@@ -1,0 +1,37 @@
+
+***T1546_EventTriggeredExecution
+
+1. Netsh Helper DLL
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+2. Image File Execution Options Injection
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+3. Component Object Model Hijacking
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+4. Change Default File Association
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+5. Windows Management Instrumentation Event Subscription
+đã có check trong tool rsmd, chưa có cách viết script detect tự động
+6. Powershell Profile
+chưa có cách viết script detect tự động 
+
+
+***Traffic Signaling - Port Knocking
+Không detect được vì lợi dụng các Persistence khác
+
+***Windows Service
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+
+***Account Manipulation
+1. Account Manipulation
+chưa có cách viết script detect tự động 
+2. Account Manipulation
+chưa có cách viết script detect tự động 
+
+***Create Account
+1. Local Account
+chưa có cách viết script detect tự động 
+2. Domain Account
+chưa có cách viết script detect tự động 
+
+***Boot or Logon Autostart Execution
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn

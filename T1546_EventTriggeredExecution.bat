@@ -50,7 +50,7 @@ reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentV
 reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" /v  > "%tdir%\LoaAppInit_DLLs2.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" > "%tdir%\reg_AppInit_DLLs2_LastWriteTime.txt" 2>&1
 
-rem AppInit DLLs
+rem AppInit DLLs end
 
 rem Application Shimming
 rem trong rasoat.bat da co, đang tùm cách detect tự động
@@ -71,9 +71,9 @@ rem dang tim cach kiem tra tung key value
 
 rem Change Default File Association end
 
-rem Change Default File Association
+rem  Windows Management Instrumentation Event Subscription
 rem Trong rasoat.bat đã có, đang tìm cách detect tự động 
-rem Change Default File Association
+rem Windows Management Instrumentation Event Subscription
 
 rem Powershell Profile
 rem chưa tìm được cách detect tự động 
