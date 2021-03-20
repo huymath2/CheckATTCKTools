@@ -15,3 +15,5 @@ reg query HKCU\Environment\ /v "COR_PROFILER" > "%tdir%\COR_PROFILER.txt" 2>&1
 reg query HKCU\Environment\ /v "COR_PROFILER_PATH" > "%tdir%\COR_PROFILER_PATH.txt" 2>&1
 
 ..\Viettel\RegLastWriteTime.exe HKCU\Environment > "%tdir%\reg_Environment_LastWriteTime.txt" 2>&1
+
+rem COR_PROFILER end
