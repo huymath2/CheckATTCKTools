@@ -1,8 +1,6 @@
 
 ***T1546_EventTriggeredExecution
 
-1. Netsh Helper DLL
-chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
 2. Image File Execution Options Injection
 chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
 3. Component Object Model Hijacking

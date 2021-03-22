@@ -20,11 +20,15 @@ reg query "HKCU\Control Panel\Desktop" /v "ScreenSaveTimeout" > "%tdir%\ScreenSa
 rem Screensaver end
 
 rem Netsh Helper DLL
-rem dang tim cach duyet tung key
+set tdir=%sdir%\Netsh_Helper_DLL
+mkdir %tdir%
+powershell -noprofile -executionpolicy bypass "..\ATTCKTools\T1546_EventTriggeredExecution_NetshHelperDLL.ps1" > "%tdir%\Netsh_Helper_DLL.txt" 2>&1
+..\Viettel\RegLastWriteTime.exe "HKLM\SOFTWARE\Microsoft\Netsh" > "%tdir%\reg_Netsh_Helper_DLL_LastWriteTime.txt" 2>&1
+..\Viettel\RegLastWriteTime.exe "HKLM\SOFTWARE\Wow6432Node\Microsoft\Netsh" > "%tdir%\reg_Netsh_Helper_DLL_LastWriteTime2.txt" 2>&1
 rem Netsh Helper DLL end
 
 rem Accessibility Features
-set set tdir=%sdir%\Accessibility_Features
+set tdir=%sdir%\Accessibility_Features
 mkdir %tdir%
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe" /v Debugger > "%tdir%\Accessibility_Features.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe" > "%tdir%\reg_sethc_exe_LastWriteTime.txt" 2>&1
@@ -32,7 +36,7 @@ reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
 rem Accessibility Features end
 
 rem AppCert DLLs
-set set tdir=%sdir%\AppCert_DLLs
+set tdir=%sdir%\AppCert_DLLs
 mkdir %tdir%
 reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\AppCertDLLs" > "%tdir%\AppCert_DLLs.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\AppCertDLLs" > "%tdir%\reg_AppCertDLLs_LastWriteTime.txt" 2>&1
@@ -40,7 +44,7 @@ reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\A
 rem AppCert DLLs end
 
 rem AppInit DLLs
-set set tdir=%sdir%\AppInit_DLLs
+set tdir=%sdir%\AppInit_DLLs
 mkdir %tdir%
 reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v AppInit_DLLs > "%tdir%\AppInit_DLLs.txt" 2>&1
 reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v LoaAppInit_DLLs > "%tdir%\LoaAppInit_DLLs.txt" 2>&1
