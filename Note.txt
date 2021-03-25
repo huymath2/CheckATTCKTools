@@ -1,35 +1,41 @@
-
 ***T1546_EventTriggeredExecution
+1. Application Shimming
+chưa có cách viết script detect tự động. 
+Phải list tất cả nội dung của folder sau đó kiểm tra từng file
 
 2. Image File Execution Options Injection
 chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+Phải list tất cả nội dung của các key sau đó kiểm tra từng value của key
+
 3. Component Object Model Hijacking
 chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+Hoặc chỉ có thể check sig của từng file
+
 4. Change Default File Association
-chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+chưa có cách viết script detect tự động. Vì phải so sánh command gốc với command hiện tại của key
+
 5. Windows Management Instrumentation Event Subscription
 đã có check trong tool rsmd, chưa có cách viết script detect tự động
-6. Powershell Profile
-chưa có cách viết script detect tự động 
 
-
-***Traffic Signaling - Port Knocking
+***T1205_Traffic Signaling - Port Knocking
 Không detect được vì lợi dụng các Persistence khác
 
-***Windows Service
-chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+***T1543_Windows Service
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn.
+Hoặc chỉ có thể check sig của từng file service
 
-***Account Manipulation
+***T1098_Account Manipulation
 1. Account Manipulation
 chưa có cách viết script detect tự động 
 2. Account Manipulation
 chưa có cách viết script detect tự động 
 
-***Create Account
+***T1136_Create Account
 1. Local Account
 chưa có cách viết script detect tự động 
 2. Domain Account
 chưa có cách viết script detect tự động 
 
-***Boot or Logon Autostart Execution
-chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
+***T1547_Boot or Logon Autostart Execution
+chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn.
+Hoặc chỉ có thể viết được bằng cách check sig của từng file

@@ -1,0 +1,5 @@
+Hướng dẫn sử dụng
+FileName <Full Path của thư mục chứa log>
+
+CheckATTCK.bat <Path> : Check các kỹ thuật ATTCK có trong máy (hiện tại chỉ có Persistence)
+Review_CheckATTCK.bat <Path> : Review lại log xem kĩ thuật nào đang tồn tại và hiển thị

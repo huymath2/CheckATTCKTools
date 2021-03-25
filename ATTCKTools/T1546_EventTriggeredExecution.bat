@@ -22,7 +22,7 @@ rem Screensaver end
 rem Netsh Helper DLL
 set tdir=%sdir%\Netsh_Helper_DLL
 mkdir %tdir%
-powershell -noprofile -executionpolicy bypass "..\ATTCKTools\T1546_EventTriggeredExecution_NetshHelperDLL.ps1" > "%tdir%\Netsh_Helper_DLL.txt" 2>&1
+powershell -noprofile -executionpolicy bypass "ATTCKTools\T1546_EventTriggeredExecution_NetshHelperDLL.ps1" > "%tdir%\Netsh_Helper_DLL.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKLM\SOFTWARE\Microsoft\Netsh" > "%tdir%\reg_Netsh_Helper_DLL_LastWriteTime.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKLM\SOFTWARE\Wow6432Node\Microsoft\Netsh" > "%tdir%\reg_Netsh_Helper_DLL_LastWriteTime2.txt" 2>&1
 rem Netsh Helper DLL end
@@ -47,11 +47,11 @@ rem AppInit DLLs
 set tdir=%sdir%\AppInit_DLLs
 mkdir %tdir%
 reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v AppInit_DLLs > "%tdir%\AppInit_DLLs.txt" 2>&1
-reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v LoaAppInit_DLLs > "%tdir%\LoaAppInit_DLLs.txt" 2>&1
+reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v LoadAppInit_DLLs > "%tdir%\LoadAppInit_DLLs.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows" > "%tdir%\reg_AppInit_DLLs_LastWriteTime.txt" 2>&1
 
-reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" /v > "%tdir%\AppInit_DLLs2.txt" 2>&1
-reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" /v  > "%tdir%\LoaAppInit_DLLs2.txt" 2>&1
+reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" /v AppInit_DLLs > "%tdir%\AppInit_DLLs2.txt" 2>&1
+reg query "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" /v LoadAppInit_DLLs > "%tdir%\LoadAppInit_DLLs2.txt" 2>&1
 ..\Viettel\RegLastWriteTime.exe "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows" > "%tdir%\reg_AppInit_DLLs2_LastWriteTime.txt" 2>&1
 
 rem AppInit DLLs end
@@ -80,7 +80,9 @@ rem Trong rasoat.bat đã có, đang tìm cách detect tự động
 rem Windows Management Instrumentation Event Subscription
 
 rem Powershell Profile
-rem chưa tìm được cách detect tự động 
+set tdir=%sdir%\Powershell_Profile
+mkdir %tdir%
+powershell -noprofile -executionpolicy bypass "ATTCKTools\T1546_EventTriggeredExecution_PowershellProfile.ps1" > "%tdir%\Powershell_Profile.txt" 2>&1
 rem  Powershell Profile  end  
 
 
