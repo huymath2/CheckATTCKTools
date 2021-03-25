@@ -1,4 +1,3 @@
-$signtable = @{}
 function Get-Signature {
     param (
         [Parameter(Mandatory = $true, Position=1)]
@@ -93,6 +92,67 @@ function Get-BootExecute {
     }
 }
 
-Get-RunKey
+function Get-ExplorerRun {
+	$regpath = @("HKLM:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run", "HKCU:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run")
+    $regpath | ForEach-Object{
+        if (Test-Path $_){
+			(Get-RegistryValue $_).Value | Where-Object{$_.Name -ne $null} | ForEach-Object{
+				$o = "" | Select-Object Key, Path
+				$o.Path = $_.Value
+				$o.Key = "[HKLM/HKCU]:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run"
+				$o
+			}
+		}
+    }
+}
+
+function Get-RunOnceEx {
+	$regpath = @("HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnceEx")
+    $regpath | ForEach-Object{
+        if (Test-Path $_){
+				(Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
+				$o = "" | Select-Object  Key, Path
+				$o.Path = $_
+				$o.Key = "HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnceEx"
+				$o
+			}
+	    }
+    }
+}
+
+function Get-RunServicesOnce {
+	$regpath = @("HKLM:\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce")
+    $regpath | ForEach-Object{
+        if (Test-Path $_){
+				(Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
+				$o = "" | Select-Object  Key, Path
+				$o.Path = $_
+				$o.Key = "HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce"
+				$o
+			}
+	    }
+    }
+}
+
+function Get-RunServices {
+	$regpath = @("HKLM:\Software\Microsoft\Windows\CurrentVersion\RunServices")
+    $regpath | ForEach-Object{
+        if (Test-Path $_){
+				(Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
+				$o = "" | Select-Object  Key, Path
+				$o.Path = $_
+				$o.Key = "HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices"
+				$o
+			}
+	    }
+    }
+}
+
+
+#Get-RunKey chua tách được file Path cụ thể
 Get-RunOnceKey
 Get-BootExecute
+Get-ExplorerRun
+Get-RunOnceEx
+Get-RunServicesOnce
+Get-RunServices 
