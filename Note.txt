@@ -37,5 +37,11 @@ chưa có cách viết script detect tự động
 chưa có cách viết script detect tự động 
 
 ***T1547_Boot or Logon Autostart Execution
+1. TimeProvider
+2. Shortcut Modification
+3. Port Monitors
+4. Print Processors
+
+
 chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn.
 Hoặc chỉ có thể viết được bằng cách check sig của từng file

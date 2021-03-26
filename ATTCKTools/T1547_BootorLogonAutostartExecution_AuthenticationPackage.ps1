@@ -41,7 +41,7 @@ function Get-AuthenticationPackage{
         (Get-RegistryValue $_) | Where-Object{$_.Name -eq "Authentication Packages"} | ForEach-Object{
 			$o = "" | Select-Object Key, Path
 			$o.Path = $_.Value
-			$o.Key = "HKLM\SYSTEM\CurrentControlSet\Control\Lsa"
+			$o.Key = "HKLM\SYSTEM\CurrentControlSet\Control\Lsa - Authentication Packages"
 			if ($o.Path.Length -gt 1){
 				$o
 			}
@@ -55,7 +55,7 @@ function Get-NotificationPackages{
         (Get-RegistryValue $_) | Where-Object{$_.Name -eq "Notification Packages"} | ForEach-Object{
 			$o = "" | Select-Object Key, Path
 			$o.Path = $_.Value
-			$o.Key = "HKLM\SYSTEM\CurrentControlSet\Control\Lsa"
+			$o.Key = "HKLM\SYSTEM\CurrentControlSet\Control\Lsa - Notification Packages"
 			if ($o.Path.Length -gt 1){
 				$o
 			}
