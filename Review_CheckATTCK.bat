@@ -231,7 +231,55 @@ pause
 echo.
 rem T1137_OfficeApplicationStartup end
 
+rem T1547_BootorLogonAutostartExecution
+set ok=0
 
+echo "[+] Ra soat Boot or Logon Autostart Execution"
+
+rem RegistryRunKeys_StartupFolder
+type "%sdir%\T1547_BootorLogonAutostartExecution\RegistryRunKeys_StartupFolder\RegistryRunKeys_StartupFolder.txt"  | findstr /c:"Path" > nul 2>&1
+IF %errorlevel% EQU 0 (
+    echo "    [-] Boot or Logon Autostart Execution: Registry RunKeys Startup Folder was found!"
+    type "%sdir%\T1547_BootorLogonAutostartExecution\RegistryRunKeys_StartupFolder\RegistryRunKeys_StartupFolder.txt"
+	set ok=1
+    echo.
+) 
+
+rem AuthenticationPackage
+type "%sdir%\T1547_BootorLogonAutostartExecution\AuthenticationPackage\AuthenticationPackage.txt"  | findstr /c:"Path" > nul 2>&1
+IF %errorlevel% EQU 0 (
+    echo "    [-] Boot or Logon Autostart Execution: Authentication Package was found!"
+    type "%sdir%\T1547_BootorLogonAutostartExecution\AuthenticationPackage\AuthenticationPackage.txt"
+	set ok=1
+    echo.
+) 
+
+rem WinlogonHelperDLL
+type "%sdir%\T1547_BootorLogonAutostartExecution\WinlogonHelperDLL\WinlogonHelperDLL.txt"  | findstr /c:"Path" > nul 2>&1
+IF %errorlevel% EQU 0 (
+    echo "    [-] Boot or Logon Autostart Execution: Winlogon Helper DLL was found!"
+    type "%sdir%\T1547_BootorLogonAutostartExecution\WinlogonHelperDLL\WinlogonHelperDLL.txt"
+	set ok=1
+    echo.
+) 
+
+
+rem SecuritySupport
+type "%sdir%\T1547_BootorLogonAutostartExecution\SecuritySupport\SecuritySupport.txt"  | findstr /c:"Path" > nul 2>&1
+IF %errorlevel% EQU 0 (
+    echo "    [-] Boot or Logon Autostart Execution: Security Support was found!"
+    type "%sdir%\T1547_BootorLogonAutostartExecution\SecuritySupport\SecuritySupport.txt"
+	set ok=1
+    echo.
+) 
+
+
+IF %ok% NEQ 1 (
+	echo "    [-] Boot or Logon Autostart Execution not found!"
+)
+
+
+rem T1547_BootorLogonAutostartExecution end
 
 
 

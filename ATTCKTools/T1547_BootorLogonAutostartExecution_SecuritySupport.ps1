@@ -32,3 +32,5 @@ function Get-SecuritySupport {
         }
     }
 }
+
+Get-SecuritySupport

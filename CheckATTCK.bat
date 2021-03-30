@@ -30,5 +30,6 @@ call ATTCKTools\T1137_OfficeApplicationStartup.bat %sdir%
 
 rem T1547_BootorLogonAutostartExecution
 set sdir=%1%
+call ATTCKTools\T1547_BootorLogonAutostartExecution.bat %sdir%
 
 

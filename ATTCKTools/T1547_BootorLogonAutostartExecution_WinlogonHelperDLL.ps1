@@ -21,7 +21,7 @@
 
 
 function Get-WinlogonUserinit{
-	$regpath = @("HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\", "HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon\")
+	$regpath = @("HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon", "HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon")
     $regpath | ForEach-Object{
         (Get-RegistryValue $_) | Where-Object{$_.Name -eq "Userinit"} | ForEach-Object{
 			$o = "" | Select-Object Key, Path
@@ -38,7 +38,7 @@ function Get-WinlogonUserinit{
 }
 
 function Get-WinlogonShell{
-	$regpath = @("HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\", "HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon\")
+	$regpath = @("HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon", "HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon")
     $regpath | ForEach-Object{
         (Get-RegistryValue $_) | Where-Object{$_.Name -eq "Shell"} | ForEach-Object{
 			$o = "" | Select-Object Key, Path

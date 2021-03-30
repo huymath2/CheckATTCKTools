@@ -39,10 +39,11 @@ function Get-RunKey {
 	$regpath = @("HKCU:\Software\Microsoft\Windows\CurrentVersion\Run", "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run")
     $regpath | ForEach-Object{
         (Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
-            if(Test-Path $_){
+            $x = $_.split(" ")[0]
+            if(Test-Path $x){
                 $o = "" | Select-Object Key, Path, Signer 
-                $o.Path = $_
-                $sign = Get-Signature $_
+                $o.Path = $x.trim('"')
+                $sign = Get-Signature $x
                 $o.Signer = $sign
 				$o.Key = "[HKLM/HKCU]:\Software\Microsoft\Windows\CurrentVersion\Run"
 				if($sign -eq "Invalid"){
@@ -52,7 +53,8 @@ function Get-RunKey {
 			else{
 				$filePath = $_.split('"')
 				$o = "" | Select-Object Key, Path, Signer
-				$o.Path = $filePath[1]
+				$o.Path = '"' + $filePath[1] + '"'
+                #Write-Host $o.Path
 				$sign = Get-Signature $filePath[1]
 				$o.Signer = $sign
 				$o.Key = "[HKLM/HKCU]:\Software\Microsoft\Windows\CurrentVersion\Run"
@@ -93,7 +95,7 @@ function Get-BootExecute {
 }
 
 function Get-ExplorerRun {
-	$regpath = @("HKLM:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run", "HKCU:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run")
+	$regpath = @("HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run", "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run")
     $regpath | ForEach-Object{
         if (Test-Path $_){
 			(Get-RegistryValue $_).Value | Where-Object{$_.Name -ne $null} | ForEach-Object{
@@ -149,7 +151,7 @@ function Get-RunServices {
 }
 
 
-#Get-RunKey chua tách được file Path cụ thể
+Get-RunKey 
 Get-RunOnceKey
 Get-BootExecute
 Get-ExplorerRun
