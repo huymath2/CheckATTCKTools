@@ -11,7 +11,7 @@ Phải list tất cả nội dung của các key sau đó kiểm tra từng valu
 chưa có cách viết script detect tự động. Nếu thủ công thì dùng autoruns vẫn hiệu quả hơn
 Hoặc chỉ có thể check sig của từng file
 
-4. Change Default File Association
+4. Change Default File Association **
 chưa có cách viết script detect tự động. Vì phải so sánh command gốc với command hiện tại của key
 
 5. Windows Management Instrumentation Event Subscription
@@ -37,8 +37,8 @@ chưa có cách viết script detect tự động
 chưa có cách viết script detect tự động 
 
 ***T1547_Boot or Logon Autostart Execution
-1. TimeProvider
-2. Shortcut Modification
+1. TimeProvider	**
+2. Shortcut Modification	**
 3. Port Monitors
 4. Print Processors
 
