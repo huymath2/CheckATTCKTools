@@ -1,0 +1,63 @@
+**********Chưa hoàn thành**************
+1. Account Manipulation
+- Chưa tìm cách detect kĩ thuật
+2. Boot or Logon Autostart Execution
+- Startup folder, TimeProvider, LSASS Driver, Shortcut Modification,  Port Monitors, Print Processors. không có cách khác ngoài check signature, vì vậy autorun hiệu quả hơn
+3. Boot or Logon Initialization Scripts
+- Network Logon Script chưa tìm được cách detect các scripts độc, nếu thủ công thì autorun hiệu quả hơn
+4. Browser Extensions
+- Với các trình duyệt như FireFox, Opera, ... không có cách detect do không có đặc điểm cụ thể
+5. Create Account
+- Chưa tìm được cách detect 
+6. Create or Modify System Process
+- không có cách khác ngoài check signature, vì vậy autorun hiệu quả hơn
+7. Event Triggered Execution
+- Change Default File Association chưa tìm được cách detect do phải compare giữa command cũ và hiện tại 
+- Windows Management Instrumentation Event Subscription chưa tìm được cách detect do không có đặc điểm cụ thể, trong scripts rasoat có liệt kê WMI
+- Application Shimming chưa tìm được cách detect do không có đặc điểm cụ thể, trong scripts rasoat có liệt kê Shimfolder
+- Image File Execution Options Injection chưa tìm được cách detect do không có đặc điểm cụ thể
+- Component Object Model Hijacking không có cách khác ngoài check signature
+8. Hijack Execution Flow
+- Một số kĩ thuật không thể detect tự động, chỉ có thể dùng các monitor
+9. Traffic Signaling
+- Không thể detect do lợi dụng các persistence khác
+10. Create Account
+- Chưa tìm cách detect kĩ thuật
+
+11. Pre-OS Boot, External Remote Services, Compromise Client Software Binary, Server Software Component chưa có output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********Đã hoàn thành*****************
+1. BITS Jobs
+- Detect dựa trên các bits đang chạy. 
+2. Boot or Logon Autostart Execution
+- Detect dựa trên các reg đã đăng kí
+- Riêng với ...\CurentVersion\Run đang dựa trên check signature
+3. Boot or Logon Initialization Scripts
+- Detect dựa trên reg đã đăng kí
+4. Browser Extensions
+- Detect dựa trên các reg đã đăng kí: Chrome, Edge, Brave
+5. Event Triggered Execution
+- Detect dựa trên các reg đã đăng kí
+6. Hijack Execution Flow
+- Detect dựa trên các reg đã đăng kí
+7. Office Application Startup
+- Detect dựa trên các reg đã đăng kí
+
