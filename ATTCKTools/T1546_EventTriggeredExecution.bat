@@ -76,7 +76,12 @@ rem dang tim cach kiem tra tung key value
 rem Change Default File Association end
 
 rem  Windows Management Instrumentation Event Subscription
-rem Trong rasoat.bat đã có, đang tìm cách detect tự động 
+set tdir=%sdir%\WMI
+mkdir %tdir%
+wmic/namespace:\\root\subscription PATH __EventConsumer get/format:list > "%tdir%\wmi_event_consumer.txt" 2>&1
+wmic/namespace:\\root\subscription PATH __EventFilter get/format:list > "%tdir%\wmi_event_filter.txt" 2>&1
+wmic/namespace:\\root\subscription PATH __FilterToConsumerBinding get/format:list > "%tdir%\wmi_filter_consumer_binding.txt" 2>&1
+wmic/namespace:\\root\subscription PATH __TimerInstruction get/format:list > "%tdir%\wmi_timer_instruction.txt" 2>&1
 rem Windows Management Instrumentation Event Subscription
 
 rem Powershell Profile

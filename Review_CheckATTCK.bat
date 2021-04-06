@@ -150,6 +150,20 @@ IF %errorlevel% NEQ 0 (
     echo.
 ) 
 
+rem WMI
+type "%sdir%\T1546_EventTriggeredExecution\WMI\wmi_event_consumer.txt"  | findstr /c:"ExecutablePath" > nul 2>&1
+IF %errorlevel% EQU 0 (
+    echo "    [-] Event Triggered Execution: Windows Management Instrumentation Event Subscription was found!"
+    type "%sdir%\T1546_EventTriggeredExecution\WMI\wmi_event_consumer.txt"
+	type "%sdir%\T1546_EventTriggeredExecution\WMI\wmi_event_filter.txt"
+	type "%sdir%\T1546_EventTriggeredExecution\WMI\wmi_filter_consumer_binding.txt"
+	type "%sdir%\T1546_EventTriggeredExecution\WMI\wmi_timer_instruction.txt"
+	set ok=1
+    echo.
+) 
+
+rem WMI end
+
 rem Powershell Profile
 type "%sdir%\T1546_EventTriggeredExecution\Powershell_Profile\Powershell_Profile.txt"  | findstr /c:"ps1" > nul 2>&1
 IF %errorlevel% EQU 0 (

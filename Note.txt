@@ -14,9 +14,6 @@ Hoặc chỉ có thể check sig của từng file
 4. Change Default File Association **
 chưa có cách viết script detect tự động. Vì phải so sánh command gốc với command hiện tại của key
 
-5. Windows Management Instrumentation Event Subscription
-đã có check trong tool rsmd, chưa có cách viết script detect tự động
-
 ***T1205_Traffic Signaling - Port Knocking
 Không detect được vì lợi dụng các Persistence khác
 

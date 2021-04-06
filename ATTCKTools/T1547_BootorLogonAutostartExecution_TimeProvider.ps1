@@ -42,7 +42,7 @@ function Get-Signature {
 }
 
 function Get-TimeProviders {
-    $items = Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\" | Get-ItemProperty | Select-Object DllName, Enabled, InputProvider, PSPath 
+    $items = Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\" | Get-ItemProperty | Select-Object DllName, Enabled, InputProvider, PSPath
     foreach($item in $items){
         $sign = Get-Signature $item.DllName
         $item | Add-Member NoteProperty Signer $sign -Force
