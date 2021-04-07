@@ -105,11 +105,11 @@ function Get-BootExecute {
 function Get-ExplorerRun {
 	$regpath = @("HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run", "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run")
     $regpath | ForEach-Object{
+		$o = "" | Select-Object Key, Path
+        $o.Key = $_
         if (Test-Path $_){
 			(Get-RegistryValue $_).Value | Where-Object{$_.Name -ne $null} | ForEach-Object{
-				$o = "" | Select-Object Key, Path
 				$o.Path = $_.Value
-				$o.Key = "[HKLM/HKCU]:Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run"
 				$o
 			}
 		}
