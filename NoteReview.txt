@@ -59,3 +59,10 @@
 7. Office Application Startup
 - Detect dựa trên các reg đã đăng kí
 
+
+
+
+Todo:
+Lấy lại scripts của a hoangvd_vcs viết thêm script review. 
+
+
