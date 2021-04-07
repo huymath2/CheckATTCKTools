@@ -54,19 +54,18 @@ function Get-PortMonitor
 {
     $regpath = @("HKLM:\SYSTEM\CurrentControlSet\Control\Print\Monitors")
     $regpath | ForEach-Object{
-        $items = Get-ChildItem -Path $_ | Get-ItemProperty | Select-Object Driver
-        $items2 = Get-ChildItem -Path $_ | Select-Object Name
-        $i = 0 
+        $items = Get-ChildItem -Path $_ | Get-ItemProperty | Select-Object PSPath, Driver
         foreach($item in $items){
             if($item.Driver -ne $null){
                 $fullPath =  "$env:WINDIR\system32\" + $item.Driver
                 $sign = Get-Signature $fullPath
-                $item | Add-Member NoteProperty Signer $sign  -Force
-                $item | Add-Member NoteProperty Name $items2[$i] -Force
-                $item | Add-Member NoteProperty Category "Port Monitors" -Force
-                $item
+                $output = ""| Select-Object Key, Path
+                $output.Key = $item.PsPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                $output.Path = $fullPath
+                $output | Add-Member NoteProperty Signer $sign  -Force
+                $output | Add-Member NoteProperty Category "Port Monitors" -Force
+                $output
             }
-            $i = $i + 1
         }  
     }
 }

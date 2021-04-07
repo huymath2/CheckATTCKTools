@@ -1,4 +1,6 @@
-﻿function Get-RegistryValue
+﻿$ErrorActionPreference= 'silentlycontinue'
+
+function Get-RegistryValue
 {
     param
     (
@@ -23,16 +25,16 @@ function Get-Debugger
 {
     $regpath = @("HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\", "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\")
     $regpath | ForEach-Object{
-        $items = Get-ChildItem -Path $_ | Get-ItemProperty | Select-Object debugger
-        $items2 = Get-ChildItem -Path $_ | Select-Object Name
-        $i = 0 
+        $items = Get-ChildItem -Path $_ | Get-ItemProperty | Select-Object debugger, PSPath
         foreach($item in $items){
             if($item.debugger -ne $null){  
-                $item | Add-Member NoteProperty Name $items2[$i] -Force
-                $item | Add-Member NoteProperty Category "Image File Execution Options Injection" -Force
-                $item
+                $output = ""|Select-Object Key, Path
+                $output.Key = $item.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                $output.Path = $item.debugger
+                $output | Add-Member NoteProperty Category "Image File Execution Options Injection" -Force
+                $output
+
             }
-            $i = $i + 1
         }  
     }
 }

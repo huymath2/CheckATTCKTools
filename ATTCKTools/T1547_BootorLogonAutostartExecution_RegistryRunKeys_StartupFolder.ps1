@@ -35,29 +35,37 @@ function Get-RegistryValue
     }
 }
 
+function Get-StartupFolder {
+    $path = @("C:\Users\*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\*", "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\*")
+    $path | Get-Item | Select-Object FullName, DirectoryName | ForEach-Object{
+        $output = ""| Select-Object Key, Path
+        $output.Key = $_.DirectoryName
+        $output.Path = $_.FullName
+        $output
+    }
+}
+
 function Get-RunKey {
 	$regpath = @("HKCU:\Software\Microsoft\Windows\CurrentVersion\Run", "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run")
     $regpath | ForEach-Object{
+        $o = "" | Select-Object Key, Path, Signer 
+        $o.Key = $_
         (Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
             $x = $_.split(" ")[0]
             if(Test-Path $x){
-                $o = "" | Select-Object Key, Path, Signer 
                 $o.Path = $x.trim('"')
                 $sign = Get-Signature $x
                 $o.Signer = $sign
-				$o.Key = "[HKLM/HKCU]:\Software\Microsoft\Windows\CurrentVersion\Run"
 				if($sign -eq "Invalid"){
 					$o
 				}
             }
 			else{
 				$filePath = $_.split('"')
-				$o = "" | Select-Object Key, Path, Signer
 				$o.Path = '"' + $filePath[1] + '"'
                 #Write-Host $o.Path
 				$sign = Get-Signature $filePath[1]
 				$o.Signer = $sign
-				$o.Key = "[HKLM/HKCU]:\Software\Microsoft\Windows\CurrentVersion\Run"
 				if($sign -eq "Invalid"){
 					$o
 				}
@@ -70,10 +78,10 @@ function Get-RunKey {
 function Get-RunOnceKey {
 	$regpath = @("HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce", "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce")
     $regpath | ForEach-Object{
+        $o = "" | Select-Object Key, Path, Signer 
+        $o.Key = $_
         (Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
-            $o = "" | Select-Object  Key, Path
             $o.Path = $_
-			$o.Key = "[HKLM/HKCU]\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 			$o
         }
     }
@@ -150,7 +158,7 @@ function Get-RunServices {
     }
 }
 
-
+Get-StartupFolder
 Get-RunKey 
 Get-RunOnceKey
 Get-BootExecute
