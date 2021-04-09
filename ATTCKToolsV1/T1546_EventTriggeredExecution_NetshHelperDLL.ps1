@@ -51,4 +51,4 @@ function Get-NetshHelperDLL {
     }
 }
 
-Get-NetshHelperDLL | Format-Table -Wrap | Out-String -width 2048
+Get-NetshHelperDLL | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048
