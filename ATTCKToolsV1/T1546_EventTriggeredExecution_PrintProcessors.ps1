@@ -9,4 +9,4 @@ function Get-PrintProcessors {
     }
 }
 
-Get-PrintProcessors | Format-List
+Get-PrintProcessors  | Format-Table -Wrap | Out-String -width 2048

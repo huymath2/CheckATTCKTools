@@ -5,10 +5,10 @@ function Get-PrintDemon{
         $key = $_
         (Get-RegistryValue $_).Name | Where-Object{$_ -ne $null} | ForEach-Object{
             if(Test-Path $_){
-                $o = "" | Select-Object Key, Name, LastWriteTimeUtc
+                $o = "" | Select-Object LastWriteTime, Key, Name 
                 $o.Name = $_
                 $file = Get-Item $_ |Select-Object *
-                $o.LastWriteTimeUtc = Get-Date -Date $file.LastWriteTimeUtc  -Format "MM-dd-yyyy HH:mm:ss tt"
+                $o.LastWriteTime = Get-Date -Date $file.LastWriteTime  -Format "MM-dd-yyyy HH:mm:ss tt"
                 $o.Key = $key
                 $o
             }
@@ -16,4 +16,4 @@ function Get-PrintDemon{
     }
 }
 
-Get-PrintDemon | Format-List
+Get-PrintDemon | Format-Table -Wrap | Out-String -width 2048

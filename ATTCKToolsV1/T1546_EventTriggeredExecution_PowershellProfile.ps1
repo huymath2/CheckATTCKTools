@@ -1,10 +1,29 @@
 ﻿$ErrorActionPreference= 'silentlycontinue'
+
+function Get-SplitStr
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$str1
+    )
+
+    $str = ""
+    $str1 -split '(\w{30})' | ? {
+        $str = $str + $_ + "`n"
+    }
+    $str
+}
+
+
+
 function Get-PowerShellProfile {
     $path = @("$($pshome)\\*profile.ps1", "$($home)\\*profile.ps1")
     $path | Get-ItemProperty | Select-Object FullName, LastWriteTimeUtc | ForEach-Object -Process {
-        $_.LastWriteTimeUtc = Get-Date -Date $_.LastWriteTimeUtc -Format "MM-dd-yyyy HH:mm:ss tt"
+        $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "MM-dd-yyyy HH:mm:ss tt"
+        $_.FullName = $_.FullName
         $_
     }      
 }
 
-Get-PowerShellProfile | Format-List
+Get-PowerShellProfile | Format-Table -Wrap | Out-String -width 2048

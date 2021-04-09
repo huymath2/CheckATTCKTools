@@ -33,4 +33,4 @@ function Get-COR_PROFILER {
     }
 }
 
-Get-COR_PROFILER | Format-List
+Get-COR_PROFILER | Format-Table -Wrap | Out-String -width 2048

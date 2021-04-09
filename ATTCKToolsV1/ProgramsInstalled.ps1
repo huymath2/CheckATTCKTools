@@ -6,4 +6,4 @@ function Get-ProgramsInstalled {
     }
 }
 
-Get-ProgramsInstalled | Format-List
+Get-ProgramsInstalled | Format-Table -Wrap | Out-String -width 2048

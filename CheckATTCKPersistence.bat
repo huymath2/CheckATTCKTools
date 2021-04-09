@@ -3,77 +3,88 @@
 set sdir=%1%\Check_ATTCK
 mkdir %sdir%
 
+call :colorEcho 0b "[+]Ra soat ATTCK Persistence"
+echo.
+
 rem COR_PROFILER
-echo "[+]Checking COR_PROFILER..."
+call :colorEcho 0e "[+] Ra soat COR_PROFILER..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\COR_PROFILER.ps1" > "%sdir%\COR_PROFILER.txt" 2>&1
 
 rem ExchangeMalwarePersistent
-echo "[+]Checking Exchange Malware Persistent..."
+call :colorEcho 0e "[+] Ra soat Exchange Malware Persistent..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ExchangeMalwarePersistent.ps1" > "%sdir%\ExchangeMalwarePersistent.txt" 2>&1
 
 rem PrintDemon
-echo "[+]Checking PrintDemon..."
+call :colorEcho 0e "[+] Ra soat PrintDemon..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PrintDemon.ps1" > "%sdir%\PrintDemon.txt" 2>&1
 
 rem ProgramsInstalled
-echo "[+]Checking Programs Installed..."
+call :colorEcho 0e "[+] Ra soat Programs Installed..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ProgramsInstalled.ps1" > "%sdir%\ProgramsInstalled.txt" 2>&1
 
 rem T1176_BrowserExtensions
-echo "[+]Checking Browser Extensions..."
+call :colorEcho 0e "[+] Ra soat Browser Extensions..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1176_BrowserExtensions.ps1" > "%sdir%\T1176_BrowserExtensions.txt" 2>&1
 
 rem T1197_BITSJobs
-echo "[+]Checking BITSJobs..."
+call :colorEcho 0e "[+] Ra soat BITSJobs..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1197_BITSJobs.ps1" > "%sdir%\T1197_BITSJobs.txt" 2>&1
 
 rem T1546_EventTriggeredExecution_ChangeDefaultFileAssociation
-echo "[+]Checking Change Default File Association..."
+call :colorEcho 0e "[+] Ra soat Change Default File Association..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.ps1" > "%sdir%\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.txt" 2>&1
 
 rem T1546_EventTriggeredExecution_NetshHelperDLL
-echo "[+]Checking Netsh Helper DLL..."
+call :colorEcho 0e "[+] Ra soat Netsh Helper DLL..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1546_EventTriggeredExecution_NetshHelperDLL.ps1" > "%sdir%\T1546_EventTriggeredExecution_NetshHelperDLL.txt" 2>&1
 
 rem T1546_EventTriggeredExecution_PowershellProfile
-echo "[+]Checking Powershell Profile..."
+call :colorEcho 0e "[+] Ra soat Powershell Profile..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1546_EventTriggeredExecution_PowershellProfile.ps1" > "%sdir%\T1546_EventTriggeredExecution_PowershellProfile.txt" 2>&1
 
 rem T1546_EventTriggeredExecution_PrintProcessors
-echo "[+]Checking Print Processors..."
+call :colorEcho 0e "[+] Ra soat Print Processors..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1546_EventTriggeredExecution_PrintProcessors.ps1" > "%sdir%\T1546_EventTriggeredExecution_PrintProcessors.txt" 2>&1
 
 rem T1547_BootorLogonAutostartExecution_ShortcutModification
-echo "[+]Checking Shortcut Modification..."
+call :colorEcho 0e "[+] Ra soat Shortcut Modification..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1" > "%sdir%\T1547_BootorLogonAutostartExecution_ShortcutModification.txt" 2>&1
 
 rem T1547_BootorLogonAutostartExecution_TimeProvider
-echo "[+]Checking Time Provider..."
+call :colorEcho 0e "[+] Ra soat Time Provider..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1547_BootorLogonAutostartExecution_TimeProvider.ps1" > "%sdir%\T1547_BootorLogonAutostartExecution_TimeProvider.txt" 2>&1
 
 rem WindowsServiceRecovery
-echo "[+]Checking Windows Service Recovery..."
+call :colorEcho 0e "[+] Ra soat Windows Service Recovery..."
 echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\WindowsServiceRecovery.ps1" > "%sdir%\WindowsServiceRecovery.txt" 2>&1
 
 rem PathHijacking
-echo "[+]Checking Path Hijacking..."
+call :colorEcho 0e "[+] Ra soat Path Hijacking..."
 echo.
 rem powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PathHijacking.ps1" > "%sdir%\PathHijacking.txt" 2>&1
 
 
+EXIT
+
+:colorEcho
+echo off
+<nul set /p ".=%DEL%" > "%~2"
+findstr /v /a:%1 /R "^$" "%~2" nul
+del "%~2" > nul 2>&1i
+EXIT /B
 
 
 

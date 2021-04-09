@@ -53,4 +53,4 @@ function Get-AllFilesInPATH {
     }
 }
 
-Get-AllFilesInPATH | Format-List
+Get-AllFilesInPATH | Format-Table -Wrap | Out-String -width 2048

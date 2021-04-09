@@ -35,4 +35,4 @@ function Get-WindowsServiceRecovery{
     }
 }
 
-Get-WindowsServiceRecovery | Format-List
+Get-WindowsServiceRecovery | Format-Table -Wrap | Out-String -width 2048

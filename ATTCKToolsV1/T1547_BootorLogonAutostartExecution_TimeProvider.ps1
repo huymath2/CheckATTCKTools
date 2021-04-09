@@ -21,25 +21,6 @@ function Get-RegistryValue
   
     }
 }
-function Get-Signature {
-    param (
-        [Parameter(Mandatory = $true, Position=1)]
-        [string]$FilePath
-    )
-    if (Test-Path -Path $FilePath -PathType Leaf ){
-            $sign = Get-AuthenticodeSignature -FilePath $FilePath
-            if ($sign.Status -eq "Valid") {
-                $dnDict = ($sign.SignerCertificate.Subject -split ', ') | ForEach-Object {
-                    $dnDict = @{}
-                    $item = $_.Split('='); $dnDict[$item[0]] = $item[1]
-                    $dnDict
-                }
-                $s = "(Verified) $($dnDict."O")"
-                $signtable.Add($FilePath, $s)
-                Return $s
-            }
-    }
-}
 
 function Get-TimeProviders {
     $items = Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\" | Get-ItemProperty | Select-Object DllName, Enabled, InputProvider, PSPath
@@ -51,4 +32,4 @@ function Get-TimeProviders {
     }  
 }
 
-Get-TimeProviders | Format-List
+Get-TimeProviders | Format-Table -Wrap | Out-String -width 2048
