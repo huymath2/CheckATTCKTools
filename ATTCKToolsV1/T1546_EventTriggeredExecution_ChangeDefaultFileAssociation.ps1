@@ -17,7 +17,7 @@ function Get-RegLastWriteTime {
 
 function Get-ChangeDefaultFileAssociation {
     Get-Item -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Get-ItemProperty | Select-Object *| ForEach-Object {
-        $output = "" | Select-Object FileType, 'a(Open with)', LastWriteTime
+        $output = "" | Select-Object LastWriteTime, FileType, 'a(Open with)'
         $output.'a(Open with)' = $_.a 
         #$output.b = Get-SplitStr $_.b
         #$output.c = Get-SplitStr $_.c

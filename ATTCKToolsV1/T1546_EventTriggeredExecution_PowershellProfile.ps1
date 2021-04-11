@@ -19,8 +19,8 @@ function Get-SplitStr
 
 function Get-PowerShellProfile {
     $path = @("$($pshome)\\*profile.ps1", "$($home)\\*profile.ps1")
-    $path | Get-ItemProperty | Select-Object FullName, LastWriteTimeUtc | ForEach-Object -Process {
-        $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "MM-dd-yyyy HH:mm:ss tt"
+    $path | Get-ItemProperty | Select-Object LastWriteTime, FullName | ForEach-Object -Process {
+        $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss tt"
         $_.FullName = $_.FullName
         $_
     }      

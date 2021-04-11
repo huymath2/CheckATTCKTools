@@ -11,22 +11,22 @@ pause
 
 
 rem ExchangeMalwarePersistent
-call :colorEcho 0e "[+] Ra soat Exchange Malware Persistent..."
-echo.
-type "%sdir%\ExchangeMalwarePersistent.txt"
-pause
+REM call :colorEcho 0e "[+] Ra soat Exchange Malware Persistent..."
+REM echo.
+REM type "%sdir%\ExchangeMalwarePersistent.txt"
+REM pause
 
-rem PrintDemon
-call :colorEcho 0e "[+] Ra soat PrintDemon..."
-echo.
-type "%sdir%\PrintDemon.txt"
-pause
+REM rem PrintDemon
+REM call :colorEcho 0e "[+] Ra soat PrintDemon..."
+REM echo.
+REM type "%sdir%\PrintDemon.txt"
+REM pause
 
-rem ProgramsInstalled
-call :colorEcho 0e "[+] Ra soat Programs Installed..."
-echo.
-type "%sdir%\ProgramsInstalled.txt"
-pause
+REM rem ProgramsInstalled
+REM call :colorEcho 0e "[+] Ra soat Programs Installed..."
+REM echo.
+REM type "%sdir%\ProgramsInstalled.txt"
+REM pause
 
 rem T1176_BrowserExtensions
 call :colorEcho 0e "[+] Ra soat Browser Extensions..."
@@ -77,15 +77,15 @@ type "%sdir%\T1547_BootorLogonAutostartExecution_TimeProvider.txt"
 pause
 
 rem WindowsServiceRecovery
-call :colorEcho 0e "[+] Ra soat Windows Service Recovery..."
-echo.
-type "%sdir%\WindowsServiceRecovery.txt"
-pause
+REM call :colorEcho 0e "[+] Ra soat Windows Service Recovery..."
+REM echo.
+REM type "%sdir%\WindowsServiceRecovery.txt"
+REM pause
 
 rem PathHijacking
 call :colorEcho 0e "[+] Ra soat Path Hijacking..."
 echo.
-rem type "%sdir%\PathHijacking.txt"
+type "%sdir%\PathHijacking.txt"
 rem pause
 
 EXIT /B

@@ -39,8 +39,9 @@ function Get-RegLastWriteTime {
 function Get-NetshHelperDLL {
     $regpath = @("HKLM:\SOFTWARE\Microsoft\NetSh", "HKLM:\SOFTWARE\Wow6432Node\Microsoft\NetSh")
     $regpath | ForEach-Object{
-        $report = "" |  Select-Object Key, Path, LastWriteTime
+        $report = "" |  Select-Object LastWriteTime, Owner, Key, Path
         $report.Key = $_
+        $report.Owner = (Get-Acl $_).Owner 
         $report.LastWriteTime = (Get-RegLastWriteTime ("HKLM" + $_.TrimStart("HKLM:"))).Time
         (Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
             if (Test-Path $_){

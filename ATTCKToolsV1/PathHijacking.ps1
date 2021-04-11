@@ -40,17 +40,21 @@ function Get-AllFilesInPATH {
             if($Readable -eq $false){
                 continue
             }
-            $o = "" | Select-Object Name, LastWriteTimeUtc
+            $o = "" | Select-Object LastWriteTime, Owner, Name, Signer
             $o.Name = $item
             $sign = Get-Signature $item
             if ($sign -eq "(Verified) Microsoft Corporation"){
                 Continue
             }
-            $file = Get-Item $item | Select-Object *
-            $o.LastWriteTimeUtc = Get-Date -Date $file.LastWriteTimeUtc  -Format "MM-dd-yyyy HH:mm:ss tt"
-            $o
+            $o.Signer = $sign
+            if($item -like "*.exe" -or $item -like "*.bat" -or $item -like "*.com" -and $item -notmatch "rsmd_windows"){ 
+                $file = Get-Item $item | Select-Object *
+                $o.LastWriteTime = Get-Date -Date $file.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+                $o.Owner = (Get-Acl $item).Owner
+                $o
+            }
         }
     }
 }
 
-Get-AllFilesInPATH | Format-Table -Wrap | Out-String -width 2048
+Get-AllFilesInPATH | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048

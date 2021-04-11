@@ -22,4 +22,4 @@ function Get-BITSJobs{
         }
     }    
 }
-Get-BITSJobs
+Get-BITSJobs | Format-Table -Wrap | Out-String -width 2048

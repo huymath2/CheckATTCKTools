@@ -3,7 +3,7 @@
 set sdir=%1%\Check_ATTCK
 mkdir %sdir%
 
-call :colorEcho 0b "[+]Ra soat ATTCK Persistence"
+call :colorEcho 0b "[+] Ra soat ATTCK Persistence"
 echo.
 
 rem COR_PROFILER
@@ -12,19 +12,19 @@ echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\COR_PROFILER.ps1" > "%sdir%\COR_PROFILER.txt" 2>&1
 
 rem ExchangeMalwarePersistent
-call :colorEcho 0e "[+] Ra soat Exchange Malware Persistent..."
-echo.
-powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ExchangeMalwarePersistent.ps1" > "%sdir%\ExchangeMalwarePersistent.txt" 2>&1
+REM call :colorEcho 0e "[+] Ra soat Exchange Malware Persistent..."
+REM echo.
+REM powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ExchangeMalwarePersistent.ps1" > "%sdir%\ExchangeMalwarePersistent.txt" 2>&1
 
 rem PrintDemon
-call :colorEcho 0e "[+] Ra soat PrintDemon..."
-echo.
-powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PrintDemon.ps1" > "%sdir%\PrintDemon.txt" 2>&1
+REM call :colorEcho 0e "[+] Ra soat PrintDemon..."
+REM echo.
+REM powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PrintDemon.ps1" > "%sdir%\PrintDemon.txt" 2>&1
 
 rem ProgramsInstalled
-call :colorEcho 0e "[+] Ra soat Programs Installed..."
-echo.
-powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ProgramsInstalled.ps1" > "%sdir%\ProgramsInstalled.txt" 2>&1
+REM call :colorEcho 0e "[+] Ra soat Programs Installed..."
+REM echo.
+REM powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\ProgramsInstalled.ps1" > "%sdir%\ProgramsInstalled.txt" 2>&1
 
 rem T1176_BrowserExtensions
 call :colorEcho 0e "[+] Ra soat Browser Extensions..."
@@ -67,14 +67,14 @@ echo.
 powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\T1547_BootorLogonAutostartExecution_TimeProvider.ps1" > "%sdir%\T1547_BootorLogonAutostartExecution_TimeProvider.txt" 2>&1
 
 rem WindowsServiceRecovery
-call :colorEcho 0e "[+] Ra soat Windows Service Recovery..."
-echo.
-powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\WindowsServiceRecovery.ps1" > "%sdir%\WindowsServiceRecovery.txt" 2>&1
+REM call :colorEcho 0e "[+] Ra soat Windows Service Recovery..."
+REM echo.
+REM powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\WindowsServiceRecovery.ps1" > "%sdir%\WindowsServiceRecovery.txt" 2>&1
 
 rem PathHijacking
 call :colorEcho 0e "[+] Ra soat Path Hijacking..."
 echo.
-rem powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PathHijacking.ps1" > "%sdir%\PathHijacking.txt" 2>&1
+powershell -noprofile -executionpolicy bypass "ATTCKToolsV1\PathHijacking.ps1" > "%sdir%\PathHijacking.txt" 2>&1
 
 
 EXIT

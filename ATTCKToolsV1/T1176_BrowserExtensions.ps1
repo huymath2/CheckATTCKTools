@@ -8,18 +8,13 @@ function Get-BrowserExtensions{
         
         Get-ChildItem -Path $_.FullName -Recurse -Force -Include *.js | Select-Object FullName, LastWriteTime  | ForEach-Object {
         #Get-ChildItem -Path $_.FullName -Recurse -Force -Include *.js | Select-Object *  | ForEach-Object {
-            $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "MM-dd-yyyy HH:mm:ss"
+            $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
             $output = "" | Select-Object LastWriteTime, Owner, FullPath  
             $output.FullPath = "%localappdata%\" + $_.FullName.TrimStart($env:LOCALAPPDATA)
-            #$output.FullPath = ""
-            #$str = "%localappdata%\" + $_.FullName.TrimStart($env:LOCALAPPDATA) 
-            #$str -split '(\w{30})' | ? {
-            #    $output.FullPath = $output.FullPath + $_ + "`r`n"
-            #}
             $output.LastWriteTime = $_.LastWriteTime
             $output.Owner = ($_.FullName | Get-Acl | Select-Object Owner).Owner.TrimStart($env:computername + '\')
             $output
         }
     }
 }
-Get-BrowserExtensions | Format-Table -Wrap | Out-String -width 2048 
+Get-BrowserExtensions | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048 
