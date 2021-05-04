@@ -129,7 +129,6 @@ function Get-COR_PROFILER {
                 $output.Sign = Get-Signature $output.Path
                 $output.MD5 = Get-FileHash $output.Path
 
-
                 $output
             }
         }

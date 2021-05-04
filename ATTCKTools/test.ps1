@@ -2,8 +2,6 @@
 $signtable = @{}
 $hashtable = @{}
 $filetable = @{}
-$reporttable = @()
-$counttable  = @{}
 
 function Get-Signature {
     param (
@@ -84,45 +82,34 @@ function Get-FileHash {
 }
 
 function Get-PATHHijacking {
-    $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName, CreationTime, LastAccessTime, LastWriteTime
+    $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName
     foreach($item in $items){
         if(Test-Path $item.FullName -PathType Leaf){
-            if($item.Name -notlike "*.txt" -or $item.Name -notlike "*.ico"){
-                $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5
-                $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
-                $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
-                $output.LastWriteTime = Get-Date -Date $item.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
-                $output.Owner = (Get-Acl $item.FullName).Owner
-                $output.Name = $item.Name
-                $output.FullName = $item.FullName
-                $output.Sign = Get-Signature $item.FullName
-                $output.MD5 = Get-FileHash $item.FullName
-
-                $check = $filetable.get_item($item.Name)
-                if($check)
-                {
-                    if($check.MD5 -ne $output.MD5)
-                    {
-                        $reporttable += $output
-                        if($counttable.get_item($check.Name) -ne 'false'){    
-                            $reporttable += $check
-                            $counttable.Add($check.Name, 1)
-                        }
-                    }
-                
-                }
-                else{
-                    $filetable.Add($item.Name, $output)
-                }
-            
+            try {
+                [System.IO.File]::OpenRead($item).Close()
+                $Readable = $true
             }
+            catch {
+                $Readable = $false        
+            }
+            if($Readable -eq $false){
+                continue
+            }
+            $o = "" | Select-Object LastWriteTime, Owner, Name, Signer
+            $o.Name = $item
+            $filetable.Add($o.Name)
             
+            
+            $sign = Get-Signature $item
+            $o.Signer = $sign
+            if($item -like "*.exe" -or $item -like "*.bat" -or $item -like "*.com" -and $item -notmatch "rsmd_windows"){ 
+                $file = Get-Item $item | Select-Object *
+                $o.LastWriteTime = Get-Date -Date $file.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+                $o.Owner = (Get-Acl $item).Owner
+                $o
+            }
         }
-    }
-
-    $reporttable | ForEach-Object{
-        $_
     }
 }
 
-Get-PATHHijacking | Sort-Object -Property Name | Format-Table -Wrap | Out-String -width 2048
+Get-PATHHijacking | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048
