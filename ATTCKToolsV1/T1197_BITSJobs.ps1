@@ -1,13 +1,16 @@
 ﻿$ErrorActionPreference= 'silentlycontinue'
 function Get-BITSJobs{
     $content = bitsadmin /list /allusers /verbose
-    $o = "" | Select-Object GUID, DISPLAY, COMMAND, TIME, Category
+    $o = "" | Select-Object GUID, DISPLAY,"JOB FILES", COMMAND, TIME
     $content | ForEach-Object {
         if($_ -match "^GUID: (?<GUID>[\S]+)" ){  
             $o.guid = $matches["GUID"] 
         }
         if($_ -match "DISPLAY: (?<DISPLAY>.*)$" ){  
             $o.display = $matches["DISPLAY"] 
+        }
+        if($_ -match "0 / UNKNOWN WORKING"){
+            $o."JOB FILES" = $_
         }
         if($_ -match "^NOTIFICATION COMMAND LINE: (?<command>.*)$" ){  
             $o.command = $matches["command"] 
@@ -16,9 +19,8 @@ function Get-BITSJobs{
             $o.time = $matches["TIME"] 
         }
         if($o.command -ne $null){
-            $o.Category = "BITS Jobs"
             $o
-            $o = "" | Select-Object GUID, DISPLAY, COMMAND, TIME, Category
+            $o = "" | Select-Object GUID, DISPLAY, "JOB FILES", COMMAND, TIME
         }
     }    
 }

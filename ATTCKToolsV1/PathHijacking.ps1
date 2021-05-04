@@ -1,5 +1,8 @@
 ﻿$ErrorActionPreference= 'silentlycontinue'
 $signtable = @{}
+$hashtable = @{}
+$filetable = @{}
+
 function Get-Signature {
     param (
         [Parameter(Mandatory = $true, Position=1)]
@@ -22,11 +25,63 @@ function Get-Signature {
                 $signtable.Add($FilePath, $s)
                 Return $s
             }
+            else
+            {
+                $s = "No Signature"
+                Return $s
+            }
         }
     }
 }
 
-function Get-AllFilesInPATH {
+
+function Get-FileHash {
+    Param(
+        [Parameter(Mandatory = $true, Position=1)]
+        [string]$FilePath,
+        [ValidateSet("MD5","SHA1","SHA256","SHA384","SHA512","RIPEMD160")]
+        [string]$HashType = "MD5"
+    )
+        
+        switch ( $HashType.ToUpper() )
+        {
+            "MD5"       { $hash = [System.Security.Cryptography.MD5]::Create() }
+            "SHA1"      { $hash = [System.Security.Cryptography.SHA1]::Create() }
+            "SHA256"    { $hash = [System.Security.Cryptography.SHA256]::Create() }
+            "SHA384"    { $hash = [System.Security.Cryptography.SHA384]::Create() }
+            "SHA512"    { $hash = [System.Security.Cryptography.SHA512]::Create() }
+            "RIPEMD160" { $hash = [System.Security.Cryptography.RIPEMD160]::Create() }
+            default     { "Invalid hash type selected." }
+        }
+
+        if ($hashtable.get_item($FilePath)) {
+            $PaddedHex = $hashtable.get_item($FilePath)
+            $PaddedHex
+        } else {
+            if (Test-Path $FilePath) {
+                $File = Get-ChildItem -Force $FilePath
+                $fileData = [System.IO.File]::ReadAllBytes($File.FullName)
+                if($fileData.length -eq 0){
+                    return
+                }
+                $HashBytes = $hash.ComputeHash($fileData)
+                $PaddedHex = ""
+        
+                foreach($Byte in $HashBytes) {
+                    $ByteInHex = [String]::Format("{0:X}", $Byte)
+                    $PaddedHex += $ByteInHex.PadLeft(2,"0")
+                }
+                $hashtable.Add($FilePath, $PaddedHex)
+                $PaddedHex
+                
+            } else {
+                "${FilePath} is locked or could not be not found."
+                Write-Error -Category InvalidArgument -Message ("{0} is locked or could not be found." -f $FilePath)
+            }
+    }
+}
+
+function Get-PATHHijacking {
     $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }).FullName
     foreach($item  in $items){
         if(Test-Path $item -PathType Leaf){
@@ -42,10 +97,10 @@ function Get-AllFilesInPATH {
             }
             $o = "" | Select-Object LastWriteTime, Owner, Name, Signer
             $o.Name = $item
+            $filetable.Add($o.Name)
+            
+            
             $sign = Get-Signature $item
-            if ($sign -eq "(Verified) Microsoft Corporation"){
-                Continue
-            }
             $o.Signer = $sign
             if($item -like "*.exe" -or $item -like "*.bat" -or $item -like "*.com" -and $item -notmatch "rsmd_windows"){ 
                 $file = Get-Item $item | Select-Object *
@@ -57,4 +112,4 @@ function Get-AllFilesInPATH {
     }
 }
 
-Get-AllFilesInPATH | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048
+Get-PATHHijacking | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048

@@ -1,0 +1,1 @@
+Có thể thu thập được log của Powershell Script nhưng cần enable Transcripting

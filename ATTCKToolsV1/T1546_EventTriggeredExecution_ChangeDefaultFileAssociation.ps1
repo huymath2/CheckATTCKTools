@@ -28,6 +28,8 @@ function Get-ChangeDefaultFileAssociation {
         $output.LastWriteTime = (Get-RegLastWriteTime $reg).Time
         $output
     }
+	#thêm đủ thông tin cho file a
+	#convert full path GUID
 }
 
 Get-ChangeDefaultFileAssociation | Sort-Object -Property LastWriteTime | Format-Table -Wrap | Out-String -width 2048

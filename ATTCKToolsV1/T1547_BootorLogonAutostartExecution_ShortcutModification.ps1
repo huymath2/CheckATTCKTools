@@ -45,7 +45,7 @@ function Get-SplitStr
 
 
 function Get-ShortcutModification{
-    $path = @("C:\\Users\\*\\Desktop\\", "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\")
+    $path = @("C:\\Users\\*\\Desktop\\", "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\") #thay bằng $env
     $links = $path | Get-ChildItem -Recurse -Filter *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
     foreach($link in $links){
         #$info = @{}
@@ -60,12 +60,15 @@ function Get-ShortcutModification{
         #New-Object PSObject -Property $info
         if(Test-Path -Path $output.Path -ErrorAction SilentlyContinue){
             $output.Signer = Get-Signature $output.Path
-            if ($output.signer -eq "(Verified) Microsoft Corporation" -and $output.CMDLine -eq ""){
+            <# if ($output.signer -eq "(Verified) Microsoft Corporation" -and $output.CMDLine -eq ""){
                 Continue
-            }
+            } #>
            
         }
         $output
+		#sd các thư mục đã có trong cuộc atk trên attck
+		#sort signer + file path
+		#thêm các trường cần thiết
     }  
 }
 Get-ShortcutModification | Sort-Object -Property  Signer| Format-Table -Wrap | Out-String -width 2048
