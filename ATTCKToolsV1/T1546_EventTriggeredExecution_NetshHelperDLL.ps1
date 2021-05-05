@@ -119,13 +119,15 @@ function Get-RegLastWriteTime {
 function Get-NetshHelperDLL {
     $regpath = @("HKLM:\SOFTWARE\Microsoft\NetSh", "HKLM:\SOFTWARE\Wow6432Node\Microsoft\NetSh")
     $regpath | ForEach-Object{
-        $report = "" |  Select-Object LastWriteTime, Owner, Key, Path, Sign, MD5
+    #Registry: LastWriteTime, KeyOwner, KeyName
+    #File: MFT, Owner, Path, Sign, MD5
+        $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5
         $Key = $_
         (Get-RegistryValue $_).Value | Where-Object{$_ -ne $null} | ForEach-Object{
             $report.Key = $Key.TrimStart("HKLM:") 
             $report.Key = $report.Key.TrimStart("\SOFTWARE")
-            $report.LastWriteTime = (Get-RegLastWriteTime ("HKLM" + $Key.TrimStart("HKLM:"))).Time
-            if (Test-Path $_){
+            $report.RegLastWriteTime = (Get-RegLastWriteTime ("HKLM" + $Key.TrimStart("HKLM:"))).Time
+            if (Test-Path $_ -PathType Leaf){
                 $report.Path = $_
                 $report.Owner = (Get-Acl $report.Path).Owner
                 $report.Sign = Get-Signature $report.Path
@@ -136,11 +138,11 @@ function Get-NetshHelperDLL {
             else {
                 $report.Path = [System.Environment]::SystemDirectory + "\" + $_
                 $report.Owner = (Get-Acl $report.Path).Owner
-                if ($report.Owner -notlike "NT SERVICE\TrustedInstaller"){
+                #if ($report.Owner -notlike "NT SERVICE\TrustedInstaller"){
                     $report.Sign = Get-Signature $report.Path
                     $report.MD5 = Get-FileHash $report.Path
                     $report
-                }
+                #}
                 $report = "" |  Select-Object LastWriteTime, Owner, Key, Path, Sign, MD5
             }
         }

@@ -114,11 +114,11 @@ function Get-PrintProcessors {
             $output.Path = [System.Environment]::SystemDirectory + "\spool\prtprocs\*\" + $_.Driver
             $output.LastWriteTime = (Get-RegLastWriteTime $key).Time
             $output.Owner = (Get-Acl $output.Path).Owner
-            if($output.Owner -notlike "NT SERVICE\TrustedInstaller"){
+            #if($output.Owner -notlike "NT SERVICE\TrustedInstaller"){
                 $output.Sign = Get-Signature $output.Path
                 $output.MD5 = Get-FileHash $output.Path
                 $output
-            }
+            #}
         }
     }
 	#Note lại key

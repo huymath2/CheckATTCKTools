@@ -125,12 +125,11 @@ function Get-TimeProviders {
         $output.DllName = $item.DllName
         $output.Owner = (Get-Acl $item.DllName).Owner
         $output.LastWriteTime = (Get-RegLastWriteTime "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\").Time
-        if($output.Owner -notlike "NT SERVICE\TrustedInstaller")
-        {
+        #if($output.Owner -notlike "NT SERVICE\TrustedInstaller"){
             $output.Sign = Get-Signature $item.DllName
             $output.MD5 = Get-FileHash $item.DllName
             $output
-        }
+        #}
     }  
 	#thêm thông tin
     #done

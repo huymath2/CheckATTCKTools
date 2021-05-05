@@ -87,7 +87,9 @@ function Get-PATHHijacking {
     $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName, CreationTime, LastAccessTime, LastWriteTime
     foreach($item in $items){
         if(Test-Path $item.FullName -PathType Leaf){
-            if($item.Name -notlike "*.txt" -or $item.Name -notlike "*.ico"){
+            $extension = ([IO.FileInfo]$item.FullName).Extension 
+            if($extension -ne ".txt" -and $extension -ne ".ico"){
+            #if($item.Name -notlike "*.txt" -and $item.Name -notlike "*.ico"){
                 $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5
                 $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
