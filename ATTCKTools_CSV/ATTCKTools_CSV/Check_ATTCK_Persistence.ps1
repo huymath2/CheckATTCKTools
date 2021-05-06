@@ -377,7 +377,7 @@ function Get-ChangeDefaultFileAssociation {
 
 }
 
-$sdir = "D:\abcd"
+$sdir = $args[0]
 
 Write-Host "[+] Ra soat BITSJobs..."
 Get-BITSJobs | Export-Csv "$sdir\T1197_BITSJob.csv" 

@@ -13,7 +13,7 @@ function Pause ($Message = "Press any key to continue . . . ") {
 }
 
 
-$sdir = "D:\abcd"
+$sdir = $args[0]
 
 function Review_BITSJobs{
     $report = Import-Csv -Path "$sdir\T1197_BITSJob.csv"

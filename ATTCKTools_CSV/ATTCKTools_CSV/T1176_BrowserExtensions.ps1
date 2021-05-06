@@ -9,7 +9,48 @@ function Get-BrowserExtensions{
         $drive = $env:SystemDrive
         $extension_path = $drive + $extension_paths[$browser]
         $extension_folders = Get-ChildItem -Path $extension_path
-        $extension_folders
+        foreach ($extension_folder in $extension_folders){
+            $version_folders = Get-ChildItem -Path "$($extension_folder.FullName)"
+            foreach ($version_folder in $version_folders) {
+                $appid = $extension_folder.BaseName
+                $name = ""
+                $desc = ""
+                if( (Test-Path -Path "$($version_folder.FullName)\manifest.json") ) {
+                    try {
+                        $json = Get-Content -Raw -Path "$($version_folder.FullName)\manifest.json" | ConvertFrom-Json
+                        $name = $json.name
+                        $desc = $json.description
+                    } catch {
+                        #$_
+                        $name = ""
+                    }
+                }
+                if($name -like "*MSG*"){
+                    $tempName = $name.TrimStart("__MSG_").TrimEnd("__")
+                    $tempDesc = $desc.TrimStart("__MSG_").TrimEnd("__")
+                    if( Test-Path -Path "$($version_folder.FullName)\_locales\en\messages.json" ) {
+                        try { 
+                            $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en\messages.json" | ConvertFrom-Json
+                            $name = $json.$tempName.message
+                            $desc = $json.$tempDesc.message
+                        } catch { 
+                            #$_
+                            $name = ""
+                        }
+                    }
+                    if( Test-Path -Path "$($version_folder.FullName)\_locales\en\messages.json" ) {
+                        try { 
+                            $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en_US\messages.json" | ConvertFrom-Json
+                            $name = $json.$tempName.message
+                            $desc = $json.$tempDesc.message
+                        } catch { 
+                            #$_
+                            $name = ""
+                        }
+                    }
+                }
+            }
+        }
 
     }
 	#thêm ID, name, descript, develop, source, url...
