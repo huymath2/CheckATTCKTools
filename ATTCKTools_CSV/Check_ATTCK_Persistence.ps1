@@ -27,11 +27,6 @@ function Get-Signature {
                 $signtable.Add($FilePath, $s)
                 Return $s
             }
-            else
-            {
-                $s = "No Signature"
-                Return $s
-            }
         }
     }
 }
@@ -143,7 +138,6 @@ function Get-BITSJobs{
         }
     }    
 }
-
 
 function Get-COR_PROFILER {
     $regpath = @("HKCU:\Environment\", "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment")
@@ -304,7 +298,6 @@ function Get-PATHHijacking {
         if(Test-Path $item.FullName -PathType Leaf){
             $extension = ([IO.FileInfo]$item.FullName).Extension 
             if($extension -ne ".txt" -and $extension -ne ".ico"){
-            #if($item.Name -notlike "*.txt" -and $item.Name -notlike "*.ico"){
                 $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5
                 $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -320,9 +313,9 @@ function Get-PATHHijacking {
                 {
                     if($check.MD5 -ne $output.MD5)
                     {
-                        $reporttable += $output
+                        $output
                         if($counttable.get_item($check.Name) -ne 'false'){    
-                            $reporttable += $check
+                            $check
                             $counttable.Add($check.Name, 1)
                         }
                     }
@@ -336,18 +329,79 @@ function Get-PATHHijacking {
             
         }
     }
-    $reporttable | ForEach-Object{
-        $_
+}
+
+function Get-ShortcutModification{
+    $path = @("$env:SystemDrive\\Users\\*\\Desktop\\")
+    $links = $path | Get-ChildItem -Recurse -Filter *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
+    foreach($link in $links){
+        $report = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Entry, Path, Sign, CMDLine, MD5
+        $report.CMDLine = $link.Arguments
+        $report.Path = $link.TargetPath
+
+        $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+        $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.Entry = try { Split-Path $link.FullName -Leaf } catch { 'n/a'}
+        if(Test-Path -Path $report.Path -PathType Leaf){
+            $report.Sign = Get-Signature $report.Path
+            $report.Owner = (Get-Acl $report.Path).Owner
+        }
+        $report.MD5 = Get-FileHash $report.Path
+        $report
+    }  
+}
+
+
+function Get-ChangeDefaultFileAssociation {
+    Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\.*" | Select-Object "(default)", PSChildName | ForEach-Object{
+        $report = "" | Select-Object KeyLastWriteTime, Extension, KeyName, Command
+        $report.Extension = $_.PSChildName
+        $opw = $_."(default)"
+        if($opw -ne $null){
+            if(Test-Path "Registry::HKEY_CLASSES_ROOT\$opw\shell\open\command"){
+                Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\$opw\shell\open\command" | Select-Object "(default)", PSPath | ForEach-Object{
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $report.KeyName = "HKCR" + $report.KeyName.TrimStart("HKEY_CLASSES_ROOT")
+                    $report.Command = $_."(default)"
+                    if($report.Command -ne $null){
+                        $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                        $report
+                    }
+                }
+            }
+        }
+
     }
+
 }
 
 $sdir = "D:\abcd"
 
+Write-Host "[+] Ra soat BITSJobs..."
+Get-BITSJobs | Export-Csv "$sdir\T1197_BITSJob.csv" 
 
-#Get-BITSJobs | Export-Csv "$sdir\T1197_BITSJob.csv" 
-#Get-COR_PROFILER | Export-Csv "$sdir\T1574_COR_PROFILER.csv"
-#Get-NetshHelperDLL | Export-Csv "$sdir\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
-#Get-TimeProviders | Export-Csv "$sdir\T1547_BootorLogonAutostartExecution_TimeProvider.csv"
-#Get-PrintProcessors | Export-Csv "$sdir\T1546_EventTriggeredExecution_PrintProcessors.csv"
-#Get-PowerShellProfile | Export-Csv "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
-Get-PATHHijacking | Sort-Object -Property Name | Export-Csv "$sdir\PathHijacking.csv"
+Write-Host "[+] Ra soat COR_PROFILER"
+Get-COR_PROFILER | Export-Csv "$sdir\T1574_COR_PROFILER.csv"
+
+Write-Host "[+] Ra soat Netsh Helper DLL..."
+Get-NetshHelperDLL | Export-Csv "$sdir\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
+
+Write-Host "[+] Ra soat Time Provider..."
+Get-TimeProviders | Export-Csv "$sdir\T1547_BootorLogonAutostartExecution_TimeProvider.csv"
+
+Write-Host "[+] Ra soat Print Processors..."
+Get-PrintProcessors | Export-Csv "$sdir\T1546_EventTriggeredExecution_PrintProcessors.csv"
+
+Write-Host "[+] Ra soat Powershell Profile..."
+Get-PowerShellProfile | Export-Csv "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
+
+Write-Host "[+] Ra soat Shortcut Modification..."
+Get-ShortcutModification | Export-Csv "$sdir\T1547_BootorLogonAutostartExecution_ShortcutModification.csv"
+
+Write-Host "[+] Ra soat Path Hijacking..."
+Get-PATHHijacking | Sort-Object -Property Name | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T_1574_PathHijacking.csv"
+
+Write-Host "[+] Ra soat Change Default File Association..."
+Get-ChangeDefaultFileAssociation | Export-Csv "$sdir\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.csv"

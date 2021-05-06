@@ -5,5 +5,5 @@
 #$J | ConvertFrom-Csv -Header $Header
 
 #Get-Process | Export-Csv -Path .\Processes.csv
-$P = Import-Csv -Path "D:\abcd\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
+$P = Import-Csv -Path "D:\abcd\"
 $P

@@ -160,5 +160,5 @@ function Get-NetshHelperDLL {
     #done
 }
 $sdir = "D:/abcd"
-Get-NetshHelperDLL | Export-Csv "$sdir/T1546_EventTriggeredExecution_NetshHelperDLL.csv"
-#Get-NetshHelperDLL | Format-Table -Wrap | Out-String -width 2048
+#Get-NetshHelperDLL | Export-Csv "$sdir/T1546_EventTriggeredExecution_NetshHelperDLL.csv"
+Get-NetshHelperDLL | Format-Table -Wrap | Out-String -width 2048
