@@ -23,41 +23,84 @@ function Review_BITSJobs{
 
 function Review_COR_PROFILER{
     $report = Import-Csv -Path "$sdir\T1574_COR_PROFILER.csv"
-    $report
+    foreach($rp in $report){
+        $output = $rp | Select-Object KeyName, Owner, Path, Sign 
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
+            $output
+        }
+    } 
 }
 
 function Review_NetshHelperDLL{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
-    $report
+    foreach($rp in $report){
+        $output = $rp | Select-Object KeyName, Owner, Path, Sign
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
+            $output
+        }
+    }
 }
 
 function Review_TimeProviders{
     $report = Import-Csv -Path "$sdir\T1547_BootorLogonAutostartExecution_TimeProvider.csv"
-    $report
+    foreach($rp in $report){
+        $output = $rp | Select-Object KeyName, Owner, Path, Sign
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
+            $output
+        }
+    }
 }
 
 function Review_PrintProcessors{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_PrintProcessors.csv"
-    $report
+    foreach($rp in $report){
+        $output = $rp | Select-Object KeyName, Owner, Path, Sign
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
+            $output
+        }
+    }
 }
 
 function Review_PowerShellProfile{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
-    $report
+    foreach($rp in $report){
+        $output = $rp | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        $output
+    }
 }
 
 function Review_ShortcutModification{
     $report = Import-Csv -Path "$sdir\T1547_BootorLogonAutostartExecution_ShortcutModification.csv"
-    $report
-} 
+    foreach($rp in $report){
+        $output = $rp | Select-Object Owner, Entry, Path, Sign, CMDLine
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        $output
+    }
+}
+
 
 function Review_PATHHijacking{
-    $report = Import-Csv -Path "$sdir\T_1574_PathHijacking.csv"
-    $report
+    $report = Import-Csv -Path "$sdir\T_1574_PathHijacking.csv" 
+    foreach($rp in $report){
+        $output = $rp | Select-Object CreationTime, Owner, FullName, Sign
+        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        $output
+    }
 }
 
 function Review_ChangeDefaultFileAssociation{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.csv"
+
+    $report
+}
+
+function Review_BrowserExtensions{
+    $report = Import-Csv -Path "$sdir\T1176_BrowserExtensions.csv"
     $report
 }
 
@@ -68,41 +111,51 @@ Review_BITSJobs | Format-Table -Wrap | Out-String -width 2048
 Pause
 
 Write-Host "[+] Ra soat COR_PROFILER"
-Review_COR_PROFILER | Select-Object KeyName, Owner, Path, Sign | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
+Review_COR_PROFILER | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Netsh Helper DLL..."
-Review_NetshHelperDLL | Select-Object KeyName, Owner, Path, Sign | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
+Review_NetshHelperDLL | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Time Provider..."
-Review_TimeProviders | Select-Object KeyName, Owner, Path, Sign | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
+Review_TimeProviders | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Print Processors..."
-Review_PrintProcessors | Select-Object KeyName, Owner, Path, Sign | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
+Review_PrintProcessors | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Powershell Profile..."
-Review_PowerShellProfile | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign | Format-Table -Wrap | Out-String -width 2048
+Review_PowerShellProfile  | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Shortcut Modification..."
-Review_ShortcutModification | Select-Object Owner, Entry, Path, Sign, CMDLine | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
+Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Path Hijacking..."
-Review_PATHHijacking | Select-Object Owner, FullName, Sign | Format-Table -Wrap | Out-String -width 2048
+Review_PATHHijacking | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat Change Default File Association..."
 Review_ChangeDefaultFileAssociation | Format-Table -Wrap | Out-String -width 2048
+
+Pause
+
+Write-Host "[+] Ra soat Browser Extensions..."
+Review_BrowserExtensions | Format-List | Out-String -width 2048
+
+Pause
+
+
+
 
 
