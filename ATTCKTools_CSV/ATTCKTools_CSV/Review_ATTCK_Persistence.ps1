@@ -17,15 +17,24 @@ $sdir = $args[0]
 
 function Review_BITSJobs{
     $report = Import-Csv -Path "$sdir\T1197_BITSJob.csv"
-    $report
+    $report | Select-Object  Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
 }
 
 
 function Review_COR_PROFILER{
     $report = Import-Csv -Path "$sdir\T1574_COR_PROFILER.csv"
     foreach($rp in $report){
-        $output = $rp | Select-Object KeyName, Owner, Path, Sign 
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        $output = $rp | Select-Object KeyName, Owner, KeyValue, KeyData, Sign 
+        if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
+            $output
+        }
+    } 
+}
+
+function Review_COR_PROFILER-NonReg{
+    $report = Import-Csv -Path "$sdir\T1574_COR_PROFILER_NonReg.csv"
+    foreach($rp in $report){
+        $output = $rp | Select-Object VariableName, Owner, Value, Sign
         if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
             $output
         }
@@ -36,7 +45,6 @@ function Review_NetshHelperDLL{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
     foreach($rp in $report){
         $output = $rp | Select-Object KeyName, Owner, Path, Sign
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
         if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
             $output
         }
@@ -47,7 +55,7 @@ function Review_TimeProviders{
     $report = Import-Csv -Path "$sdir\T1547_BootorLogonAutostartExecution_TimeProvider.csv"
     foreach($rp in $report){
         $output = $rp | Select-Object KeyName, Owner, Path, Sign
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        
         if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
             $output
         }
@@ -58,7 +66,7 @@ function Review_PrintProcessors{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_PrintProcessors.csv"
     foreach($rp in $report){
         $output = $rp | Select-Object KeyName, Owner, Path, Sign
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
+       
         if($output.Owner -ne "NT SERVICE\TrustedInstaller"){
             $output
         }
@@ -69,7 +77,6 @@ function Review_PowerShellProfile{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
     foreach($rp in $report){
         $output = $rp | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
         $output
     }
 }
@@ -77,8 +84,7 @@ function Review_PowerShellProfile{
 function Review_ShortcutModification{
     $report = Import-Csv -Path "$sdir\T1547_BootorLogonAutostartExecution_ShortcutModification.csv"
     foreach($rp in $report){
-        $output = $rp | Select-Object Owner, Entry, Path, Sign, CMDLine
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
+        $output = $rp | Select-Object Owner, Entry, Path, Sign, CMDLine 
         $output
     }
 }
@@ -88,14 +94,12 @@ function Review_PATHHijacking{
     $report = Import-Csv -Path "$sdir\T_1574_PathHijacking.csv" 
     foreach($rp in $report){
         $output = $rp | Select-Object CreationTime, Owner, FullName, Sign
-        $output.Owner = $rp.Owner.TrimStart($env:computername)
         $output
     }
 }
 
 function Review_ChangeDefaultFileAssociation{
     $report = Import-Csv -Path "$sdir\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.csv"
-
     $report
 }
 
@@ -106,12 +110,13 @@ function Review_BrowserExtensions{
 
 
 Write-Host "[+] Ra soat BITSJobs..."
-Review_BITSJobs | Format-Table -Wrap | Out-String -width 2048
+Review_BITSJobs | Format-List | Out-String -width 2048
 
 Pause
 
 Write-Host "[+] Ra soat COR_PROFILER"
 Review_COR_PROFILER | Format-Table -Wrap | Out-String -width 2048
+Review_COR_PROFILER-NonReg | Format-Table -Wrap | Out-String -width 2048
 
 Pause
 

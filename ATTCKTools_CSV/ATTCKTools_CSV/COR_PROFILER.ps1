@@ -117,34 +117,137 @@ function Get-RegLastWriteTime {
 
 
 function Get-COR_PROFILER {
-    $regpath = @("HKCU:\Environment\", "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment")
+    $regpath = @("Registry::HKEY_USERS\*\Environment\", "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment")
     $regpath | ForEach-Object{
         $Key = $_
-        (Get-RegistryValue $_) | ForEach-Object{
-            if($_.Name -eq "COR_PROFILER_PATH"){
-                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, CreationTime, LastAccessTime, LastWriteTime, Owner, Path, Sign, MD5
-                if($Key -like "HKCU*"){
-                    $report.KeyName = "HKCU" + $Key.TrimStart("HKCU:")
+        (Get-ItemProperty $_) | ForEach-Object{
+            if($_.COR_PROFILER_PATH -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
                 }
                 else{
                     $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
                 }
                 $report.KeyOwner = (Get-Acl $Key).Owner
                 $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
-                $report.Path = $_.Value
-                $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                $report.KeyData = $_.COR_PROFILER_PATH
+                $Timer = (Get-Item $report.KeyData) | Select-Object CreationTime, LastAccessTime, LastWriteTime
                 $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
                 $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
-                $report.Owner = (Get-Acl $report.Path ).Owner
-                $report.Sign = Get-Signature $report.Path
-                $report.MD5 = Get-FileHash $report.Path
+                $report.Owner = (Get-Acl $report.KeyData ).Owner
+                $report.Sign = Get-Signature $report.KeyData
+                $report.MD5 = Get-FileHash $report.KeyData
+                $report.KeyValue = "COR_PROFILER_PATH"
 
                 $report
+            }
+            if($_.COR_ENABLE_PROFILING -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
+                }
+                else{
+                    $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = $_.COR_ENABLE_PROFILING
+                $report.KeyValue = "COR_ENABLE_PROFILING"
+                $report
+            }
+            if($_.COR_PROFILER -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
+                }
+                else{
+                    $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
+                    $k = "HKLM:\"
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = $_.COR_PROFILER
+                $report.KeyValue = "COR_PROFILER"
+                $report
+                $CLSID = $report.KeyData
+
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                $k = $Key.TrimEnd("Environment")
+                $k = $k + "SOFTWARE\Classes\CLSID\$CLSID\InProcServer32"
+                if($k -like "Registry*"){
+                    $Key = $k
+                    $report.KeyName = $k.TrimStart("Registry::")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                }
+                else{
+                    $report.KeyName = "HKLM" + $k.TrimStart("HKLM:")
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = (Get-ItemProperty $k).'(default)'
+                $Timer = (Get-Item $report.KeyData) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.Owner = (Get-Acl $report.KeyData ).Owner
+                $report.Sign = Get-Signature $report.KeyData
+                $report.MD5 = Get-FileHash $report.KeyData
+                $report.KeyValue = "(default)"
+
+                $report
+                
             }
         }
     }
 }
+
+function Get-COR_PROFILER-NonReg{
+    if($env:COR_PROFILER_PATH -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_PROFILER_PATH"
+        $report.Value = $env:COR_PROFILER_PATH
+        $Timer = (Get-Item $report.Value) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+        $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.Owner = (Get-Acl $report.Value ).Owner
+        $report.Sign = Get-Signature $report.Value
+        $report.MD5 = Get-FileHash $report.Value
+        $report
+    }
+    if($env:COR_PROFILER -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_PROFILER"
+        $report.Value = $env:COR_PROFILER
+        $report
+    }
+    if($env:COR_ENABLE_PROFILING -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_ENABLE_PROFILING"
+        $report.Value = $env:COR_ENABLE_PROFILING
+        $report
+    }
+
+}
 $sdir = "D:\abcd"
 #Get-COR_PROFILER | Format-Table -Wrap | Out-String -width 2048
-Get-COR_PROFILER | Export-Csv "$sdir\COR_PROFILER.csv"
+#Get-COR_PROFILER | Export-Csv "$sdir\COR_PROFILER.csv"
+Get-COR_PROFILER | Format-List| Out-String -width 2048
+Get-COR_PROFILER-NonReg | FL | Out-String -width 2048
+#$Name = “” 
+
+#(New-Object System.Security.Principal.SecurityIdentifier($Name)).Translate([System.Security.Principal.NTAccount]).value

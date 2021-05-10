@@ -89,7 +89,6 @@ function Get-PATHHijacking {
         if(Test-Path $item.FullName -PathType Leaf){
             $extension = ([IO.FileInfo]$item.FullName).Extension 
             if($extension -ne ".txt" -and $extension -ne ".ico"){
-            #if($item.Name -notlike "*.txt" -and $item.Name -notlike "*.ico"){
                 $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5
                 $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -105,11 +104,11 @@ function Get-PATHHijacking {
                 {
                     if($check.MD5 -ne $output.MD5)
                     {
-                        $reporttable += $output
                         if($counttable.get_item($check.Name) -ne 'false'){    
-                            $reporttable += $check
+                            $check
                             $counttable.Add($check.Name, 1)
                         }
+                        $output
                     }
                 
                 }
@@ -121,10 +120,7 @@ function Get-PATHHijacking {
             
         }
     }
-    $reporttable | ForEach-Object{
-        $_
-    }
 }
 $sdir = "D:\abcd"
-#Get-PATHHijacking | Sort-Object -Property Name | Format-Table -Wrap | Out-String -width 2048
-Get-PATHHijacking | Export-Csv "$sdir\PathHijacking.csv"
+Get-PATHHijacking | Sort-Object -Property Name | Format-Table -Wrap | Out-String -width 2048
+#Get-PATHHijacking | Export-Csv "$sdir\PathHijacking.csv"

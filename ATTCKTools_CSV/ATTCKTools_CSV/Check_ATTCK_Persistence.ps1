@@ -115,13 +115,28 @@ function Get-RegLastWriteTime {
 
 function Get-BITSJobs{
     $content = bitsadmin /list /allusers /verbose
-    $o = "" | Select-Object GUID, DISPLAY,"JOB FILES", COMMAND, TIME
+    $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
     $content | ForEach-Object {
         if($_ -match "^GUID: (?<GUID>[\S]+)" ){  
-            $o.guid = $matches["GUID"] 
+            $o.GUID = $matches["GUID"] 
         }
         if($_ -match "DISPLAY: (?<DISPLAY>.*)$" ){  
-            $o.display = $matches["DISPLAY"] 
+            $o.Display = $matches["DISPLAY"] 
+        }
+        if($_ -match "^TYPE: (?<TYPE>[\S]+)"){
+            $o.Type = $matches["TYPE"]
+        }
+        if($_ -match "STATE: (?<STATE>.[\S]+)" ){  
+            $o.State = $matches["STATE"] 
+        }
+        if($_ -match "OWNER: (?<OWNER>.*)$" ){  
+            $o.Owner = $matches["OWNER"] 
+        }
+        if($_ -match "^CREATION TIME: (?<TIME>.*)" ){  
+            $o.CreationTime = $matches["TIME"].split("M")[0]  + 'M'
+        }
+       if($_ -match "MODIFICATION TIME: (?<TIME>.*)$" ){  
+            $o.ModificationTime = $matches["TIME"] 
         }
         if($_ -match "0 / UNKNOWN WORKING"){
             $o."JOB FILES" = $_
@@ -129,44 +144,141 @@ function Get-BITSJobs{
         if($_ -match "^NOTIFICATION COMMAND LINE: (?<command>.*)$" ){  
             $o.command = $matches["command"] 
         }
-        if($_ -match "MODIFICATION TIME: (?<TIME>.*)$" ){  
-            $o.time = $matches["TIME"] 
-        }
+        
         if($o.command -ne $null){
             $o
-            $o = "" | Select-Object GUID, DISPLAY, "JOB FILES", COMMAND, TIME
+            $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
         }
     }    
 }
 
 function Get-COR_PROFILER {
-    $regpath = @("HKCU:\Environment\", "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment")
+    $regpath = @("Registry::HKEY_USERS\*\Environment\", "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment")
     $regpath | ForEach-Object{
         $Key = $_
-        (Get-RegistryValue $_) | ForEach-Object{
-            if($_.Name -eq "COR_PROFILER_PATH"){
-                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, CreationTime, LastAccessTime, LastWriteTime, Owner, Path, Sign, MD5
-                if($Key -like "HKCU*"){
-                    $report.KeyName = "HKCU" + $Key.TrimStart("HKCU:")
+        (Get-ItemProperty $_) | ForEach-Object{
+            if($_.COR_PROFILER_PATH -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
                 }
                 else{
                     $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
                 }
                 $report.KeyOwner = (Get-Acl $Key).Owner
                 $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
-                $report.Path = $_.Value
-                $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                $report.KeyData = $_.COR_PROFILER_PATH
+                $Timer = (Get-Item $report.KeyData) | Select-Object CreationTime, LastAccessTime, LastWriteTime
                 $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
                 $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
-                $report.Owner = (Get-Acl $report.Path ).Owner
-                $report.Sign = Get-Signature $report.Path
-                $report.MD5 = Get-FileHash $report.Path
+                $report.Owner = (Get-Acl $report.KeyData ).Owner
+                $report.Sign = Get-Signature $report.KeyData
+                $report.MD5 = Get-FileHash $report.KeyData
+                $report.KeyValue = "COR_PROFILER_PATH"
 
                 $report
             }
+            if($_.COR_ENABLE_PROFILING -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
+                }
+                else{
+                    $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = $_.COR_ENABLE_PROFILING
+                $report.KeyValue = "COR_ENABLE_PROFILING"
+                $report
+            }
+            if($_.COR_PROFILER -ne $null){
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                if($Key -like "Registry*"){
+                    $report.KeyName = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\Registry::")
+                    $Key = $_.PSPath.TrimStart("Microsoft.PowerShell.Core\")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                    
+
+                }
+                else{
+                    $report.KeyName = "HKLM" + $Key.TrimStart("HKLM:")
+                    $k = "HKLM:\"
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = $_.COR_PROFILER
+                $report.KeyValue = "COR_PROFILER"
+                $report
+                $CLSID = $report.KeyData
+
+                $report = "" |  Select-Object KeyLastWriteTime, KeyOwner, KeyName, KeyValue, CreationTime, LastAccessTime, LastWriteTime, Owner, KeyData, Sign, MD5
+                $k = $Key.TrimEnd("Environment")
+                $k = $k + "SOFTWARE\Classes\CLSID\$CLSID\InProcServer32"
+                if($k -like "Registry*"){
+                    $Key = $k
+                    $report.KeyName = $k.TrimStart("Registry::")
+                    $report.KeyName = "HKU" + $report.KeyName.TrimStart("HKEY_USERS")
+                }
+                else{
+                    $report.KeyName = "HKLM" + $k.TrimStart("HKLM:")
+                }
+                $report.KeyOwner = (Get-Acl $Key).Owner
+                $report.KeyLastWriteTime = (Get-RegLastWriteTime $report.KeyName).Time
+                $report.KeyData = (Get-ItemProperty $k).'(default)'
+                $Timer = (Get-Item $report.KeyData) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+                $report.Owner = (Get-Acl $report.KeyData ).Owner
+                $report.Sign = Get-Signature $report.KeyData
+                $report.MD5 = Get-FileHash $report.KeyData
+                $report.KeyValue = "(default)"
+
+                $report
+                
+            }
         }
     }
+}
+
+
+function Get-COR_PROFILER-NonReg{
+    if($env:COR_PROFILER_PATH -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_PROFILER_PATH"
+        $report.Value = $env:COR_PROFILER_PATH
+        $Timer = (Get-Item $report.Value) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+        $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+        $report.Owner = (Get-Acl $report.Value ).Owner
+        $report.Sign = Get-Signature $report.Value
+        $report.MD5 = Get-FileHash $report.Value
+        $report
+    }
+    if($env:COR_PROFILER -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_PROFILER"
+        $report.Value = $env:COR_PROFILER
+        $report
+    }
+    if($env:COR_ENABLE_PROFILING -ne $null){
+        $report = "" | Select-Object VariableName, CreationTime, LastAccessTime, LastWriteTime, Owner, Value, Sign, MD5
+        $report.VariableName = "COR_ENABLE_PROFILING"
+        $report.Value = $env:COR_ENABLE_PROFILING
+        $report
+    }
+
 }
 
 function Get-NetshHelperDLL {
@@ -313,11 +425,11 @@ function Get-PATHHijacking {
                 {
                     if($check.MD5 -ne $output.MD5)
                     {
-                        $output
                         if($counttable.get_item($check.Name) -ne 'false'){    
                             $check
                             $counttable.Add($check.Name, 1)
                         }
+                        $output
                     }
                 
                 }
@@ -446,12 +558,13 @@ function Get-BrowserExtensions{
                             }
                         }
                     }
-                    $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path
+                    $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path, CreationTime, LastAccessTime, LastWriteTime
                     $report.Browser = $browser
                     $report.ID = $appid
                     $report.Name = $name
                     $report.Version = $version_folder
                     $report.Description = $desc
+
                     #URL here
                     if($browser -eq "Chrome"){
                         $report.URL = "https://chrome.google.com/webstore/detail/" + $appid
@@ -468,6 +581,10 @@ function Get-BrowserExtensions{
 
 
                     $report.Path = $version_folder.FullName
+                    $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                    $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+                    $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+                    $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
                     $report
 
                 }
@@ -478,7 +595,7 @@ function Get-BrowserExtensions{
             foreach($extension_folder in $extension_folders){
                 $json = (Get-Content -Raw -Path "$extension_folder\addons.json" | ConvertFrom-Json).addons
                 foreach($ext in $json){
-                    $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path
+                    $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path, CreationTime, LastAccessTime, LastWriteTime
                     $report.Browser = "FireFox"
                     $report.ID = $ext.id
                     $report.Name = $ext.name
@@ -486,6 +603,10 @@ function Get-BrowserExtensions{
                     $report.Description = $ext.description
                     $report.URL = $ext.homepageURL
                     $report.Path = "$extension_folder\addons.json"
+                    $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                    $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+                    $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+                    $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
                     $report
                 
                 }
@@ -497,6 +618,30 @@ function Get-BrowserExtensions{
     
 }
 
+function Get-BrowserExtensions_JSList{
+    $extension_paths = @{'Chrome' = '\Users\*\AppData\Local\Google\Chrome\User Data\*\Extensions\*'; 'CocCoc' = '\Users\*\AppData\Local\CocCoc\Browser\User Data\*\Extensions\*'; 
+    'FireFox' = '\Users\*\AppData\Roaming\Mozilla\Firefox\Profiles\*'; 'Edge' = '\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Extensions\*'; 
+    'Opera' = '\Users\*\AppData\Roaming\Opera Software\Opera Stable\Extensions\*'} #$env:systemdrive và thêm IE
+    $browsers = @("Chrome", "CocCoc", "FireFox", "Edge", "Opera")
+    foreach ($browser in $browsers){
+        $drive = $env:SystemDrive
+        $extension_path = $drive + $extension_paths[$browser]
+        $extension_path | Get-Item | Select-Object Name, FullName | Where-Object { $_.Name -ne "Temp"} | ForEach-Object{
+            $Name = $_.Name;
+            Get-ChildItem -Path $_.FullName -Recurse -Force -Include *.js | Select-Object CreationTime, LastAccessTime, LastWriteTime, FullName | ForEach-Object {
+                $_.LastWriteTime = Get-Date -Date $_.LastWriteTime -Format "MM-dd-yyyy HH:mm:ss"
+                $_.CreationTime = Get-Date -Date $_.CreationTime -Format "MM-dd-yyyy HH:mm:ss"
+                $_.LastAccessTime = Get-Date -Date $_.LastAccessTime -Format "MM-dd-yyyy HH:mm:ss"
+                if (Test-Path -Path $_.FullName -PathType Leaf){
+                    $hash = Get-FileHash $_.FullName
+                    $_ | Add-Member NoteProperty MD5 $hash -Force
+                }
+                $_
+            }
+        }
+    }
+}
+
 $sdir = $args[0]
 
 Write-Host "[+] Ra soat BITSJobs..."
@@ -504,6 +649,7 @@ Get-BITSJobs | Export-Csv "$sdir\T1197_BITSJob.csv"
 
 Write-Host "[+] Ra soat COR_PROFILER"
 Get-COR_PROFILER | Export-Csv "$sdir\T1574_COR_PROFILER.csv"
+Get-COR_PROFILER-NonReg | Export-Csv "$sdir\T1574_COR_PROFILER_NonReg.csv"
 
 Write-Host "[+] Ra soat Netsh Helper DLL..."
 Get-NetshHelperDLL | Export-Csv "$sdir\T1546_EventTriggeredExecution_NetshHelperDLL.csv"
@@ -521,10 +667,11 @@ Write-Host "[+] Ra soat Shortcut Modification..."
 Get-ShortcutModification | Export-Csv "$sdir\T1547_BootorLogonAutostartExecution_ShortcutModification.csv"
 
 Write-Host "[+] Ra soat Path Hijacking..."
-Get-PATHHijacking | Sort-Object -Property Name | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T_1574_PathHijacking.csv"
+Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T_1574_PathHijacking.csv"
 
 Write-Host "[+] Ra soat Change Default File Association..."
 Get-ChangeDefaultFileAssociation | Export-Csv "$sdir\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.csv"
 
 Write-Host "[+] Ra soat Browser Extensions..."
 Get-BrowserExtensions | Export-Csv "$sdir\T1176_BrowserExtensions.csv"
+Get-BrowserExtensions_JSList | Export-Csv "$sdir\T1176_BrowserExtensions_JSList.csv"
