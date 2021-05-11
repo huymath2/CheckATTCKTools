@@ -444,7 +444,7 @@ function Get-PATHHijacking {
 }
 
 function Get-ShortcutModification{
-    $path = @("$env:SystemDrive\\Users\\*\\Desktop\\")
+    $path = @("$env:SystemDrive\\Users\\*\\Desktop\\", "$env:SystemDrive\\Users\\*\OneDrive\\Desktop")
     $links = $path | Get-ChildItem -Recurse -Filter *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
     foreach($link in $links){
         $report = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Entry, Path, Sign, CMDLine, MD5
