@@ -91,7 +91,7 @@ function Review_ShortcutModification{
 
 
 function Review_PATHHijacking{
-    $report = Import-Csv -Path "$sdir\T_1574_PathHijacking.csv" 
+    $report = Import-Csv -Path "$sdir\T1574_PathHijacking.csv" 
     foreach($rp in $report){
         $output = $rp | Select-Object CreationTime, Owner, FullName, Sign
         $output

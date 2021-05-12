@@ -1,7 +1,6 @@
 @echo OFF
 
-set sdir=%1%\Check_ATTCK
-mkdir %sdir%
+set sdir=%1%
 
 call :colorEcho 0b "[+] Ra soat ATTCK Persistence"
 echo.

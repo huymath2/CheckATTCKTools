@@ -1,4 +1,6 @@
-﻿function Get-PowerShellLog{
+﻿$ErrorActionPreference= 'silentlycontinue'
+
+function Get-PowerShellLog{
     $Events = Get-EventLog  -LogName 'Windows PowerShell' | Select-Object Message, TimeGenerated, InstanceID
     foreach ($Event in $Events){
         $lines = $Event.Message.Split("`n")
@@ -36,5 +38,7 @@ function Get-ConSoleHostHistory{
     }
 }
 
-Get-PowerShellLog | Format-List | Out-String -width 2048
-#Get-ConSoleHostHistory "D:\abcd"
+$sdir = $args[0]
+
+Get-PowerShellLog | Export-Csv "$sdir\T1059_PowerShell.csv"
+Get-ConSoleHostHistory "$sdir"

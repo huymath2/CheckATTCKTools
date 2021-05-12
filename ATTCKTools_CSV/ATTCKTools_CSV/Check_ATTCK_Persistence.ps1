@@ -666,8 +666,8 @@ Get-PowerShellProfile | Export-Csv "$sdir\T1546_EventTriggeredExecution_Powershe
 Write-Host "[+] Ra soat Shortcut Modification..."
 Get-ShortcutModification | Export-Csv "$sdir\T1547_BootorLogonAutostartExecution_ShortcutModification.csv"
 
-Write-Host "[+] Ra soat Path Hijacking..."
-Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T_1574_PathHijacking.csv"
+#Write-Host "[+] Ra soat Path Hijacking..."
+#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
 
 Write-Host "[+] Ra soat Change Default File Association..."
 Get-ChangeDefaultFileAssociation | Export-Csv "$sdir\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.csv"

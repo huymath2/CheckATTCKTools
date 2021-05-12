@@ -65,7 +65,6 @@ start 3rasoat.bat %sdir%
 :: echo.
 start 4rasoat.bat %sdir%
 :: call :colorEcho 0b "[4] Sucess..."
-start CheckATTCKPersistence.bat %sdir%
 
 call :colorEcho 0b "Success..."
 echo.
@@ -271,9 +270,6 @@ dir /a /t:c /o:d c:\windows\system32\tasks > "%sdir%\system32_tasks_created.txt"
 call :colorEcho 0b "[+] Ra soat PortProxy tunnel"
 echo.
 netsh interface portproxy show all > "%sdir%\portproxy.txt" 2>&1
-
-:: 2.bat
-
 
 echo.
 echo ================================================================================
@@ -755,8 +751,6 @@ IF "%enumUser%"=="y" (
     echo.
 )
 
-
-
 call :colorEcho 0b "[+] Ra soat Task Scheduler"
 echo.
 call :colorEcho 0e "    [+] Windows Tasks"
@@ -785,92 +779,8 @@ echo.
 
 call :colorEcho 0b "[+] Ra soat ATTCK Persistence"
 echo.
-call Review_CheckATTCKPersistence.bat %sdir%
+powershell -noprofile -executionpolicy bypass "ATTCKTools_CSV\Review_ATTCK_Persistence.ps1" "%sdir%\Check_ATTCK"
 echo.
-
-:: echo.
-:: echo ================================================================================
-:: call :colorEcho 0a "Ra soat cac ky thuat persistence nang cao"
-:: echo.
-:: echo ================================================================================
-:: powershell -noprofile -executionpolicy bypass "%sdir%\..\check_persistence_ex.ps1" "%sdir%"
-:: 
-:: call :colorEcho 0e "Browser Extensions"
-:: echo.
-:: type %sdir%\BrowserExtensions.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Change Default File Association"
-:: echo.
-:: type %sdir%\ChangeDefaultFileAssociation.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "PowerShell Profile"
-:: echo.
-:: type %sdir%\PowerShellProfile.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Shortcut Modification"
-:: echo.
-:: type %sdir%\ShortcutModification.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Programs Installed"
-:: echo.
-:: type %sdir%\ProgramsInstalled.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Netsh Helper DLL"
-:: echo.
-:: type %sdir%\NetshHelperDLL.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Exchange Malware Persistent"
-:: echo.
-:: type %sdir%\ExchangeMalwarePersistent.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Windows Service Recovery"
-:: echo.
-:: type %sdir%\WindowsServiceRecovery.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Print Demon"
-:: echo.
-:: type %sdir%\PrintDemon.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "BITS Jobs"
-:: echo.
-:: type %sdir%\BITSJobs.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "Time Providers"
-:: echo.
-:: type %sdir%\TimeProviders.csv
-:: echo.
-:: pause
-:: 
-:: call :colorEcho 0e "All Files In PATH"
-:: echo.
-:: type %sdir%\AllFilesInPATH.csv
-:: echo.
-:: pause
-
-:: ================================================================================
-:: Ra soat cac dau hieu tan cong
-:: ================================================================================
-
 
 echo.
 echo ================================================================================
