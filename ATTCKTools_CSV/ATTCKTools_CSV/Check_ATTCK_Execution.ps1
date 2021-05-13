@@ -1,25 +1,30 @@
 ﻿$ErrorActionPreference= 'silentlycontinue'
 
 function Get-PowerShellLog{
-    $Events = Get-EventLog  -LogName 'Windows PowerShell' | Select-Object Message, TimeGenerated, InstanceID
-    foreach ($Event in $Events){
-        $lines = $Event.Message.Split("`n")
-        $report = "" | Select-Object CreationTime, EventId, Description, ProviderName, HostName, HostApplication
-        $report.CreationTime = $Event.TimeGenerated
-        $report.EventId = $Event.InstanceID
-        $report.Description = $lines[0]
-        foreach($line in $lines){
-            if($line -like "*HostName*"){
-                $report.HostName = $line.TrimStart("`tHostName=")
+    Measure-Command -Expression {
+        $Events = Get-EventLog  -LogName 'Windows PowerShell' | Select-Object Message, TimeGenerated, InstanceID
+        foreach ($Event in $Events){
+            $lines = $Event.Message.Split("`n")
+            $report = "" | Select-Object CreationTime, EventId, Description, ProviderName, HostName, HostApplication
+            $report.CreationTime = $Event.TimeGenerated
+            $report.EventId = $Event.InstanceID
+            $report.Description = $lines[0]
+            foreach($line in $lines){
+                if($line -like "*HostName*"){
+                    $report.HostName = $line.TrimStart("`tHostName")
+                    $report.HostName = $report.HostName.TrimStart("=")
+                }
+                if($line -like "*ProviderName*"){
+                    $report.ProviderName = $line.TrimStart("`tProviderName")
+                    $report.ProviderName = $report.ProviderName.TrimStart("=")
+                }
+                if($line -like "*HostApplication*"){
+                    $report.HostApplication = $line.TrimStart("`tHostApplication")
+                    $report.HostApplication = $report.HostApplication.TrimStart("=")
+                }
             }
-            if($line -like "*ProviderName*"){
-                $report.ProviderName = $line.TrimStart("`tProviderName=")
-            }
-            if($line -like "*HostApplication*"){
-                $report.HostApplication = $line.TrimStart("`tHostApplication=")
-            }
+            $report
         }
-        $report
     }
 }
 
@@ -38,7 +43,7 @@ function Get-ConSoleHostHistory{
     }
 }
 
-$sdir = $args[0]
-
+#$sdir = $args[0]
+$sdir = "D:\abcd"
 Get-PowerShellLog | Export-Csv "$sdir\T1059_PowerShell.csv"
 Get-ConSoleHostHistory "$sdir"
