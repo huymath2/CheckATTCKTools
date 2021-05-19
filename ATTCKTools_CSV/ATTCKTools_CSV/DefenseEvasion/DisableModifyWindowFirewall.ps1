@@ -1,10 +1,11 @@
 ﻿Function Get-EventDisableModifyFirewall{
-    Get-WinEvent -LogName "Security" | Select-Object Id, TimeCreated | ForEach-Object{
+    Get-WinEvent -LogName "Security" | Select-Object Id, TimeCreated, Message | ForEach-Object{
         if($_.Id -eq "4950" -or $_.Id -eq "4946" -or $_.Id -eq "4947" -or $_.Id -eq "4948" -or $_.Id -eq "4954" -or $_.Id -eq "4956" -or $_.Id -eq "5025" -or $_.Id -eq "5034"){
-            $report = "" | Select-Object Id, CreationTime, Message       
+            $report = "" | Select-Object Id, CreationTime, Event, Message       
             $report.Id = $_.Id
             $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
-            #$report.Message = $_.Message
+            $report.Message = $_.Message
+			$report.Event = $_.Message.Split("`n")[0]
             $report
         }
     }

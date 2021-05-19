@@ -110,53 +110,53 @@ function Review_BrowserExtensions{
 
 
 Write-Host "[+] Ra soat BITSJobs..."
-Review_BITSJobs | Format-List | Out-String -width 2048 | more
+Review_BITSJobs | Format-List | more
 
 Pause
 
 Write-Host "[+] Ra soat COR_PROFILER"
-Review_COR_PROFILER | Format-Table -Wrap | Out-String -width 2048
-Review_COR_PROFILER-NonReg | Format-Table -Wrap | Out-String -width 2048 | more
+Review_COR_PROFILER | Format-Table -Wrap 
+Review_COR_PROFILER-NonReg | Format-Table -Wrap  |  more
 
 Pause
 
 Write-Host "[+] Ra soat Netsh Helper DLL..."
-Review_NetshHelperDLL | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048 | more
+Review_NetshHelperDLL | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Time Provider..."
-Review_TimeProviders | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048 | more
+Review_TimeProviders | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Print Processors..."
-Review_PrintProcessors | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048 | more
+Review_PrintProcessors | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Powershell Profile..."
-Review_PowerShellProfile  | Format-Table -Wrap | Out-String -width 2048 | more
+Review_PowerShellProfile  | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Shortcut Modification..."
-Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -Wrap | Out-String -width 2048 | more
+Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Path Hijacking..."
-Review_PATHHijacking | Format-Table -Wrap | Out-String -width 2048 | more
+Review_PATHHijacking | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Change Default File Association..."
-Review_ChangeDefaultFileAssociation | Format-Table -Wrap | Out-String -width 2048 | more
+Review_ChangeDefaultFileAssociation | Format-Table -Wrap  | more
 
 Pause
 
 Write-Host "[+] Ra soat Browser Extensions..."
-Review_BrowserExtensions | Format-List | Out-String -width 2048 | more
+Review_BrowserExtensions | Format-List | more
 
 Pause
 

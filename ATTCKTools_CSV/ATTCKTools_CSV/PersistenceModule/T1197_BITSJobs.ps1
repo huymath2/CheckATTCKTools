@@ -2,6 +2,7 @@
 function Get-BITSJobs{
     $content = bitsadmin /list /allusers /verbose
     $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
+    $i = 0
     $content | ForEach-Object {
         if($_ -match "^GUID: (?<GUID>[\S]+)" ){  
             $o.GUID = $matches["GUID"] 
@@ -24,8 +25,8 @@ function Get-BITSJobs{
        if($_ -match "MODIFICATION TIME: (?<TIME>.*)$" ){  
             $o.ModificationTime = $matches["TIME"] 
         }
-        if($_ -match "0 / UNKNOWN WORKING"){
-            $o."JOB FILES" = $_
+        if($_ -like "*JOB FILES*"){
+            $o."JOB FILES" = $content[$i + 1]
         }
         if($_ -match "^NOTIFICATION COMMAND LINE: (?<command>.*)$" ){  
             $o.command = $matches["command"] 
@@ -35,6 +36,7 @@ function Get-BITSJobs{
             $o
             $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
         }
+        $i += 1
     }    
 }
 $sdir = "D:/abcd"

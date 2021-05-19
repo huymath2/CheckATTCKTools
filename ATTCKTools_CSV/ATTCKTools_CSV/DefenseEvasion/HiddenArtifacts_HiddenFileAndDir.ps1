@@ -3,7 +3,7 @@
 
 Function Get-HiddenFileAndDir{
 
-    $items = Get-ChildItem "C:\" -Recurse -Hidden | Select-Object CreationTime, Attributes, FullName
+    $items = Get-ChildItem "$env:SystemDrive" -Recurse -Hidden | Select-Object CreationTime, Attributes, FullName
     $items
 }
 

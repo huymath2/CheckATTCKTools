@@ -31,7 +31,6 @@ function Get-Signature {
     }
 }
 
-
 function Get-FileHash {
     Param(
         [Parameter(Mandatory = $true, Position=1)]
@@ -113,9 +112,18 @@ function Get-RegLastWriteTime {
     
 }
 
+function ConvertFrom-Json20([object] $item){ 
+    add-type -assembly system.web.extensions
+    $ps_js=new-object system.web.script.serialization.javascriptSerializer
+
+    #The comma operator is the array construction operator in PowerShell
+    return $ps_js.DeserializeObject($item)
+}
+
 function Get-BITSJobs{
     $content = bitsadmin /list /allusers /verbose
     $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
+    $i = 0
     $content | ForEach-Object {
         if($_ -match "^GUID: (?<GUID>[\S]+)" ){  
             $o.GUID = $matches["GUID"] 
@@ -138,8 +146,8 @@ function Get-BITSJobs{
        if($_ -match "MODIFICATION TIME: (?<TIME>.*)$" ){  
             $o.ModificationTime = $matches["TIME"] 
         }
-        if($_ -match "0 / UNKNOWN WORKING"){
-            $o."JOB FILES" = $_
+        if($_ -like "*JOB FILES*"){
+            $o."JOB FILES" = $content[$i + 1]
         }
         if($_ -match "^NOTIFICATION COMMAND LINE: (?<command>.*)$" ){  
             $o.command = $matches["command"] 
@@ -149,6 +157,7 @@ function Get-BITSJobs{
             $o
             $o = "" | Select-Object GUID, Display, Type, State, Owner, CreationTime, ModificationTime,  "JOB FILES", COMMAND
         }
+        $i += 1
     }    
 }
 
@@ -445,7 +454,7 @@ function Get-PATHHijacking {
 
 function Get-ShortcutModification{
     $path = @("$env:SystemDrive\\Users\\*\\Desktop\\", "$env:SystemDrive\\Users\\*\OneDrive\\Desktop")
-    $links = $path | Get-ChildItem -Recurse -Filter *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
+    $links = $path | Get-ChildItem -Recurse -Include *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
     foreach($link in $links){
         $report = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Entry, Path, Sign, CMDLine, MD5
         $report.CMDLine = $link.Arguments
@@ -501,6 +510,9 @@ function Get-BrowserExtensions{
 
             $extension_folders = Get-ChildItem -Path $extension_path
             foreach ($extension_folder in $extension_folders){
+                if($extension_folder -like "*Temp*"){
+                    continue
+                }
                 $version_folders = Get-ChildItem -Path "$($extension_folder.FullName)"
                 foreach ($version_folder in $version_folders) {
                     $appid = $extension_folder.BaseName
@@ -508,7 +520,7 @@ function Get-BrowserExtensions{
                     $desc = ""
                     if( (Test-Path -Path "$($version_folder.FullName)\manifest.json") ) {
                         try {
-                            $json = Get-Content -Raw -Path "$($version_folder.FullName)\manifest.json" | ConvertFrom-Json
+                            $json = ConvertFrom-Json20 (Get-Content -Path "$($version_folder.FullName)\manifest.json")
                             $name = $json.name
                             $desc = $json.description
                         } catch {
@@ -517,10 +529,10 @@ function Get-BrowserExtensions{
                         }
                     }
                     if($name -like "*MSG*"){
-                        $tempName = $name.TrimStart("__MSG_").TrimEnd("__")
+                        $tempName = $name.TrimStart("__MSG_").TrimEnd("__").ToLower()
                         if( Test-Path -Path "$($version_folder.FullName)\_locales\en\messages.json" ) {
                             try { 
-                                $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en\messages.json" | ConvertFrom-Json
+                                $json = ConvertFrom-Json20 (Get-Content -Path "$($version_folder.FullName)\_locales\en\messages.json")
                                 $name = $json.$tempName.message
                             } catch { 
                                 #$_
@@ -529,7 +541,7 @@ function Get-BrowserExtensions{
                         }
                         if( Test-Path -Path "$($version_folder.FullName)\_locales\en_US\messages.json" ) {
                             try { 
-                                $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en_US\messages.json" | ConvertFrom-Json
+                                $json = ConvertFrom-Json20 (Get-Content -Path "$($version_folder.FullName)\_locales\en_US\messages.json")
                                 $name = $json.$tempName.message
                             } catch { 
                                 #$_
@@ -538,10 +550,10 @@ function Get-BrowserExtensions{
                         }
                     }
                     if($desc -like "*MSG*"){
-                        $tempDesc = $desc.TrimStart("__MSG_").TrimEnd("__")
+                        $tempDesc = $desc.TrimStart("__MSG_").TrimEnd("__").ToLower()
                         if( Test-Path -Path "$($version_folder.FullName)\_locales\en\messages.json" ) {
                             try { 
-                                $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en\messages.json" | ConvertFrom-Json
+                                $json = ConvertFrom-Json20 (Get-Content -Path "$($version_folder.FullName)\_locales\en\messages.json")
                                 $desc = $json.$tempDesc.message
                             } catch { 
                                 #$_
@@ -550,13 +562,16 @@ function Get-BrowserExtensions{
                         }
                         if( Test-Path -Path "$($version_folder.FullName)\_locales\en_US\messages.json" ) {
                             try { 
-                                $json = Get-Content -Raw -Path "$($version_folder.FullName)\_locales\en_US\messages.json" | ConvertFrom-Json
+                                $json = ConvertFrom-Json20 (Get-Content -Path "$($version_folder.FullName)\_locales\en_US\messages.json")
                                 $desc = $json.$tempDesc.message
                             } catch { 
                                 #$_
                                 $name = ""
                             }
                         }
+                    }
+                    if($name -eq $null){
+                        continue
                     }
                     $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path, CreationTime, LastAccessTime, LastWriteTime
                     $report.Browser = $browser
@@ -578,8 +593,7 @@ function Get-BrowserExtensions{
                     if($browser -eq "Opera"){
                         $report.URL = "https://addons.opera.com/extensions/details/app_id/" + $app
                     }
-
-
+                        
                     $report.Path = $version_folder.FullName
                     $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
                     $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -593,22 +607,27 @@ function Get-BrowserExtensions{
         if($browser -eq "FireFox"){
             $extension_folders = Get-ChildItem -Path $extension_path
             foreach($extension_folder in $extension_folders){
-                $json = (Get-Content -Raw -Path "$extension_folder\addons.json" | ConvertFrom-Json).addons
-                foreach($ext in $json){
-                    $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path, CreationTime, LastAccessTime, LastWriteTime
-                    $report.Browser = "FireFox"
-                    $report.ID = $ext.id
-                    $report.Name = $ext.name
-                    $report.Version = $ext.version
-                    $report.Description = $ext.description
-                    $report.URL = $ext.homepageURL
-                    $report.Path = "$extension_folder\addons.json"
-                    $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
-                    $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
-                    $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
-                    $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
-                    $report
+                if($extension_folder -like "*Temp*"){
+                    continue
+                }
+                if(Test-Path -Path "$($extension_folder)\addons.json"){
+                    $json = ( ConvertFrom-Json20 (Get-Content -Path "$($extension_folder)\addons.json")).addons
+                    foreach($ext in $json){
+                        $report = "" | Select-Object Browser, ID, Name, Version, Description, URL, Path, CreationTime, LastAccessTime, LastWriteTime
+                        $report.Browser = "FireFox"
+                        $report.ID = $ext.id
+                        $report.Name = $ext.name
+                        $report.Version = $ext.version
+                        $report.Description = $ext.description
+                        $report.URL = $ext.homepageURL
+                        $report.Path = "$extension_folder\addons.json"
+                        $Timer = (Get-Item $report.Path) | Select-Object CreationTime, LastAccessTime, LastWriteTime
+                        $report.CreationTime = Get-Date -Date $Timer.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
+                        $report.LastAccessTime = Get-Date -Date $Timer.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
+                        $report.LastWriteTime = Get-Date -Date $Timer.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
+                        $report
                 
+                    }
                 }
             }
         }
@@ -617,6 +636,7 @@ function Get-BrowserExtensions{
     }
     
 }
+
 
 function Get-BrowserExtensions_JSList{
     $extension_paths = @{'Chrome' = '\Users\*\AppData\Local\Google\Chrome\User Data\*\Extensions\*'; 'CocCoc' = '\Users\*\AppData\Local\CocCoc\Browser\User Data\*\Extensions\*'; 

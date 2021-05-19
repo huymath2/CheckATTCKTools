@@ -77,7 +77,7 @@ function Get-FileHash {
 
 function Get-ShortcutModification{
     $path = @("$env:SystemDrive\\Users\\*\\Desktop\\", "$env:SystemDrive\\Users\\*\OneDrive\\Desktop")
-    $links = $path | Get-ChildItem -Recurse -Filter *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
+    $links = $path | Get-ChildItem -Recurse -Include *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
     foreach($link in $links){
         $report = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Entry, Path, Sign, CMDLine, MD5
         $report.CMDLine = $link.Arguments
@@ -90,9 +90,9 @@ function Get-ShortcutModification{
         $report.Entry = try { Split-Path $link.FullName -Leaf } catch { 'n/a'}
         if(Test-Path -Path $report.Path -PathType Leaf){
             $report.Sign = Get-Signature $report.Path
-            $report.Owner = (Get-Acl $report.Path).
-            $report.MD5 = Get-FileHash $report.Path
+            $report.Owner = (Get-Acl $report.Path).Owner
         }
+        $report.MD5 = Get-FileHash $report.Path
         $report
     }  
 }
