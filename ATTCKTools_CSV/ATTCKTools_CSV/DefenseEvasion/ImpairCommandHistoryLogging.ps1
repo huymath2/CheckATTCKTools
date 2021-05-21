@@ -1,4 +1,4 @@
-Function Get-ImpairHisCommand{
+Function Get-ImpairHistoryCommand{
     param
     (
         [Parameter(Mandatory = $true)]
@@ -12,4 +12,4 @@ Function Get-ImpairHisCommand{
     }
 }
 $sdir = args[0]
-Get-ImpairHisCommand "$sdir\T1059_PowerShell.csv"
+Get-ImpairHistoryCommand "$sdir\T1059_PowerShell.csv"

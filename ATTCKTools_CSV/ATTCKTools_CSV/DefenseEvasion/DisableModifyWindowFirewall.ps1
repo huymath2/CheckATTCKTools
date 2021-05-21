@@ -5,7 +5,7 @@
             $report.Id = $_.Id
             $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
             $report.Message = $_.Message
-			$report.Event = $_.Message.Split("`n")[0]
+			#$report.Event = $_.Message.Split("`n")[0]
             $report
         }
     }
@@ -21,4 +21,4 @@
 #5025	The Windows Firewall Service has been stopped
 #5034	The Windows Firewall Driver has been stopped
 
-Get-EventDisableModifyFirewall
+Get-EventDisableModifyFirewall | Export-Csv "C:\FWEventId.csv"

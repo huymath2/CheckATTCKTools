@@ -9,5 +9,5 @@ Function Get-HiddenFileAndDir{
 
 
 
-$sdir = "D:\abcd"
+$sdir = args[0]
 Get-HiddenFileAndDir | Export-Csv "$sdir\HiddenArtifacts_HiddenFileAndDir.csv"
