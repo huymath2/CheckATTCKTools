@@ -82,8 +82,16 @@ function Get-FileHash {
 
 
 function Get-PowerShellProfile {
-    $path = @("$($pshome)\\*profile.ps1", "$($home)\\*profile.ps1")
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$DesFolder
+    )
+
+    $userPaths = $home.Replace($env:USERNAME, "*")
+    $path = @("$($pshome)\\*profile.ps1", "$($userPaths)\\*profile.ps1")
     #$path | Get-ItemProperty | Select-Object LastWriteTime, FullName | ForEach-Object -Process {
+    $i = 0
     $path | Get-ItemProperty | Select-Object * | ForEach-Object -Process {
         $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5
         $output.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -95,13 +103,17 @@ function Get-PowerShellProfile {
         $output.MD5 = Get-FileHash $_.FullName
 
         $output
+
+        $desPath = "$DesFolder\PSProfile_Sameple$i.txt"
+        $i += 1
+        Copy-Item $output.FullName -Destination $desPath
     }
 	#owner, hash, timestamp: create, modify, MFT, sig
 	#collect về
     #done
 }
 
-$sdir = "D:\abcd"
-Get-PowerShellProfile | Export-Csv "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
+#$sdir = "D:\abcd"
+#Get-PowerShellProfile | Export-Csv "$sdir\T1546_EventTriggeredExecution_PowershellProfile.csv"
 
-#Get-PowerShellProfile | Format-Table -Wrap | Out-String -width 2048
+Get-PowerShellProfile "D:\test" | Format-Table -Wrap 

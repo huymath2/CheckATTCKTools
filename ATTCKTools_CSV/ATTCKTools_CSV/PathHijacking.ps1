@@ -84,12 +84,12 @@ function Get-FileHash {
 }
 
 function Get-PATHHijacking {
-    $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName, CreationTime, LastAccessTime, LastWriteTime
+    $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName, CreationTime, LastAccessTime, LastWriteTime, Length
     foreach($item in $items){
         if(Test-Path $item.FullName -PathType Leaf){
             $extension = ([IO.FileInfo]$item.FullName).Extension 
             if($extension -ne ".txt" -and $extension -ne ".ico"){
-                $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5
+                $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5, Length
                 $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastWriteTime = Get-Date -Date $item.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -98,12 +98,12 @@ function Get-PATHHijacking {
                 $output.FullName = $item.FullName
                 $output.Sign = Get-Signature $item.FullName
                 $output.MD5 = Get-FileHash $item.FullName
+                $output.Length = $item.Length
 
                 $check = $filetable.get_item($item.Name)
                 if($check)
                 {
-                    if($check.MD5 -ne $output.MD5)
-                    {
+                    if($check.MD5 -ne $output.MD5 -and $check.Length -ne $output.Length){
                         if($counttable.get_item($check.Name) -ne 'false'){    
                             $check
                             $counttable.Add($check.Name, 1)
@@ -123,4 +123,5 @@ function Get-PATHHijacking {
 }
 $sdir = $args[0]
 Write-Host "[+] Ra soat Path Hijacking..."
-Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
+#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
+Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | FT -Wrap | Out-String -Width 2048

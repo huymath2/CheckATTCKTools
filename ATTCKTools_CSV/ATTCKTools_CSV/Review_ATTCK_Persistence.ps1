@@ -115,43 +115,43 @@ Review_BITSJobs | Format-List | more
 Pause
 
 Write-Host "[+] Ra soat COR_PROFILER"
-Review_COR_PROFILER | Format-Table -Wrap 
-Review_COR_PROFILER-NonReg | Format-Table -Wrap  |  more
+Review_COR_PROFILER | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048 | more
+Review_COR_PROFILER-NonReg | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048  |  more
 
 Pause
 
 Write-Host "[+] Ra soat Netsh Helper DLL..."
-Review_NetshHelperDLL | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
+Review_NetshHelperDLL | Sort-Object -Property Sign, Path | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048  | more
 
 Pause
 
 Write-Host "[+] Ra soat Time Provider..."
-Review_TimeProviders | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
+Review_TimeProviders | Sort-Object -Property Sign, Path | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048  | more
 
 Pause
 
 Write-Host "[+] Ra soat Print Processors..."
-Review_PrintProcessors | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
+Review_PrintProcessors | Sort-Object -Property Sign, Path | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048  | more
 
 Pause
 
 Write-Host "[+] Ra soat Powershell Profile..."
-Review_PowerShellProfile  | Format-Table -Wrap  | more
+Review_PowerShellProfile  | Format-Table -Property @{e = "*"; width = 20} -Wrap | Out-String -Width 2048  | more
 
 Pause
 
 Write-Host "[+] Ra soat Shortcut Modification..."
-Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -Wrap  | more
+Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Path Hijacking..."
-Review_PATHHijacking | Format-Table -Wrap  | more
+Review_PATHHijacking | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Change Default File Association..."
-Review_ChangeDefaultFileAssociation | Format-Table -Wrap  | more
+Review_ChangeDefaultFileAssociation | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
