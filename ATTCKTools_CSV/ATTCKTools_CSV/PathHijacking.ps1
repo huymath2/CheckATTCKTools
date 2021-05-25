@@ -123,5 +123,5 @@ function Get-PATHHijacking {
 }
 $sdir = $args[0]
 Write-Host "[+] Ra soat Path Hijacking..."
-#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
-Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | FT -Wrap | Out-String -Width 2048
+Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
+#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | FT -Wrap | Out-String -Width 2048
