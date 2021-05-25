@@ -12,4 +12,4 @@ Function Get-ClearCommandHistory{
     }
 }
 $sdir = args[0]
-Get-ClearCommandHistory "$sdir\T1059_PowerShell.csv"
+Get-ClearCommandHistory "$sdir\PowerShell_Log.csv"

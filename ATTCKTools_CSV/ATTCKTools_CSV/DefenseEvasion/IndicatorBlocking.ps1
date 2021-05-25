@@ -12,4 +12,4 @@ Function Get-ImpairIndicatorBlocking{
     }
 }
 $sdir = args[0]
-Get-ImpairHisCommand "$sdir\T1059_PowerShell.csv"
+Get-ImpairIndicatorBlocking "$sdir\T1059_PowerShell.csv"
