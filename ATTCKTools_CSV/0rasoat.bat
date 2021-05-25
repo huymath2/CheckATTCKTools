@@ -278,37 +278,37 @@ echo.
 echo ================================================================================
 call :colorEcho 0b "[+] Lich su ra soat"
 echo.
-type "%sdir%\rasoat_history.txt"
+type "%sdir%\rasoat_history.txt"														| more
 pause
 echo.
 
-call :colorEcho 0b "[+] System Information"
+call :colorEcho 0b "[+] System Information"											
 echo.
-type "%sdir%\systeminfo.txt"
+type "%sdir%\systeminfo.txt"															| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Local Users..."
 echo.
-type "%sdir%\local_users_list.txt"
+type "%sdir%\local_users_list.txt"														| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Local Administrators"
 echo.
-type "%sdir%\local_admin_list.txt"
+type "%sdir%\local_admin_list.txt"														| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Users Directory"
 echo.
-type "%sdir%\local_users_dir_modified.txt"
+type "%sdir%\local_users_dir_modified.txt"												| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Logged On Users"
 echo.
-type "%sdir%\logged_on_users.txt"
+type "%sdir%\logged_on_users.txt"														| more
 pause
 echo.
 
@@ -316,7 +316,7 @@ call :colorEcho 0b "[+] Kiem tra cac ban va nghiem trong..."
 echo.
 call :colorEcho 0e "    [+] MS17-010 (SMB RCE)"
 echo.
-type "%sdir%\check_ms17_010.txt" | findstr NOT > nul 2>&1
+type "%sdir%\check_ms17_010.txt" | findstr NOT > nul 2>&1								
 IF %errorlevel% EQU 0 (
     call :colorEcho 0c "        [-] System is NOT patched"
     echo.
@@ -330,7 +330,7 @@ echo.
 
 call :colorEcho 0e "    [+] CVE-2019-0708 (RDP RCE)"
 echo.
-type "%sdir%\check_CVE_2019_0708.txt" | findstr /c:"NOT patched" > nul 2>&1
+type "%sdir%\check_CVE_2019_0708.txt" | findstr /c:"NOT patched" > nul 2>&1	
 IF %errorlevel% EQU 0 (
     call :colorEcho 0c "        [-] System is NOT patched"
     echo.
@@ -518,28 +518,28 @@ call :colorEcho 0b "[+] Ra soat backdoor Shim"
 echo.
 call :colorEcho 0e "    [+] Shim Key (Custom)"
 echo.
-type "%sdir%\reg_AppCompatFlags_Custom.txt"
+type "%sdir%\reg_AppCompatFlags_Custom.txt"											| more
 echo.
 
 call :colorEcho 0e "    [+] Shim Key (InstalledSDB)"
 echo.
-type "%sdir%\reg_AppCompatFlags_InstalledSDB.txt"
+type "%sdir%\reg_AppCompatFlags_InstalledSDB.txt"									| more
 echo.
 
 call :colorEcho 0e "    [+] Shim Folder (Custom)"
 echo.
-type %sdir%\shim_created.txt
+type %sdir%\shim_created.txt														| more
 echo.
 
 call :colorEcho 0e "    [+] Shim Folder (Custom64)"
 echo.
-type %sdir%\shimx64_created.txt
+type %sdir%\shimx64_created.txt														| more
 echo.
 pause
 
 call :colorEcho 0b "[+] Ra soat backdoor WMI"
 echo.
-call :colorEcho 0e "    [+] Event Consumer"
+call :colorEcho 0e "    [+] Event Consumer"											| more
 echo.
 type "%sdir%\wmi_event_consumer.txt"
 pause
@@ -547,19 +547,19 @@ echo.
 
 call :colorEcho 0e "    [+] Event Filter"
 echo.
-type "%sdir%\wmi_event_filter.txt"
+type "%sdir%\wmi_event_filter.txt"													| more
 pause
 echo.
 
 call :colorEcho 0e "    [+] Filter to Consumer Binding"
 echo.
-type "%sdir%\wmi_filter_consumer_binding.txt"
+type "%sdir%\wmi_filter_consumer_binding.txt"										| more
 pause
 echo.
 
 call :colorEcho 0e "    [+] Timer Instruction"
 echo.
-type "%sdir%\wmi_timer_instruction.txt"
+type "%sdir%\wmi_timer_instruction.txt"												| more
 pause
 echo.
 
@@ -621,7 +621,7 @@ call :colorEcho 0b "[+] Ra soat thu muc nghi ngo"
 echo.
 call :colorEcho 0e "    [+] System drive BEGIN"
 echo.
-type "%sdir%\c_drive_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\c_drive_created.txt" | findstr /v /i /c:TrustedInsta 							| more
 call :colorEcho 0e "    [+] System drive END"
 echo.
 pause
@@ -629,7 +629,7 @@ echo.
 
 call :colorEcho 0e "    [+] Windows BEGIN"
 echo.
-type "%sdir%\windows_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\windows_created.txt" | findstr /v /i /c:TrustedInsta 							| more
 call :colorEcho 0e "    [+] Windows END"
 echo.
 pause
@@ -637,7 +637,7 @@ echo.
 
 call :colorEcho 0e "    [+] System32 BEGIN"
 echo.
-type "%sdir%\system32_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\system32_created.txt" | findstr /v /i /c:TrustedInsta 							| more
 call :colorEcho 0e "    [+] System32 END"
 echo.
 pause
@@ -645,7 +645,7 @@ echo.
 
 call :colorEcho 0e "    [+] SysWOW64 BEGIN"
 echo.
-type "%sdir%\syswow64_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\syswow64_created.txt" | findstr /v /i /c:TrustedInsta 							| more
 call :colorEcho 0e "    [+] SysWOW64 END"
 echo.
 pause
@@ -653,7 +653,7 @@ echo.
 
 call :colorEcho 0e "    [+] Windows Temp BEGIN"
 echo.
-type "%sdir%\windows_temp_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\windows_temp_created.txt" | findstr /v /i /c:TrustedInsta 						| more
 call :colorEcho 0e "    [+] Windows Temp END"
 echo.
 pause
@@ -661,15 +661,15 @@ echo.
 
 call :colorEcho 0e "    [+] Public user BEGIN"
 echo.
-type "%sdir%\user_public_created.txt" | findstr /v /i /c:TrustedInsta 
-call :colorEcho 0e "    [+] Public user END"
+type "%sdir%\user_public_created.txt" | findstr /v /i /c:TrustedInsta 						| more
+call :colorEcho 0e "    [+] Public user END"	
 echo.
 pause
 echo.
 
 call :colorEcho 0e "    [+] ProgramData BEGIN"
 echo.
-type "%sdir%\programdata_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\programdata_created.txt" | findstr /v /i /c:TrustedInsta 						| more
 call :colorEcho 0e "    [+] ProgramData END"
 echo.
 pause
@@ -677,7 +677,7 @@ echo.
 
 call :colorEcho 0e "    [+] Common Files BEGIN"
 echo.
-type "%sdir%\programfiles_common_files_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\programfiles_common_files_created.txt" | findstr /v /i /c:TrustedInsta 		| more
 call :colorEcho 0e "    [+] Common Files END"
 echo.
 pause
@@ -685,7 +685,7 @@ echo.
 
 call :colorEcho 0e "    [+] Common Files (x86) BEGIN"
 echo.
-type "%sdir%\programfiles_x86_common_files_created.txt" | findstr /v /i /c:TrustedInsta 
+type "%sdir%\programfiles_x86_common_files_created.txt" | findstr /v /i /c:TrustedInsta 	| more
 call :colorEcho 0e "    [+] Common Files (x86) END"
 echo.
 pause
@@ -707,7 +707,7 @@ IF "%enumUser%"=="y" (
     for /f "tokens=*" %%A in ('dir /b /a:d "%systemdrive%\Users"') do (
         IF EXIST "%systemdrive%\Users\%%A\AppData\Roaming" (
             echo         [+] User: %%A - AppData - BEGIN
-            type "%sdir%\appdata_%%A_created.txt" | findstr /v /i /c:TrustedInsta 
+            type "%sdir%\appdata_%%A_created.txt" | findstr /v /i /c:TrustedInsta 			| more
             echo         [+] User: %%A - AppData -  END
             pause
             echo.
@@ -723,7 +723,7 @@ IF "%enumUser%"=="y" (
     for /f "tokens=*" %%A in ('dir /b /a:d "%systemdrive%\Users"') do (
         IF EXIST "%systemdrive%\Users\%%A\AppData\Local" (
             echo         [+] User: %%A - LocalAppData - BEGIN
-            type "%sdir%\localappdata_%%A_created.txt" | findstr /v /i /c:TrustedInsta 
+            type "%sdir%\localappdata_%%A_created.txt" | findstr /v /i /c:TrustedInsta 		| more
             echo         [+] User: %%A - LocalAppData - END
             pause
             echo.
@@ -739,7 +739,7 @@ IF "%enumUser%"=="y" (
     for /f "tokens=*" %%A in ('dir /b /a:d "%systemdrive%\Users"') do (
         IF EXIST "%systemdrive%\Users\%%A\AppData\Local\Temp" (
             echo         [+] User: %%A - Temp - BEGIN
-            type "%sdir%\temp_%%A_created.txt" | findstr /v /i /c:TrustedInsta 
+            type "%sdir%\temp_%%A_created.txt" | findstr /v /i /c:TrustedInsta 				| more
             echo         [+] User: %%A - Temp - END
             pause
             echo.
@@ -755,25 +755,25 @@ call :colorEcho 0b "[+] Ra soat Task Scheduler"
 echo.
 call :colorEcho 0e "    [+] Windows Tasks"
 echo.
-type "%sdir%\windows_tasks_created.txt"
+type "%sdir%\windows_tasks_created.txt"														| more
 pause
 echo.
 
 call :colorEcho 0e "    [+] System32 Tasks"
 echo.
-type "%sdir%\system32_tasks_created.txt"
+type "%sdir%\system32_tasks_created.txt"													| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Ra soat PortProxy tunnel"
 echo.
-type "%sdir%\portproxy.txt"
+type "%sdir%\portproxy.txt"																	| more
 pause
 echo.
 
 call :colorEcho 0b "[+] Ra soat Inject"
 echo.
-type "%sdir%\checkinject_result.txt"
+type "%sdir%\checkinject_result.txt"														| more
 pause
 echo.
 
