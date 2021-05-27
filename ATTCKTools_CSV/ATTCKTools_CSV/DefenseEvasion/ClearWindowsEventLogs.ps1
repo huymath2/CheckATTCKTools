@@ -1,5 +1,10 @@
 Function Get-ClearEventLog{
-    Get-WinEvent -LogName "Security" | Select-Object Id, TimeCreated, Message | ForEach-Object{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$SecurityLogPath
+    )
+    Import-Csv -Path $SecurityLogPath | ForEach-Object{
         if($_.Id -eq "1102"){
             $report = "" | Select-Object Id, CreationTime, Event, "Account Name", "Domain Name", Message       
             $report.Id = $_.Id
@@ -16,9 +21,10 @@ Function Get-ClearEventLog{
 				}
 			}
             $report
-        }
+        } 
     }
     
 }
 
-Get-ClearEventLog | Export-Csv "C:\EventId1102.csv"
+$sdir = $args[0]
+Get-ClearEventLog "$sdir\Security_Log.csv" | Export-Csv "$sdir\T1070_ClearWindowsEventLogs.csv"

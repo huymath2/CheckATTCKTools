@@ -11,5 +11,5 @@ Function Get-ImpairIndicatorBlocking{
         }
     }
 }
-$sdir = args[0]
-Get-ImpairIndicatorBlocking "$sdir\T1059_PowerShell.csv"
+$sdir = $args[0]
+Get-ImpairIndicatorBlocking "$sdir\PowerShell_Log.csv" | Export-Csv "$sdir\T1562_IndicatorBlocking.csv"

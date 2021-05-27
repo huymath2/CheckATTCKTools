@@ -11,7 +11,6 @@
         }
     }
 }
-$sdir = "D:\abcd"
-#$sdir = $args[0]
+$sdir = $args[0]
 
-Get-HiddenCommand "$sdir\T1059_PowerShell.csv"
+Get-HiddenCommand "$sdir\PowerShell_Log.csv" | Export-Csv "$sdir\T1564_HiddenWindow.csv"

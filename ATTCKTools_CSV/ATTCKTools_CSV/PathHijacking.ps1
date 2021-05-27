@@ -4,6 +4,7 @@ $hashtable = @{}
 $filetable = @{}
 $reporttable = @()
 $counttable  = @{}
+$executable_extension = @(".exe", ".dll", ".bat", ".com", ".pyc", ".cpl", ".LNK", ".ps1", ".VBS", ".VBE", ".cmd")
 
 function Get-Signature {
     param (
@@ -88,8 +89,8 @@ function Get-PATHHijacking {
     foreach($item in $items){
         if(Test-Path $item.FullName -PathType Leaf){
             $extension = ([IO.FileInfo]$item.FullName).Extension 
-            if($extension -ne ".txt" -and $extension -ne ".ico"){
-                $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5, Length
+            if($global:executable_extension.Contains($extension)){
+                $output = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5, Length, Priority
                 $output.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastAccessTime = Get-Date -Date $item.LastAccessTime -Format "yyyy-MM-dd HH:mm:ss"
                 $output.LastWriteTime = Get-Date -Date $item.LastWriteTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -104,11 +105,21 @@ function Get-PATHHijacking {
                 if($check)
                 {
                     if($check.MD5 -ne $output.MD5 -and $check.Length -ne $output.Length){
-                        if($counttable.get_item($check.Name) -ne 'false'){    
+                        $exist = $counttable.get_item($check.Name)
+                        if($exist -eq $null){    
+                            $check.Priority = 1
                             $check
                             $counttable.Add($check.Name, 1)
                         }
+                        $exist = $counttable.get_item($check.Name)
+                        $exist += 1
+                        $output.Priority = $exist
                         $output
+
+                        $counttable.Set_Item($check.Name, $exist)
+                    }
+                    else{
+                        $x = 1
                     }
                 
                 }
@@ -123,5 +134,5 @@ function Get-PATHHijacking {
 }
 $sdir = $args[0]
 Write-Host "[+] Ra soat Path Hijacking..."
-Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | Export-Csv "$sdir\T1574_PathHijacking.csv"
-#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, FullName, Sign, MD5 | FT -Wrap | Out-String -Width 2048
+Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, MD5, Priority | Sort-Object -Property Name, Priority | Export-Csv "$sdir\T1574_PathHijacking.csv"
+#Get-PATHHijacking | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Name, FullName, Sign, Priority | Sort-Object -Property Name, Priority | FT -Wrap | Out-String -Width 2048

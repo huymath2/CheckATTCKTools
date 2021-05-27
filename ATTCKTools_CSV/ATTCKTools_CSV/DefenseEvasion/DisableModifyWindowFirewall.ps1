@@ -1,5 +1,10 @@
 ﻿Function Get-EventDisableModifyFirewall{
-    Get-WinEvent -LogName "Security" | Select-Object Id, TimeCreated, Message | ForEach-Object{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$SecurityLogPath
+    )
+    Import-Csv -Path $SecurityLogPath | ForEach-Object{
         if($_.Id -eq "4950" -or $_.Id -eq "4946" -or $_.Id -eq "4947" -or $_.Id -eq "4948" -or $_.Id -eq "4954" -or $_.Id -eq "4956" -or $_.Id -eq "5025" -or $_.Id -eq "5034"){
             $report = "" | Select-Object Id, CreationTime, Event, Message       
             $report.Id = $_.Id
@@ -20,5 +25,5 @@
 #4956	Windows Firewall has changed the active profile
 #5025	The Windows Firewall Service has been stopped
 #5034	The Windows Firewall Driver has been stopped
-
-Get-EventDisableModifyFirewall | Export-Csv "C:\FWEventId.csv"
+$sdir = $args[0]
+Get-EventDisableModifyFirewall "$sdir\Security_Log.csv" | Export-Csv "$sdir\T1562_DisableorModifySystemFirewall.csv"

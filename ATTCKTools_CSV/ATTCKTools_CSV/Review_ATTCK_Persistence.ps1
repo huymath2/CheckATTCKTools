@@ -246,7 +246,7 @@ function Review_PATHHijacking{
     }
     $report = Import-Csv -Path "$sdir\T1574_PathHijacking.csv" 
     foreach($rp in $report){
-        $output = $rp | Select-Object CreationTime, Owner, FullName, Sign
+        $output = $rp | Select-Object CreationTime, Owner, FullName, Priority, Sign
         $output
     }
 }
@@ -332,8 +332,9 @@ Review_ShortcutModification | Sort-Object -Property Sign, Path | Format-Table -P
 
 Pause
 
+#CreationTime, Owner, FullName, Priority, Sign
 Write-Host "[+] Ra soat Path Hijacking..."
-Review_PATHHijacking | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048 | more
+Review_PATHHijacking | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "Owner"; width = 25}, @{e = "FullName"; width = 30}, @{e = "Priority"; width = 10}, @{e = "Sign"; width = 30}  -Wrap | Out-String -Width 2048 | more
 
 Pause
 

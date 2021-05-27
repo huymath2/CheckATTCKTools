@@ -10,5 +10,5 @@
         }
     }
 }
-
-Get-WindowDefendLog
+$sdir = $args[0]
+Get-WindowDefendLog | Export-Csv "$sdir\T1562_DisableorModifyTools.csv"

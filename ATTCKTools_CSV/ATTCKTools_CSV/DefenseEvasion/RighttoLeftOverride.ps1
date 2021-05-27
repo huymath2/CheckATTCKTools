@@ -8,6 +8,6 @@ Function Get-RighttoLeftOverride{
 }
 
 
-
-$sdir = "D:\abcd"
-Get-RighttoLeftOverride | Export-Csv "$sdir\RighttoLeftOverride.csv"
+$sdir = $args[0]
+#$sdir = "D:\abcd"
+Get-RighttoLeftOverride | Export-Csv "$sdir\T1036_RighttoLeftOverride.csv"

@@ -11,5 +11,5 @@ Function Get-ImpairHistoryCommand{
         }
     }
 }
-$sdir = args[0]
-Get-ImpairHistoryCommand "$sdir\T1059_PowerShell.csv"
+$sdir = $args[0]
+Get-ImpairHistoryCommand "$sdir\PowerShell_Log.csv" | Export-Csv "$sdir\T1562_ImpairCommandHistoryLogging.csv"

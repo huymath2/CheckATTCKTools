@@ -1,5 +1,10 @@
 ﻿Function Get-EventDisableWEL{
-    Get-WinEvent -LogName "Security" | Select-Object Id, TimeCreated, Message | ForEach-Object{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$SecurityLogPath
+    )
+    Import-Csv -Path $SecurityLogPath | ForEach-Object{
         if($_.Id -eq "1100"){
             $report = "" | Select-Object Id, CreationTime, Message       
             $report.Id = $_.Id
@@ -10,5 +15,5 @@
     }
     
 }
-
-Get-EventDisableWEL | Export-Csv "C:\EventId1100.csv"
+$sdir = $args[0]
+Get-EventDisableWEL "$sdir\Security_Log.csv" | Export-Csv "$sdir\T1562_DisableWindowsEventLogging.csv"

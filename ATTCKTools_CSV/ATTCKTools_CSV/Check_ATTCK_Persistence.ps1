@@ -425,7 +425,7 @@ function Get-PowerShellProfile {
     }
 }
 
-function Get-PATHHijacking {
+<#function Get-PATHHijacking {
     $items = ($env:Path -split ";" | Get-ChildItem | Where-Object {Test-Path $_.FullName -PathType Leaf }) | Select-Object Name, FullName, CreationTime, LastAccessTime, LastWriteTime
     foreach($item in $items){
         if(Test-Path $item.FullName -PathType Leaf){
@@ -444,13 +444,13 @@ function Get-PATHHijacking {
                 $check = $filetable.get_item($item.Name)
                 if($check)
                 {
-                    #if($check.MD5 -ne $output.MD5){
+                    f($check.MD5 -ne $output.MD5 -and $check.Length -ne $output.Length){
                         if($counttable.get_item($check.Name) -ne 'false'){    
                             $check
                             $counttable.Add($check.Name, 1)
                         }
                         $output
-                    #}
+                    }
                 
                 }
                 else{
@@ -461,11 +461,14 @@ function Get-PATHHijacking {
             
         }
     }
-}
+}#>
 
 function Get-ShortcutModification{
     $path = @("$env:SystemDrive\\Users\\*\\Desktop\\", "$env:SystemDrive\\Users\\*\OneDrive\\Desktop")
     $links = $path | Get-ChildItem -Recurse -Include *.lnk | ForEach-Object -Process { $sh = New-Object -ComObject WScript.Shell; $sh.CreateShortcut($_.FullName)} | Where-Object {$_.TargetPath -ne ""}
+    if(links -eq $null){
+        continue
+    }
     foreach($link in $links){
         $report = "" | Select-Object CreationTime, LastAccessTime, LastWriteTime, Owner, Entry, Path, Sign, CMDLine, MD5
         $report.CMDLine = $link.Arguments
@@ -520,6 +523,9 @@ function Get-BrowserExtensions{
         if($browser -eq "Chrome" -or $browser -eq "CocCoc" -or $browser -eq "Edge" -or $browser -eq "Opera"){
 
             $extension_folders = Get-ChildItem -Path $extension_path
+            if($extension_folders -eq $null){
+                continue
+            }
             foreach ($extension_folder in $extension_folders){
                 if($extension_folder -like "*Temp*"){
                     continue
@@ -617,6 +623,9 @@ function Get-BrowserExtensions{
         }
         if($browser -eq "FireFox"){
             $extension_folders = Get-ChildItem -Path $extension_path
+            if($extension_folders -eq $null){
+                continue
+            }
             foreach($extension_folder in $extension_folders){
                 if($extension_folder -like "*Temp*"){
                     continue

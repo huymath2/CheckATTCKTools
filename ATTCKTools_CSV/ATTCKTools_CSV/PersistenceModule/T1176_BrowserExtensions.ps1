@@ -19,6 +19,9 @@ function Get-BrowserExtensions{
         if($browser -eq "Chrome" -or $browser -eq "CocCoc" -or $browser -eq "Edge" -or $browser -eq "Opera"){
 
             $extension_folders = Get-ChildItem -Path $extension_path
+            if($extension_folders -eq $null){
+                continue
+            }
             foreach ($extension_folder in $extension_folders){
                 if($extension_folder -like "*Temp*"){
                     continue
@@ -117,6 +120,9 @@ function Get-BrowserExtensions{
         }
         if($browser -eq "FireFox"){
             $extension_folders = Get-ChildItem -Path $extension_path
+            if($extension_folders -eq $null){
+                continue
+            }
             foreach($extension_folder in $extension_folders){
                 if($extension_folder -like "*Temp*"){
                     continue
