@@ -162,13 +162,13 @@ Function Get-ATTCKSecurityLog{
 }
 
 
-$sdir = "D:\abcd"
-#$sdir = $args[0]
-Get-ATTCKSecurityLog "$sdir\Security_Log0.csv"
+#$sdir = "D:\abcd"
+$sdir = $args[0]
+Get-ATTCKSecurityLog "$sdir\Security_Log.csv"
 
 
 
-<#---------------Export CSV-----------------------#
+#---------------Export CSV-----------------------#
 $EventID_1102 | Export-Csv "$sdir\EventID_1102.csv"
 $T1562_DisableorModifySystemFirewall | Export-Csv "$sdir\T1562_DisableorModifySystemFirewall.csv"
 $EventID_1100 | Export-Csv "$sdir\EventID_1100.csv"
@@ -188,7 +188,7 @@ $EventID_4672 | Export-Csv "$sdir\EventID_4672.csv"
 #------------------------------------------------#>
 
 
-#---------------Write on Console-----------------#
+<#---------------Write on Console-----------------#
 $EventID_1102 | FT -Property @{e = '*'; width = 30} -Wrap
 $T1562_DisableorModifySystemFirewall | FT -Property @{e = '*'; width = 30} -Wrap
 $EventID_1100 | FT -Property @{e = '*'; width = 30} -Wrap

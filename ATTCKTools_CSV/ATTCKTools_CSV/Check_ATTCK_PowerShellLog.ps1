@@ -1,5 +1,5 @@
 $ErrorActionPreference= 'silentlycontinue'
-
+#Call via other process
 
 #--------------------------Result Array----------------------#
 
@@ -63,11 +63,11 @@ Function Get-ATTCKPowerShellLog{
             $log | Add-Member NoteProperty Category "Account Discovery - Email Account" -Force
             $global:TA0007_Discovery += $log
         }
-        if($log.HostApplication -like "*Get-Process | Where-Object {$_.MainWindowTitle -ne ""}*"){
+        if($log.HostApplication -like "*Get-Process | Where-Object {$_.MainWindowTitle -ne `"`"}*"){
             $log | Add-Member NoteProperty Category "Application Window Discovery" -Force
             $global:TA0007_Discovery += $log
         }
-        if($log.HostApplication -like "*Get-Content `"C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Bookmarks`"*"){
+        if($log.HostApplication -like "*Get-Content `"C:\Users\*\Bookmarks`"*"){
             $log | Add-Member NoteProperty Category "Browser Bookmark Discovery" -Force
             $global:TA0007_Discovery += $log
         }
@@ -153,7 +153,7 @@ $TA0007_Discovery | Export-Csv "$sdir\TA0007_Discovery.csv"
 $T1070_ClearCommandHistory | FT -Property @{e = '*'; width = 30} -Wrap
 $T1562_IndicatorBlocking | FT -Property @{e = '*'; width = 30} -Wrap
 $T1562_ImpairCommandHistoryLogging | FT -Property @{e = '*'; width = 30} -Wrap
-$T1564_HiddenWindow | FT -Property @{e = '*'; width = 30} -Wrap
+$T1564_HiddenWindow | FT -Wrap
 
 $TA0007_Discovery | FT -Property @{e = '*'; width = 30} -Wrap
 

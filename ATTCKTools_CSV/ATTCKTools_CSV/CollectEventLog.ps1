@@ -41,10 +41,10 @@ Function Get-SecurityLog{
     #Get-WinEvent -Path "C:\Windows\System32\winevt\Logs\Security.evtx" | Select-Object Message, Id, TimeCreated
 }
 
-#$sdir = args[0]
-$sdir = "D:\abcd"
+$sdir = args[0]
+#$sdir = "D:\abcd"
 
 
 Get-PowerShellLog | Export-Csv "$sdir\PowerShell_Log.csv"
-#Get-ConSoleHostHistory "$sdir"
-#Get-SecurityLog | Export-Csv "$sdir\Security_Log.csv" 
+Get-ConSoleHostHistory "$sdir"
+Get-SecurityLog | Export-Csv "$sdir\Security_Log.csv" 
