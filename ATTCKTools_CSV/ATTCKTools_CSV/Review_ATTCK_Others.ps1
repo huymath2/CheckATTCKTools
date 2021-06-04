@@ -375,6 +375,12 @@ Function Review_Event4672{
 }
 
 
+Function Review_RDPHijack{
+    $reports = Import-Csv -Path "$sdir\RDPHijack_Event.csv"
+    $reports
+}
+
+
 #-----------------------PowerShell Log---------------------------------#
 #CreationTime, EventId, Description, ProviderName, HostName, HostApplication
 Write-Host "[+] Ra soat Clear Command History..."
@@ -406,10 +412,9 @@ Pause
 
 #------------------------not in PowerShell Log-------------------------#
 Write-Host "[+] Ra soat Disable or Modify Tools..."
-Review_T1562_DisableorModifyTools | Format-Table -Wrap | Out-String -Width 2048 | more
+Review_T1562_DisableorModifyTools | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Message"; width = 60} -Wrap | Out-String -Width 2048 | more
 Pause
 
-#Attributes
 Write-Host "[+] Ra soat Hidden Files and Directories..."
 Review_T1564_HiddenFilesandDirectories | Sort-Object -Property Attributes, LastWriteTime | Format-Table -Property @{e = "LastWriteTime"; width = 20}, @{e = "Attributes"; width = 10}, @{e = "Owner"; width = 20},  @{e = "FullName"; width = 40},  @{e = "Sign"; width = 20} -Wrap | Out-String -Width 2048 | more
 Pause
@@ -427,10 +432,6 @@ Pause
 #-------------------------Security Log---------------------------------#
 Write-Host "[+] Wait for all security logs..."
 CheckSecurityEvent
-
-Write-Host "[+] Ra soat Disable or Modify Tools..."
-Review_T1562_DisableorModifyTools | Format-Table -Wrap | Out-String -Width 2048 | more
-Pause
 
 Write-Host "[+] Ra soat Disable Windows Event Logging..."
 Review_T1562_DisableWindowsEventLogging | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Account Name"; width = 30}, @{e = "Domain Name"; width = 30} -Wrap | Out-String -Width 2048 | more
@@ -466,6 +467,8 @@ Review_Event4634 | Format-Table -Wrap | Out-String -Width 2048 | more
 Review_Event4672 | Format-Table -Wrap | Out-String -Width 2048 | more
 Pause#>
 
-
+Write-Host "[+] Ra soat RDP Hijacking..."
+Review_RDPHijack | Format-Table -Wrap | Out-String -Width 2048 | more
+Pause
 
 #---------------------------------------------------------------------#>
