@@ -1,0 +1,3314 @@
+#TYPE Selected.System.Diagnostics.Eventing.Reader.EventLogRecord
+"Message","Id","TimeCreated"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:36:14 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:36:14 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:29:21 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:29:21 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:29:21 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:29:21 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:26:03 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:25:59 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:25:58 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:25:51 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BBB8
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x202c
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe","4798","5/13/2021 10:21:27 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:14:29 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:14:29 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:14:29 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:14:29 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:14:27 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:14:27 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:14:27 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:14:27 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:10:56 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:10:56 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:10:55 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:10:55 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 10:10:55 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 10:10:55 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:01:12 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:52 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:52 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:46 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:44 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:43 AM"
+"A user's local group membership was enumerated.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+
+User:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+
+Process Information:
+	Process ID:		0x1620
+	Process Name:		C:\Windows\explorer.exe","4798","5/13/2021 10:00:39 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:56:11 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:56:11 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:56:11 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:56:11 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:53:43 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:53:43 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:47:15 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:47:15 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:47:02 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:47:02 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:47:02 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:47:02 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:47:01 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:47:01 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:46:59 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:46:59 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:46:59 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:46:59 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1006
+	Account Name:		huyabc
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0xB6D71B
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:42:26 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:41:05 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:41:05 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:41:04 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:41:04 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:41:04 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:41:04 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:41:04 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:41:04 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:37:06 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:37:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:26:42 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:26:42 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:26:42 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:26:00 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:26:00 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:25:59 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:25:59 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:25:06 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:25:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:19:06 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:19:05 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:19:05 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:53 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:53 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:53 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:53 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:53 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:53 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1006
+	Account Name:		huyabc
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0xB6D71B
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:		huyhv9
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0x1BC19
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1006
+	Account Name:		huyabc
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0xB6D71B
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-21-11049384-3601598548-1102589311-1006
+	Account Name:		huyabc
+	Account Domain:		DESKTOP-16IICHS
+	Logon ID:		0xB6D71B
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Credential Manager credentials were read.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Read Operation:		Enumerate Credentials
+
+This event occurs when a user performs a read operation on stored credentials in Credential Manager.","5379","5/13/2021 9:18:41 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:41 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:41 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:41 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:41 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:41 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:41 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:40 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:40 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:18:39 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:18:39 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:13:06 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:13:06 AM"
+"Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+
+Privileges:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege","4672","5/13/2021 9:13:05 AM"
+"An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		DESKTOP-16IICHS$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+
+Logon Information:
+	Logon Type:		5
+	Restricted Admin Mode:	-
+	Virtual Account:		No
+	Elevated Token:		Yes
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-18
+	Account Name:		SYSTEM
+	Account Domain:		NT AUTHORITY
+	Logon ID:		0x3E7
+	Linked Logon ID:		0x0
+	Network Account Name:	-
+	Network Account Domain:	-
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x2e4
+	Process Name:		C:\Windows\System32\services.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","4624","5/13/2021 9:13:05 AM"
+"The audit log was cleared.
+Subject:
+	Security ID:	S-1-5-21-11049384-3601598548-1102589311-1001
+	Account Name:	huyhv9
+	Domain Name:	DESKTOP-16IICHS
+	Logon ID:	0x1BBB8","1102","5/13/2021 9:09:51 AM"

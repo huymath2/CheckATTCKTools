@@ -1,0 +1,10 @@
+#TYPE Selected.System.String
+"CreationTime","EventId","Description","ProviderName","HostName","HostApplication"
+"6/4/2021 9:12:51 AM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","400","Engine state is changed from None to Available. ","","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","powershell Clear-History"
+"6/4/2021 9:12:51 AM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","powershell Clear-History"

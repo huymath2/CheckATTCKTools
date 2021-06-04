@@ -1,0 +1,494 @@
+set-executionpolicy remotesigned
+cd C:\Users\huyhv9\Downloads\flare-vm-master
+.\install.ps1
+Get-AuthenticodeSignature -FilePath C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\Viettel\CheckInject.exe
+Get-AuthenticodeSignature -FilePath C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\Viettel\checkinject.bat
+$regpath = @("HKLM:\SOFTWARE\Microsoft\NetSh", "HKLM:\SOFTWARE\Wow6432Node\Microsoft\NetSh")
+$regpath | ForEach-Object{ get-item $_}
+cls
+cd D:\ThreatHuntingToolBuilding\CheckATTCK
+.\test.ps1
+cls
+ $PSHOME\
+$PSHOME
+cd $PSHOME\
+dir
+Test-Path -Path D:\ThreatHuntingToolBuilding\CheckATTCK\test\Check_ATTCK\T1546_EventTriggeredExecution\Netsh_Helper_DLL\Netsh_Helper_DLL.txt -PathType Leaf
+Test-Path -Path D:\ThreatHuntingToolBuilding\CheckATTCK\test\Check_ATTCK\T1546_EventTriggeredExecution\Netsh_Helper_DLL\Netsh_Helpe_DLL.txt -PathType Leaf
+Test-Path -Path $PSHOME\Profile.ps1 -PathType Leaf
+Write-Host "abc" > $PSHOME\Profile.ps1
+$PSHOME\Profile.ps1
+type $PSHOME\Profile.ps1
+Test-Path -Path $PSHOME\Profile.ps1 -PathType Leaf
+echo "abc" >  $PSHOME\Profile.ps1
+type $PSHOME\Profile.ps1
+Write-Host "$Home\Documents\PowerShell\Profile.ps1"
+clear
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools
+Get-ExecutionPolicy bypass 
+Get-ExecutionPolicy -bypass 
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+Get-ItemProperty -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+Get-AuthenticodeSignature "C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr
+clear
+Get-AuthenticodeSignature "C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+Test-Path C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.exe D:\ThreatHuntingToolBuilding\CheckATTCK\ATT2CK_Persistence\ATT2CK_Persistence.sln /restartManager  /recoveryFile "C:\Users\huyhv9\AppData\Roaming\Microsoft\VisualStudio\16.0_574d89da\AutoRecoverDat\8976.dat;C:\Users\huyhv9\AppData\Roaming\Microsoft\VisualStudio\16.0_574d89da\AutoRecoverDat\8976.suodat"
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+clear
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_RegistryRunKeys_StartupFolder.ps1
+Remove-Item  C:\Windows\System32\WindowsPowerShell\v1.0\profile.ps1
+ll
+cls
+git
+cls
+git clone
+cls
+git
+cls
+cd ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools>
+cd \ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools
+cls
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools
+cls
+.\CheckATTCK.bat D:\ThreatHuntingToolBuilding\CheckATTCK\test
+.\Review_CheckATTCK.bat D:\ThreatHuntingToolBuilding\CheckATTCK\test
+cls
+.\Review_CheckATTCK.bat D:\ThreatHuntingToolBuilding\CheckATTCK\test
+cls
+.\CheckATTCK.bat D:\ThreatHuntingToolBuilding\CheckATTCK\test
+.\Review_CheckATTCK.bat D:\ThreatHuntingToolBuilding\CheckATTCK\test
+Get-AuthenticodeSignature "C:\Program Files\NTCore\Explorer Suite\PE Detective.exe"
+Get-LocalGroup
+Get-LocalUser
+cls
+Get-Process | Where-Object {$_.MainWindowTitle -ne ""} | Select-Object MainWindowTitle
+Get-Content "C:\Users\huyhv9\AppData\Local\Google\Chrome\User Data\Default\Bookmarks"
+cls
+Get-Content "C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Bookmarks"
+cls
+Get-WmiObject -Class __FilterToConsumerBinding -Namespace "root\subscription"
+wmic/namespace:\\root\subscription
+Get-PnpDevice 
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\"
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\" Get-ItemProperty
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\" Get-Item
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\" Get-ItemName
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\" | Select-Object Name
+Get-Process
+Get-ItemProperty HKLM:\SYSTEM\ControlSet001\Control\Print\Environments\*\Print Processors\*
+Get-ItemProperty "HKLM:\SYSTEM\ControlSet001\Control\Print\Environments\*\Print Processors\*"
+Get-ComputerInfo
+Get-NetConnectionProfile
+Get-Service
+get-date
+Get-TimeZone
+Get-LocalGroup
+D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools\T1543_CreateorModifySystemProcess.ps1
+$path = @("C:\Users\*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\*", "C:\Users\[Username]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\*")
+$path | Get-Item | Select-Object *
+$path
+$path | Get-Item | Select-Object *|ForEach-Object
+clear
+bitsadmin /list /allusers /verbose
+Get-Acl C:\Users\huyhv9\AppData\Local\Google\Chrome\User Data\Default\Extensions\pkedcjkdefgpdelpbcmbmeomcjbeemfm\8921.104.0.3_0\cast_sender.js
+Get-Acl "C:\Users\huyhv9\AppData\Local\Google\Chrome\User Data\Default\Extensions\pkedcjkdefgpdelpbcmbmeomcjbeemfm\8921.104.0.3_0\cast_sender.js"
+$env:computername
+$env:LOCALAPPDATA
+"%localappdata%\Google\Chrome\User Data\Default\Extensions\pkedcjkdefgpdelpbcmbmeomcjbeemfm\8921.104.0.3_0\mirroring_webrtc.js" -split '(\w{4})' | ? {$_}
+cls
+-split '(\w{4})' | ? {$_}
+'1234567890ABCDEFGHIJ' -split '(\w{4})' | ? {$_}
+"%localappdata%\Google\Chrome\User Data\Default\Extensions\pkedcjkdefgpdelpbcmbmeomcjbeemfm\8921.104.0.3_0\mirroring_webrtc.js" -split '(\w{50})' | ? {$_}
+"%localappdata%\Google\Chrome\User Data\Default\Extensions\pkedcjkdefgpdelpbcmbmeomcjbeemfm\8921.104.0.3_0\mirroring_webrtc.js" -split '(\w{30})' | ? {$_}
+cls
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKToolsV1
+ls
+.\T1546_EventTriggeredExecution_PrintProcessors.ps1
+.\T1176_BrowserExtensions.ps1
+cls
+.\T1176_BrowserExtensions.ps1
+cls
+.\T1546_EventTriggeredExecution_ChangeDefaultFileAssociation.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+powershell .\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKToolsV1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1547_BootorLogonAutostartExecution_ShortcutModification.ps1
+cls
+.\T1176_BrowserExtensions.ps1
+cls
+.\T1176_BrowserExtensions.ps1
+cls
+Get-Item -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Get-ItemProperty | Select-Object *
+cls
+'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Get-RegistryKeyTimestamp
+Get-RegistryKeyTimestamp
+cls
+'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Select-Object LastWriteTime
+'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.arn\OpenWithList'  | Select-Object LastWriteTime
+'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Select-Object LastWriteTime | ft
+'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\'  | Select-Object LastWriteTime | ft
+$PSScriptRoot
+$ScriptDir = Split-Path $script:MyInvocation.MyCommand.Path
+cls
+"WordsWordsWords".IndexOf("Words")
+Get-Item -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'  | Get-ItemProperty | Select-Object * 
+Get-Acl
+Get-EventLog -LogName "Windows PowerShell"
+Get-EventLog -LogName *
+Get-EventLog -LogName "Windows PowerShell"
+cl
+cls
+Get-EventLog "Windows PowerShell" |`
+  Sort-Object EventID |`
+  Group-Object EventID
+Get-EventLog "Windows PowerShell | Sort-Object EventID | Group-Object EventID`
+"
+Get-EventLog "Windows PowerShell | Sort-Object EventID | Group-Object EventID"
+Get-EventLog *
+Get-EventLog -LogName Application
+cls
+Get-WinEvent -ListLog *
+cls
+Get-WinEvent -Path  %windir%\System32\winevt\Logs\Security.evtx
+Get-WinEvent -Path  "env:%windir%\System32\winevt\Logs\Security.evtx"
+Get-WinEvent -Path  "%windir%\System32\winevt\Logs\Security.evtx"
+Get-WinEvent -Path  "$env:%windir%\System32\winevt\Logs\Security.evtx"
+cls
+Get-WinEvent -Path  "C:\Windows\System32\winevt\Logs\Security.evtx"
+cls
+Get-WinEvent -Path  "C:\Windows\System32\Winevt\Logs\Windows PowerShell.evtx"
+cls
+Get-EventLog -LogName System | Select-Object -Property EventID
+cls
+Get-EventLog -LogName System | Select-Object -Property * | Where-Object {$_.EventID -eq 4657}
+Get-EventLog -LogName System | Select-Object -Property * 
+Get-EventLog -LogName System | Select-Object -Property * | Where-Object {$_.EventID -eq 4624}
+Get-EventLog -LogName System | Select-Object -Property * 
+Get-EventLog -LogName System | Select-Object -Property * > C:\a.txt
+Get-EventLog -LogName * | Select-Object -Property * | Where-Object {$_.EventID -eq 4624}
+Get-EventLog -LogName * 
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4624}
+cls
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4657}
+Get-EventLog -LogName * 
+Get-EventLog -LogName Application | Select-Object -Property * | Where-Object {$_.EventID -eq 4657}
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4657}
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4720}
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4624}
+Get-EventLog -LogName Security | Select-Object -Property * | Where-Object {$_.EventID -eq 4657}
+$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+$env:APPDATA
+C:\Users\huyhv9\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+Get-LocalUser
+bitsadmin /list /allusers /verbose
+Get-Item -Path 'Registry::HKEY_CLASS_ROOT\txtfile\shell\open\command'
+cls
+Get-Item -Path 'HKCR:\*\shell\*\command'
+Get-Item -Path 'HKCR'
+Get-Item -Path 'HKR'
+cls
+Get-Item -Path 'HKCU'
+Get-Item -Path 'HKCU:\Sofware'
+Get-Item -Path 'HKCU:\Sofware' | Get-ItemProperty
+ Get-Item -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\*\OpenWithList'
+cls
+Get-Item -Path 'HKCU:\Sofware' 
+Get-Item -Path 'HKCU:\Sofware\' | Get-ItemProperty
+cls
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKToolsV1
+.\T1546_EventTriggeredExecution_NetshHelperDLL.ps1
+cls
+$env:systemroot
+$env:SystemDirectory
+[System.Environment]::SystemDirectory
+cls
+$pshome
+Write-Host "abc" > "$PSHOME\profile.ps1"
+type
+cls
+type "$PSHOME\profile.ps1"
+"$PSHOME\profile.ps1"
+Get-Acl "$PSHOME\profile.ps1"
+Get-Acl C:\Windows\system32\winprint.dll
+Get-Acl C:\Windows\System32\spool\prtprocs\x64\winprint.dll
+Get-Acl C:\Windows\System32\spool\prtprocs\*\winprint.dll
+Test-Path "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools" -PathType Leaf
+Test-Path "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools\T1037_BootorLogonInitializationScripts.bat" -PathType Leaf
+ Get-Host | Select-Object Version
+gci
+cls
+([IO.FileInfo]'D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools\T1037_BootorLogonInitializationScripts.bat').Extension 
+cmd
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKToolsV1
+$PSHOMe
+.\COR_PROFILER.ps1
+.\PathHijacking.ps1
+cls
+.\T1546_EventTriggeredExecution_NetshHelperDLL.ps1
+.\T1546_EventTriggeredExecution_PowershellProfile.ps1
+.\T1546_EventTriggeredExecution_PrintProcessors.ps1
+.\T1547_BootorLogonAutostartExecution_TimeProvider.ps1
+cls
+Get-Acl HKLM:\SOFTWARE\Microsoft\NetSh
+Get-ForensicFileRecord D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\T1176_BrowserExtensions.ps1
+Get-ChildItem D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\T1176_BrowserExtensions.ps1
+cls
+Get-Item D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\T1176_BrowserExtensions.ps1
+Get-Item D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\T1176_BrowserExtensions.ps1 | Select-Object *
+(Get-WmiObject Win32_Processor).AddressWidth
+Get-Acl HKLM\SOFTWARE\Microsoft\NetSh
+Get-Acl HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NetSh
+cls
+Test-Path "C:\Windows\" -PathType Leaf
+Test-Path "C:\Windows\twain_32.dll" -PathType Leaf
+Test-Path C:\Python27\Scripts\binwalk
+Get-AuthenticodeSignature C:\Program Files (x86)\Dev-Cpp\devcpp.exe
+Get-AuthenticodeSignature "C:\Program Files (x86)\Dev-Cpp\devcpp.exe"
+Get-AuthenticodeSignature "C:\Program Files (x86)\Dev-Cpp\devcpp.exe"|Select-Object *
+Get-AuthenticodeSignature "C:\Program Files (x86)\IDA 6.8\idaq.exe " |Select-Object *
+cls
+$env:PSDrive
+Get-Item -Path Env:* | Get-Member
+env:PSDrive
+vls
+cls
+dir env:
+cls
+Test-Path "HKCR:\txtfile\shell\open\command"
+Write-Host (2,4,6,8,10,12) -Separator ", -> " -ForegroundColor DarkGreen -BackgroundColor White
+cd ..
+dir
+cd .\ATTCKTools_CSV\
+dir
+.\Review_ATTCK_Persistence.ps1
+cls
+.\Review_ATTCK_Persistence.ps1
+cls
+.\Review_ATTCK_Persistence.ps1
+cls
+Get-Item "Registry::HKEY_CLASSES_ROOT\*\shell\*\command"
+Get-Item "Registry::HKEY_CLASSES_ROOT\*\shell\*\command" | Select-Object Property 
+Get-Item "Registry::HKEY_CLASSES_ROOT\*\shell\*\command" | Select-Object Property  -First 1
+Write-Host "Registry::HKEY_CLASSES_ROOT\.*"
+Get-Item "Registry::HKEY_CLASSES_ROOT\.*"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\.*"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\.*"| Select-Object "(default)"
+cls
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\.*"| Select-Object "(default)"
+cls
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\.*"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\WinRAR\shell\open\command"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\WinRAR\shell\*\command"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\txtfile\shell\*\command"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\txtfile\shell\*\command" | Select-Object "(default)"
+Get-ItemProperty "Registry::HKEY_CLASSES_ROOT\txtfile\shell\*\command" | Select-Object "(default)", PSPath
+est-Path "Registry::HKEY_CLASSES_ROOT\txtfile\shell\open\command"
+Test-Path "Registry::HKEY_CLASSES_ROOT\txtfile\shell\open\command"
+cls
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_huyhv9_20210507_104713.829\Check_ATTCK"
+cls
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_huyhv9_20210507_104713.829"
+cls
+bitsadmin /list /allusers /verbose
+$env:computername
+cls
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_huyhv9_20210507_104713.829"
+cls
+.\CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\sample_ex"
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\sample_ex"
+cls
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\sample_ex"
+bitsadmin /list /allusers /verbose
+bitsadmin /listfiles "backdoor"
+bitsadmin /util /help
+bitsadmin /list /allusers 
+bitsadmin /list /allusers /verbose
+bitsadmin /getnotifycmdline {0544B3FD-A9F6-40BF-AFA4-713884E390BA}
+bitsadmin /getnotifycmdline 0544B3FD-A9F6-40BF-AFA4-713884E390BA
+bitsadmin /getnotifycmdline 'backdoor'
+bitsadmin /help
+bitsadmin /getnotifycmdline 'backdoor' /NOWRAP
+bitsadmin /list /allusers /verbose /NOWRAP
+bitsadmin /NOWRAP /list /allusers /verbose 
+bitsadmin /glist 'backdoor' 
+bitsadmin /list 'backdoor' 
+bitsadmin /listfiles 'backdoor' 
+cls
+.\Review_CheckATTCKPersistence.bat "C:\Users\huyhv9\Desktop\demo_rs\rsmd_windows\rsmd_windows\sample_ex"
+dir env:
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV
+cls
+.\T1197_BITSJobs.ps1
+$env:COR_PROFILER_PATH
+dir env:
+$env:COR_PROFILER = 1
+$env:COR_PROFILER
+$env:COR_PROFILER = "{09108e71-974c-4010-89cb-acf471ae9e2c}"
+$env:COR_PROFILER
+$env:COR_ENABLE_PROFILING = 1
+$env:COR_ENABLE_PROFILING
+dir $env
+dir env:
+$env:
+dir env:
+$env:COR_ENABLE_PROFILING = 0
+dir $env
+cls
+dir env:
+$env:COR_ENABLE_PROFILING
+$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+dir env:
+dir env:
+$env:COR_ENABLE_PROFILING = 0
+dir env:
+[Environment]::GetEnvironmentVariable('PSModulePath', 'Machine')
+[Environment]::GetEnvironmentVariable('PSModulePath')
+[Environment]::GetEnvironmentVariable('computername')
+[Environment]::GetEnvironmentVariable('COR_PROFILER')
+[System.Environment]::GetEnvironmentVariable('COR_PROFILER')
+[System.Environment]::GetEnvironmentVariable('COR_PROFILER_PATH')
+[System.Environment]::GetEnvironmentVariable('COR_ENABLE_PROFILING')
+[System.Environment]::SetEnvironmentVariable('COR_ENABLE_PROFILING', 1)
+[System.Environment]::GetEnvironmentVariable('COR_ENABLE_PROFILING')
+[System.Environment]::SetEnvironmentVariable('COR_ENABLE_PROFILING', 0)
+[System.Environment]::GetEnvironmentVariable('COR_ENABLE_PROFILING')
+[Environment]::GetEnvironmentVariable('COR_ENABLE_PROFILING')
+dir env:
+[System.Environment]::GetEnvironmentVariable('COR_ENABLE_PROFILING')
+dir env:
+$env:COR_ENABLE_PROFILING
+$env:COR_ENABLE_PROFILING = 1
+$env:COR_ENABLE_PROFILING
+dir env:
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV
+cls
+.\Check_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV"
+.\Review_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV"
+cls
+Get-Item "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools" | Select-Object *
+cls
+Get-WinEvent -ListLog *
+cls
+Get-WinEvent -ListLog 
+cls
+Get-WinEvent -ListLog | Select-Object *
+cls
+Get-WinEvent -ListLog "Powershell"
+cls
+Get-WinEvent -LogName 
+Get-WinEvent -LogName *
+cls
+Get-WinEvent -LogName 'Windows PowerShell'
+cls
+$pshome
+$home
+Get-Item HKCU:\Environment
+Get-Item HKU:\*\Environment
+est-Path -Path HKU:\Temp
+Test-Path -Path HKU:\Temp
+Test-Path -Path HKU:\Environment
+Test-Path -Path HKU:\*\Environment
+Test-Path "HKU:\S-1-5-21-11049384-3601598548-1102589311-1001\Environment"
+Get-Item "HKU:\S-1-5-21-11049384-3601598548-1102589311-1001\Environment"
+cls
+Get-Item "Registry::HKEY_USERS\S-1-5-21-11049384-3601598548-1102589311-1001\Environment"
+Get-Item "Registry::HKEY_USERS\*\Environment"
+Get-ItemProperty "Registry::HKEY_USERS\*\Environment"
+$env:COR_PROFILER_PATH
+cls
+.\Check_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV\abc"
+.\Review_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV\abc"
+cls
+.\Review_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV\abc"
+cls
+.\Review_ATTCK_Persistence.ps1 "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV\abc"
+cls
+Get-WinEvent -LogName "Secutiry"
+Get-WinEvent -LogName "Securiyy"
+Get-WinEvent -LogName "Security"
+Get-WinEvent -LogName "Security" | Where $_.Id -eq 4670
+Get-EventLog  -LogName 'Windows PowerShell' 
+$env:APPDATA
+Get-Acl $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+$env:APPDATA
+$env:SystemDrive
+Get-Item "$env:SystemDrive\Users\*\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+Get-Item "$env:SystemDrive\Users\*\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" | Select-Object *
+Get-Acl "$env:SystemDrive\Users\*\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+cd D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\ATTCKTools_CSV\ATTCKTools_CSV\Execution
+cls
+dir
+cd ..
+.\Check_ATTCK_Execution.ps1 D:\abcd\
+cls
+Get-WinEvent -LogName *
+cls
+Get-EventLog -LogName *
+Get-WinEvent -LogName "Security"
+cls
+(Get-ACL -Path "D:\abc").Access | Format-Table IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -AutoSize
+Get-ChildItem -Hidden 
+Get-EventLog -LogName *
+Get-Acl "$env:APPDATA\\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+$env:APPDATA\\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+"$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+type "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+cls
+.\Check_ATTCK_Execution.ps1 D:\abcd\
+.\Check_ATTCK_DefenseEvasion.ps1 D:\abcd\
+.\Check_ATTCK_DefenseEvasion.ps1 D:\abcd
+Get-WinEvent -ListLog "Microsoft-Windows-Windows Defender/Operational"
+Get-WinEvent -ListLog "Microsoft-Windows-Windows Defender/Operational" |fl
+Get-WinEvent -ListLog "Microsoft-Windows-Windows Defender/Operational" |fl *
+Get-WinEvent -ListLog *
+Get-WinEvent -LogName "Microsoft-Windows-Windows Defender/Operational" |fl *
+cd C:\Users\huyhv9\Desktop\something\rsmd_windows\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_abcdef_20210513_105533.880
+cd ..
+cd .\ATTCKTools_CSV\
+dir
+.\Review_ATTCK_Persistence.ps1 "C:\Users\huyhv9\Desktop\something\rsmd_windows\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_abcdef_20210513_105533.880"
+cls
+.\Review_ATTCK_Persistence.ps1 "C:\Users\huyhv9\Desktop\something\rsmd_windows\rsmd_windows\rsmd_windows\samples_DESKTOP-16IICHS_1.1.1.1_abcdef_20210513_105533.880\Check_ATTCK\"

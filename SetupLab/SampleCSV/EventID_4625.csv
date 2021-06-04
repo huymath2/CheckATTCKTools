@@ -1,0 +1,402 @@
+#TYPE Selected.System.String
+"Id","CreationTime","Message"
+"4625","2021-05-13 11:00:07","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+
+Failure Information:
+	Failure Reason:		An Error occured during Logon.
+	Status:			0xC0000073
+	Sub Status:		0xC0000073
+
+Process Information:
+	Caller Process ID:	0x3d8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-05-13 11:00:07","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			5
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+
+Failure Information:
+	Failure Reason:		An Error occured during Logon.
+	Status:			0xC0000073
+	Sub Status:		0xC0000073
+
+Process Information:
+	Caller Process ID:	0x3d8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	-
+	Source Network Address:	-
+	Source Port:		-
+
+Detailed Authentication Information:
+	Logon Process:		Advapi  
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-05-13 10:59:56","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		An Error occured during Logon.
+	Status:			0xC000006D
+	Sub Status:		0x0
+
+Process Information:
+	Caller Process ID:	0x0
+	Caller Process Name:	-
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	fe80::41d0:683f:a8e:d5e6
+	Source Port:		61912
+
+Detailed Authentication Information:
+	Logon Process:		
+	Authentication Package:	NTLM
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-05-12 15:58:07","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			2
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		The specified account's password has expired.
+	Status:			0xC000006E
+	Sub Status:		0xC0000071
+
+Process Information:
+	Caller Process ID:	0x3d8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	127.0.0.1
+	Source Port:		0
+
+Detailed Authentication Information:
+	Logon Process:		User32 
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-05-12 15:57:14","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			2
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x3d8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	127.0.0.1
+	Source Port:		0
+
+Detailed Authentication Information:
+	Logon Process:		User32 
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-05-12 15:57:01","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			2
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x3d8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	127.0.0.1
+	Source Port:		0
+
+Detailed Authentication Information:
+	Logon Process:		User32 
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-01-11 16:23:49","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			7
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x3c8
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	127.0.0.1
+	Source Port:		0
+
+Detailed Authentication Information:
+	Logon Process:		User32 
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+"4625","2021-01-08 13:57:09","An account failed to log on.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+
+Logon Type:			2
+
+Account For Which Logon Failed:
+	Security ID:		S-1-0-0
+	Account Name:		admin
+	Account Domain:		ABCDEF
+
+Failure Information:
+	Failure Reason:		Unknown user name or bad password.
+	Status:			0xC000006D
+	Sub Status:		0xC000006A
+
+Process Information:
+	Caller Process ID:	0x3d0
+	Caller Process Name:	C:\Windows\System32\svchost.exe
+
+Network Information:
+	Workstation Name:	WIN-A8A8FVKGJHJ
+	Source Network Address:	127.0.0.1
+	Source Port:		0
+
+Detailed Authentication Information:
+	Logon Process:		User32 
+	Authentication Package:	Negotiate
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."

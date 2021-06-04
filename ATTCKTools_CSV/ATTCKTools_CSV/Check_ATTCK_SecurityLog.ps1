@@ -164,7 +164,7 @@ Function Get-ATTCKSecurityLog{
 
 #$sdir = "D:\abcd"
 $sdir = $args[0]
-Get-ATTCKSecurityLog "$sdir\Security_Log.csv"
+Get-ATTCKSecurityLog "$sdir\Security_Log0.csv"
 
 
 

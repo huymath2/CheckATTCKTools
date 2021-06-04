@@ -134,12 +134,12 @@ Function Get-ATTCKPowerShellLog{
 
 
 
-$sdir = "D:\abcd"
-#$sdir = $args[0]
+#$sdir = "D:\abcd"
+$sdir = $args[0]
 Get-ATTCKPowerShellLog "$sdir\PowerShell_Log.csv"
 
 
-<#---------------Export CSV-----------------------#
+#---------------Export CSV-----------------------#
 $T1070_ClearCommandHistory | Export-Csv "$sdir\T1070_ClearCommandHistory.csv"
 $T1562_IndicatorBlocking | Export-Csv "$sdir\T1562_IndicatorBlocking.csv" 
 $T1562_ImpairCommandHistoryLogging | Export-Csv "$sdir\T1562_ImpairCommandHistoryLogging.csv"
@@ -149,12 +149,13 @@ $TA0007_Discovery | Export-Csv "$sdir\TA0007_Discovery.csv"
 #------------------------------------------------#>
 
 
-#---------------Write on Console-----------------#
+<#---------------Write on Console-----------------#
 $T1070_ClearCommandHistory | FT -Property @{e = '*'; width = 30} -Wrap
 $T1562_IndicatorBlocking | FT -Property @{e = '*'; width = 30} -Wrap
 $T1562_ImpairCommandHistoryLogging | FT -Property @{e = '*'; width = 30} -Wrap
 $T1564_HiddenWindow | FT -Wrap
 
 $TA0007_Discovery | FT -Property @{e = '*'; width = 30} -Wrap
+
 
 #------------------------------------------------#>

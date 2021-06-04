@@ -1,0 +1,2999 @@
+#TYPE Selected.System.String
+"Id","CreationTime","Message"
+"4648","2021-05-25 11:14:18","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{37109AF8-0D96-57C7-7E82-DB10A72CA19F}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-25 11:14:17","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-25 11:14:05","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{43D0378A-E964-C980-0CB4-F09E4B5011EA}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xf64
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-25 11:14:05","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{43D0378A-E964-C980-0CB4-F09E4B5011EA}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xf64
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-21 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{8BBC0E7E-7FFC-20D1-0731-160F2B3F74A4}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x122c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-21 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{8BBC0E7E-7FFC-20D1-0731-160F2B3F74A4}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x122c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-21 09:06:47","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{CED31EF2-1BFC-E558-9FC2-04C0E8835D0D}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xedc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-21 09:06:47","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{CED31EF2-1BFC-E558-9FC2-04C0E8835D0D}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xedc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 17:12:43","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{21FC882D-A73C-73F7-92D9-7C1F509C1A0C}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 17:12:43","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 16:55:49","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{1F211A33-F28A-D9F8-6C53-523B1410BB7D}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 16:55:49","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{9C93FB77-D7E0-DBA1-4EA2-26B8A8543315}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xa78
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{9C93FB77-D7E0-DBA1-4EA2-26B8A8543315}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xa78
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 14:57:49","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{D092AEF1-9E1C-6ED9-9A5C-40372676AEA8}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 14:57:49","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 09:45:46","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{AB9371CF-04C1-D0E9-9450-C99A791022A8}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 09:45:46","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 09:40:47","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{2B938E17-3642-84E2-01DF-594FDADB5FB2}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xe70
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-20 09:40:47","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{2B938E17-3642-84E2-01DF-594FDADB5FB2}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xe70
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-19 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{4AD33599-E5DC-98AB-61B4-77A0AE26BC23}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xdc8
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-19 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{4AD33599-E5DC-98AB-61B4-77A0AE26BC23}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xdc8
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-19 10:39:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{715A9170-92DE-E7A2-A80C-05E8BFCB4CE2}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x57c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-19 10:39:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{715A9170-92DE-E7A2-A80C-05E8BFCB4CE2}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x57c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 17:45:31","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{7D0E3402-E6F8-F06D-5ABF-EA8F24AD2A67}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 17:45:31","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 16:46:00","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{D02CABED-D56B-8FC4-4956-88632DB06EA6}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 16:46:00","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 16:45:52","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{87C8FB94-2602-E844-2625-1792221504E3}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x3f0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-18 16:45:52","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{87C8FB94-2602-E844-2625-1792221504E3}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x3f0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 16:03:47","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{6A6E829C-B6A6-5DB5-B674-4E904E8A4C0D}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 16:03:46","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{093D43E6-4475-FC9E-CD0C-E9683FA7ACCC}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x14f4
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 15:55:50","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{093D43E6-4475-FC9E-CD0C-E9683FA7ACCC}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x14f4
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 13:55:09","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{9D45B1A7-8255-F54E-78D1-82DB6E70BBCF}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 13:55:09","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 11:28:52","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{8D2F5BA4-532E-8019-39CE-33B107F27BC5}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 11:28:52","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 10:58:35","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{6AE6A2B7-1863-EE90-A9AF-880F27E06C2A}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 10:58:35","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 09:14:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{778D2C1E-D0BD-8A17-A26B-61F964CFF0BB}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 09:14:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 09:14:21","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{A54F6BA9-8A11-39B2-184A-DC6993285A44}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x168c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-13 09:14:21","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{A54F6BA9-8A11-39B2-184A-DC6993285A44}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x168c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-12 17:03:38","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{689F1BE7-2EE2-D0E5-8894-0BD30F7A1739}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-12 17:03:38","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-12 15:58:35","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{A8785327-3CD4-7C19-3135-596378B28B28}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-12 15:58:26","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{2EF43FB6-4C67-F9DA-19DE-61715FE69A0C}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x268
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-05-12 15:55:39","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x21c
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-13 11:07:11","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{F8AC46F0-0086-129A-8CF5-845DDC25924A}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x11b4
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-13 11:07:11","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{F8AC46F0-0086-129A-8CF5-845DDC25924A}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x11b4
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-12 15:40:31","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{FA72738C-D06A-1EEC-EB82-035C90AACA58}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3c8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-12 15:40:22","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{75F9E99F-8982-ECDC-603E-C96FF53EE713}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x3fc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-12 15:40:22","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{75F9E99F-8982-ECDC-603E-C96FF53EE713}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x3fc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 17:37:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{7924801E-6E96-28BE-F1FF-01DD326FD0A8}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xf9c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 17:37:48","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{7924801E-6E96-28BE-F1FF-01DD326FD0A8}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xf9c
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 16:23:55","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{6F712D94-E7A6-BB78-225E-37A2A620FE58}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3c8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 14:18:10","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{15F8675F-BD2E-B102-ECFE-D43EE641A005}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x920
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 14:18:10","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{15F8675F-BD2E-B102-ECFE-D43EE641A005}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x920
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:11:07","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{F3A30CCD-27C0-68E1-B090-0FDB58DE98DB}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3c8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:08:10","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x224
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:05:19","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{4E384CC0-8EE3-5EE2-CC71-4BFA750862D9}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x488
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:03:19","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x224
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:01:01","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{A6911468-7529-3AF8-1289-80AF27BD0EB5}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 11:01:01","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 09:56:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{ACD200E7-77C9-6E39-45D5-F9628FF797E2}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-11 09:56:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 15:36:34","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{9E7EBB06-2C39-3169-DFF0-91487B702341}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 15:36:34","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 14:56:26","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{5EC6FF95-225A-0391-78B9-9562ACEE75FA}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xc24
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 14:56:26","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{5EC6FF95-225A-0391-78B9-9562ACEE75FA}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xc24
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 14:14:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{CC81DD3B-D6C7-87EB-0A42-28B053C41FF7}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 14:14:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 13:58:33","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{1057BE0F-99D4-7668-EEF6-FF1BA36B36E9}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 13:58:33","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 13:43:08","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{4A360D90-8922-8DB1-DFFA-D8864883D414}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 13:43:08","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 11:43:01","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{8D950C1B-0A66-C570-FA88-2EA47449E1AA}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 11:43:01","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 10:25:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{10E2915B-9EAB-3AD5-B758-40222D0720C9}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 10:25:24","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 10:09:37","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{B7ECC22D-645F-F61E-59C2-54FDEEF8E030}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 10:09:37","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 09:54:07","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{4FE38639-B0DA-293D-341E-C693DA7FFA67}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 09:54:07","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 09:21:22","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{7EB6A797-901A-9E57-4D6B-082FB256879E}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 09:21:22","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 16:21:53","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{3F63E065-C0AD-16A5-B7C5-0EA7057682E6}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 16:21:53","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 15:45:30","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{E54A00CA-A06C-DCB2-138D-DB43F81E4F56}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 15:45:30","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 15:29:56","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{125C7044-A044-2493-7AEE-6DF0AE804EE3}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x254
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 15:29:56","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:57:07","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{003E46E9-E628-C459-91A1-BC2DC11620DB}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d4
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:56:14","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x220
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:54:33","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{7C6EA0D0-C1E5-5324-F206-D26C795FEA23}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x25c
+	Process Name:		C:\Windows\System32\lsass.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:54:32","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d0
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:31:59","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{04B4C5AC-FCB0-00DE-82A8-BE77F875151D}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x8fc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:31:59","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{04B4C5AC-FCB0-00DE-82A8-BE77F875151D}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0x8fc
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:26:58","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{537D6F66-E4E2-023F-00E5-A0AE24EC7955}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xcf0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 14:26:58","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{537D6F66-E4E2-023F-00E5-A0AE24EC7955}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xcf0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 13:57:13","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		ABCDEF
+	Logon GUID:		{985366E1-D58F-1A2A-AAE0-69461D600DA2}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x3d0
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 13:57:00","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{D3A3841D-8D4B-2A90-C82F-57348A4D878C}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xec0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 13:57:00","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF.COM
+	Logon GUID:		{D3A3841D-8D4B-2A90-C82F-57348A4D878C}
+
+Target Server:
+	Target Server Name:	win-a8a8fvkgjhj$
+	Additional Information:	win-a8a8fvkgjhj$
+
+Process Information:
+	Process ID:		0xec0
+	Process Name:		C:\Windows\System32\taskhostw.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 13:56:13","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		ABCDEF
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x220
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 13:54:06","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-2
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x2dc
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 12:39:02","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		WIN-A8A8FVKGJHJ
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x18c
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 12:38:42","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x278
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-08 12:34:04","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		admin
+	Account Domain:		WIN-A8A8FVKGJHJ
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x36c
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Network Information:
+	Network Address:	127.0.0.1
+	Port:			0
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 03:33:53","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-A8A8FVKGJHJ$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x1e4
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."
+"4648","2021-01-09 03:33:23","A logon was attempted using explicit credentials.
+
+Subject:
+	Security ID:		S-1-5-18
+	Account Name:		WIN-J3EPDF256PR$
+	Account Domain:		WORKGROUP
+	Logon ID:		0x3E7
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Account Whose Credentials Were Used:
+	Account Name:		DWM-1
+	Account Domain:		Window Manager
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Target Server:
+	Target Server Name:	localhost
+	Additional Information:	localhost
+
+Process Information:
+	Process ID:		0x1f8
+	Process Name:		C:\Windows\System32\winlogon.exe
+
+Network Information:
+	Network Address:	-
+	Port:			-
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account?s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command."

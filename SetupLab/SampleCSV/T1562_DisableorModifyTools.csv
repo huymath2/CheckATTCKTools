@@ -1,0 +1,4 @@
+#TYPE Selected.System.String
+"Id","CreationTime","Message"
+"5001","2021-06-04 09:07:09","Microsoft Defender Antivirus Real-time Protection scanning for malware and other potentially unwanted software was disabled."
+"5001","2021-06-02 10:29:21","Microsoft Defender Antivirus Real-time Protection scanning for malware and other potentially unwanted software was disabled."

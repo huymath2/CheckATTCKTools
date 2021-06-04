@@ -1,0 +1,42 @@
+#TYPE Selected.System.String
+"CreationTime","EventId","Description","ProviderName","HostName","HostApplication","Category"
+"6/3/2021 5:52:46 PM","403","Engine state is changed from Available to Stopped. ","","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","400","Engine state is changed from None to Available. ","","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""Variable"" is Started. ","Variable","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""Function"" is Started. ","Function","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""FileSystem"" is Started. ","FileSystem","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""Environment"" is Started. ","Environment","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""Alias"" is Started. ","Alias","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:46 PM","600","Provider ""Registry"" is Started. ","Registry","Default Host","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","400","Engine state is changed from None to Available. ","","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:45 PM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","PowerShell Get-ADUser","Account Discovery - Domain Account"
+"6/3/2021 5:52:36 PM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","400","Engine state is changed from None to Available. ","","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","400","Engine state is changed from None to Available. ","","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:52:36 PM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","PowerShell Get-LocalGroup","Permission Groups Discovery"
+"6/3/2021 5:37:48 PM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","400","Engine state is changed from None to Available. ","","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","PowerShell Get-Date","System Time Discovery"
+"6/3/2021 5:37:48 PM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","PowerShell Get-Date","System Time Discovery"

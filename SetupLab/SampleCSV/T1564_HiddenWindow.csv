@@ -1,0 +1,9 @@
+#TYPE Selected.System.String
+"CreationTime","EventId","Description","ProviderName","HostName","HostApplication"
+"5/13/2021 9:53:50 AM","400","Engine state is changed from None to Available. ","","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","powershell.exe -WindowStyle Hidden"
+"5/13/2021 9:53:50 AM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","powershell.exe -WindowStyle Hidden"

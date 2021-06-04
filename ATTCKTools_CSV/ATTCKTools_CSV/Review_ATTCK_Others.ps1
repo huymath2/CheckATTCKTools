@@ -40,8 +40,8 @@ Function CheckExist{
 
 }
 
-$sdir = $args[0]
-
+#$sdir = $args[0]
+$sdir = "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\SetupLab\SampleCSV"
 
 #Functions follow PS logs
 Function Review_T1070_ClearCommandHistory{
@@ -99,7 +99,7 @@ Function Review_T1564_HiddenFilesandDirectories{
 
 Function Review_T1036_RighttoLeftOverride{
     CheckExist("$sdir\T1036_RighttoLeftOverride.csv")
-    $report = Import-Csv -Path "$sdir\T1036_RighttoLeftOverride.csv"
+    $reports = Import-Csv -Path "$sdir\T1036_RighttoLeftOverride.csv"
     foreach($report in $reports){
         if($report.Owner -ne "NT SERVICE\TrustedInstaller"){
             $report | Select-Object LastWriteTime, Attributes, Owner, FullName ,Sign
@@ -144,7 +144,7 @@ Function Review_T1562_DisableWindowsEventLogging{
     Import-Csv -Path "$sdir\EventID_1102.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Domain Name"     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name*"){
@@ -193,7 +193,7 @@ Function Review_Event4769{
     Import-Csv -Path "$sdir\EventID_4769.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain", "Client Address", "Client Port"     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -206,7 +206,7 @@ Function Review_Event4769{
 			    $report."Client Address" = $line.TrimStart("`tClient Address").TrimStart(":`t")
 		    }
             if($line -like "*Client Port:*"){
-			    $report."Client Port" = $line.TrimStart("`tAccount Domain").TrimStart(":`t")
+			    $report."Client Port" = $line.TrimStart("`tClient Port").TrimStart(":`t")
 		    }
 	    }
         $report
@@ -218,7 +218,7 @@ Function Review_Event4768{
     Import-Csv -Path "$sdir\EventID_4768.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Client Address", "Client Port"     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -228,7 +228,7 @@ Function Review_Event4768{
 			    $report."Client Address" = $line.TrimStart("`tClient Address").TrimStart(":`t")
 		    }
             if($line -like "*Client Port:*"){
-			    $report."Client Port" = $line.TrimStart("`tAccount Domain").TrimStart(":`t")
+			    $report."Client Port" = $line.TrimStart("`tClient Port").TrimStart(":`t")
 		    }
 	    }
         $report
@@ -240,7 +240,7 @@ Function Review_Event4625{
     Import-Csv -Path "$sdir\EventID_4625.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain", "Source Network Address", "Source Port", "Failure Reason"     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -268,7 +268,7 @@ Function Review_Event4648{
     Import-Csv -Path "$sdir\EventID_4648.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain", "Target Server Name", "Process Name", "Network Address", Port     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -299,7 +299,7 @@ Function Review_Event4771{
     Import-Csv -Path "$sdir\EventID_4771.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Client Address", "Client Port"     
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -309,7 +309,7 @@ Function Review_Event4771{
 			    $report."Client Address" = $line.TrimStart("`tClient Address").TrimStart(":`t")
 		    }
             if($line -like "*Client Port:*"){
-			    $report."Client Port" = $line.TrimStart("`tAccount Domain").TrimStart(":`t")
+			    $report."Client Port" = $line.TrimStart("`tClient Port").TrimStart(":`t")
 		    }
 	    }
         $report
@@ -321,7 +321,7 @@ Function Review_Event4624{
     Import-Csv -Path "$sdir\EventID_4624.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain"    
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -340,7 +340,7 @@ Function Review_Event4634{
     Import-Csv -Path "$sdir\EventID_4634.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain"    
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -359,7 +359,7 @@ Function Review_Event4672{
     Import-Csv -Path "$sdir\EventID_4672.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Account Domain"    
         $report.EventID = $_.Id
-        $report.CreationTime = Get-Date -Date $_.TimeCreated -Format "yyyy-MM-dd HH:mm:ss"
+        $report.CreationTime = Get-Date -Date $_.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
         $lines = $_.Message.Split("`n")
 	    foreach($line in $lines){
 	        if($line -like "*Account Name:*"){
@@ -378,27 +378,27 @@ Function Review_Event4672{
 #-----------------------PowerShell Log---------------------------------#
 #CreationTime, EventId, Description, ProviderName, HostName, HostApplication
 Write-Host "[+] Ra soat Clear Command History..."
-Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostName"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Indicator Blocking..."
-Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostName"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Impair Command History Logging..."
-Review_T1562_ImpairCommandHistoryLogging | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostName"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1562_ImpairCommandHistoryLogging | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Hidden Window..."
-Review_T1564_HiddenWindow | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostName"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1564_HiddenWindow | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Discovery..."
-Review_TA0007_Discovery | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostName"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_TA0007_Discovery | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
@@ -409,8 +409,9 @@ Write-Host "[+] Ra soat Disable or Modify Tools..."
 Review_T1562_DisableorModifyTools | Format-Table -Wrap | Out-String -Width 2048 | more
 Pause
 
+#Attributes
 Write-Host "[+] Ra soat Hidden Files and Directories..."
-Review_T1564_HiddenFilesandDirectories | Sort-Object -Property LastWriteTime | Format-Table -Property @{e = "LastWriteTime"; width = 20}, @{e = "Owner"; width = 20},  @{e = "FullName"; width = 40},  @{e = "Sign"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1564_HiddenFilesandDirectories | Sort-Object -Property Attributes, LastWriteTime | Format-Table -Property @{e = "LastWriteTime"; width = 20}, @{e = "Attributes"; width = 10}, @{e = "Owner"; width = 20},  @{e = "FullName"; width = 40},  @{e = "Sign"; width = 20} -Wrap | Out-String -Width 2048 | more
 Pause
 
 Write-Host "[+] Ra soat Right to Left Override..."
@@ -458,12 +459,13 @@ Review_Event4648 | Format-Table -Wrap | Out-String -Width 2048 | more
 Review_Event4771 | Format-Table -Wrap | Out-String -Width 2048 | more
 Pause
 
+<# Pending: Check all event have blank field or are anomalous 
 Write-Host "[+] Ra soat Steal or Forge Kerberos Tickets: Golden Ticket, Silver Ticket..."
 Review_Event4624 | Format-Table -Wrap | Out-String -Width 2048 | more
 Review_Event4634 | Format-Table -Wrap | Out-String -Width 2048 | more
 Review_Event4672 | Format-Table -Wrap | Out-String -Width 2048 | more
-Pause
+Pause#>
 
 
 
-#---------------------------------------------------------------------#
+#---------------------------------------------------------------------#>

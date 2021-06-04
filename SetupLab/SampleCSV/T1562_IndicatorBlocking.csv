@@ -1,0 +1,18 @@
+#TYPE Selected.System.String
+"CreationTime","EventId","Description","ProviderName","HostName","HostApplication"
+"6/4/2021 9:13:16 AM","403","Engine state is changed from Available to Stopped. ","","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","403","Engine state is changed from Available to Stopped. ","","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","400","Engine state is changed from None to Available. ","","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Variable"" is Started. ","Variable","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Function"" is Started. ","Function","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""FileSystem"" is Started. ","FileSystem","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Environment"" is Started. ","Environment","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Alias"" is Started. ","Alias","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Registry"" is Started. ","Registry","Default Host","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","400","Engine state is changed from None to Available. ","","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Variable"" is Started. ","Variable","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Function"" is Started. ","Function","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""FileSystem"" is Started. ","FileSystem","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Environment"" is Started. ","Environment","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Alias"" is Started. ","Alias","ConsoleHost","powershell Set-EtwTraceProvider"
+"6/4/2021 9:13:16 AM","600","Provider ""Registry"" is Started. ","Registry","ConsoleHost","powershell Set-EtwTraceProvider"
