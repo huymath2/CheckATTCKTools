@@ -1,0 +1,1 @@
+- Time collect event log lâu (khoảng 5-10p nếu log to > 140k logs)

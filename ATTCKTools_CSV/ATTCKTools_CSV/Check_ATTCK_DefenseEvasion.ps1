@@ -162,13 +162,13 @@ Function Get-CodeSigningPolicyModification{
 }
 
 
-$sdir = "D:\abcd"
+#$sdir = "D:\abcd"
 #$sdir = $args[0]
 
 Get-WindowDefendLog | Export-Csv "$sdir\T1562_DisableorModifyTools.csv"
-#Get-HiddenFileAndDir | Export-Csv "$sdir\T1564_HiddenFilesandDirectories.csv"
-#Get-RighttoLeftOverride | Export-Csv "$sdir\T1036_RighttoLeftOverride.csv"
-#Get-CodeSigningPolicyModification | Export-Csv "$sdir\T1553_CodeSigningPolicyModification.csv"
+Get-HiddenFileAndDir | Export-Csv "$sdir\T1564_HiddenFilesandDirectories.csv"
+Get-RighttoLeftOverride | Export-Csv "$sdir\T1036_RighttoLeftOverride.csv"
+Get-CodeSigningPolicyModification | Export-Csv "$sdir\T1553_CodeSigningPolicyModification.csv"
 
 #call syscheck.bat -nobanner -tuv > "%sdir%\T1553_InstallRootCertificate.txt" #>
 

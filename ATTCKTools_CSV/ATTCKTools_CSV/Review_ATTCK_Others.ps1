@@ -40,8 +40,8 @@ Function CheckExist{
 
 }
 
-#$sdir = $args[0]
-$sdir = "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\SetupLab\SampleCSV"
+$sdir = $args[0]
+#$sdir = "D:\ThreatHuntingToolBuilding\CheckATTCK\CheckATTCKTools\SetupLab\SampleCSV"
 
 #Functions follow PS logs
 Function Review_T1070_ClearCommandHistory{
@@ -384,27 +384,27 @@ Function Review_RDPHijack{
 #-----------------------PowerShell Log---------------------------------#
 #CreationTime, EventId, Description, ProviderName, HostName, HostApplication
 Write-Host "[+] Ra soat Clear Command History..."
-Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Indicator Blocking..."
-Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Impair Command History Logging..."
-Review_T1562_ImpairCommandHistoryLogging | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1562_ImpairCommandHistoryLogging | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Hidden Window..."
-Review_T1564_HiddenWindow | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_T1564_HiddenWindow | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
 Write-Host "[+] Ra soat Discovery..."
-Review_TA0007_Discovery | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20}, @{e = "HostName"; width = 10}, @{e = "HostApplication"; width = 20} -Wrap | Out-String -Width 2048 | more
+Review_TA0007_Discovery | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
@@ -451,13 +451,18 @@ Pause
 
 Write-Host "[+] Ra soat Use Alternate Authentication Material; Steal or Forge Kerberos Tickets: Kerberoasting, AS-REP Roasting..."
 Review_Event4768 | Format-Table -Wrap | Out-String -Width 2048 | more
+Pause
 Review_Event4769 | Format-Table -Wrap | Out-String -Width 2048 | more
 Pause
-
+#CreationTime, EventID, "Account Name", "Account Domain", "Source Network Address", "Source Port", "Failure Reason"
+#CreationTime, EventID, "Account Name", "Account Domain", "Target Server Name", "Process Name", "Network Address", Port 
+#CreationTime, EventID, "Account Name", "Client Address", "Client Port"  
 Write-Host "[+] Ra soat Brute Force..."
-Review_Event4625 | Format-Table -Wrap | Out-String -Width 2048 | more
-Review_Event4648 | Format-Table -Wrap | Out-String -Width 2048 | more
-Review_Event4771 | Format-Table -Wrap | Out-String -Width 2048 | more
+Review_Event4625 | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Account Name"; width = 10}, @{e = "Account Domain"; width = 10}, @{e = "Source Network Address"; width = 30}, @{e = "Source Port"; width = 10}, @{e = "Failure Reason"; width = 20} -Wrap | Out-String -Width 2048 | more
+Pause
+Review_Event4648 | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Account Name"; width = 10}, @{e = "Account Domain"; width = 10}, @{e = "Target Server Name"; width = 20}, @{e = "Network Address"; width = 30}, @{e = "Port"; width = 10} -Wrap | Out-String -Width 2048 | more
+Pause
+Review_Event4771 | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, @{e = "Account Name"; width = 10}, @{e = "Domain Name"; width = 10}, @{e = "Client Address"; width = 30}, @{e = "Client Port"; width = 10}  -Wrap | Out-String -Width 2048 | more
 Pause
 
 <# Pending: Check all event have blank field or are anomalous 
