@@ -140,7 +140,7 @@ Function Review_T1134_SID-HistoryInjection{
 
 
 
-Function Review_T1562_DisableWindowsEventLogging{
+Function Review_T1070_ClearWindowsEventLogs{
     Import-Csv -Path "$sdir\EventID_1102.csv" | ForEach-Object{
         $report = "" | Select-Object CreationTime, EventID, "Account Name", "Domain Name"     
         $report.EventID = $_.Id
@@ -160,7 +160,7 @@ Function Review_T1562_DisableWindowsEventLogging{
 }
 
 
-Function Review_T1070_ClearWindowsEventLogs{
+Function Review_T1562_DisableWindowsEventLogging{
     $report = Import-Csv -Path "$sdir\EventID_1100.csv"
     $report
 
@@ -389,7 +389,7 @@ Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; 
 Pause
 
 Write-Host "[+] Ra soat Indicator Blocking..."
-Review_T1070_ClearCommandHistory | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
+Review_T1562_IndicatorBlocking | Format-Table -Property @{e = "CreationTime"; width = 20}, @{e = "EventId"; width = 10}, <#@{e = "Description"; width = 30},  @{e = "ProviderName"; width = 20},#> @{e = "HostName"; width = 20}, @{e = "HostApplication"; width = 50} -Wrap | Out-String -Width 2048 | more
 
 Pause
 
@@ -416,7 +416,7 @@ Review_T1562_DisableorModifyTools | Format-Table -Property @{e = "CreationTime";
 Pause
 
 Write-Host "[+] Ra soat Hidden Files and Directories..."
-Review_T1564_HiddenFilesandDirectories | Sort-Object -Property Attributes, LastWriteTime | Format-Table -Property @{e = "LastWriteTime"; width = 20}, @{e = "Attributes"; width = 10}, @{e = "Owner"; width = 20},  @{e = "FullName"; width = 40},  @{e = "Sign"; width = 20} -Wrap | Out-String -Width 2048 | more
+#Review_T1564_HiddenFilesandDirectories | Sort-Object -Property Attributes, LastWriteTime | Format-Table -Property @{e = "LastWriteTime"; width = 20}, @{e = "Attributes"; width = 10}, @{e = "Owner"; width = 20},  @{e = "FullName"; width = 40},  @{e = "Sign"; width = 20} -Wrap | Out-String -Width 2048 | more
 Pause
 
 Write-Host "[+] Ra soat Right to Left Override..."

@@ -134,8 +134,9 @@ Function Get-HiddenFileAndDir{
 
 
 Function Get-RighttoLeftOverride{
-
-    $items = Get-ChildItem "$env:SystemDrive" -Recurse | where { $_ -cmatch '[\u0080-\uffff]'}   | Select-Object CreationTime, LastAccessTime, LastWriteTime, FullName
+      
+       $items = Get-ChildItem "D:\a" -Recurse | where { $_ -cmatch '[\u0080-\uffff]'}   | Select-Object CreationTime, LastAccessTime, LastWriteTime, FullName
+    #$items = Get-ChildItem "$env:SystemDrive" -Recurse | where { $_ -cmatch '[\u0080-\uffff]'}   | Select-Object CreationTime, LastAccessTime, LastWriteTime, FullName
     foreach($item in $items){
        $report = "" | Select-Object  CreationTime, LastAccessTime, LastWriteTime, Owner, FullName ,Sign, MD5
        $report.CreationTime = Get-Date -Date $item.CreationTime -Format "yyyy-MM-dd HH:mm:ss"
@@ -165,14 +166,14 @@ Function Get-CodeSigningPolicyModification{
 #$sdir = "D:\abcd"
 #$sdir = $args[0]
 
-Get-WindowDefendLog | Export-Csv "$sdir\T1562_DisableorModifyTools.csv"
-Get-HiddenFileAndDir | Export-Csv "$sdir\T1564_HiddenFilesandDirectories.csv"
-Get-RighttoLeftOverride | Export-Csv "$sdir\T1036_RighttoLeftOverride.csv"
-Get-CodeSigningPolicyModification | Export-Csv "$sdir\T1553_CodeSigningPolicyModification.csv"
+#Get-WindowDefendLog | Export-Csv "$sdir\T1562_DisableorModifyTools.csv"
+#Get-HiddenFileAndDir | Export-Csv "$sdir\T1564_HiddenFilesandDirectories.csv"
+#Get-RighttoLeftOverride | Export-Csv "$sdir\T1036_RighttoLeftOverride.csv"
+#Get-CodeSigningPolicyModification | Export-Csv "$sdir\T1553_CodeSigningPolicyModification.csv"
 
 #call syscheck.bat -nobanner -tuv > "%sdir%\T1553_InstallRootCertificate.txt" #>
 
 #Get-WindowDefendLog
 #Get-HiddenFileAndDir | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048
-#Get-RighttoLeftOverride | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048
+Get-RighttoLeftOverride | Format-Table -Property @{e = "*"; width = 30} -Wrap | Out-String -Width 2048
 
